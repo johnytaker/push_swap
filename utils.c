@@ -12,9 +12,3 @@
 
 #include "push_swap.h"
 
-void	swap_a(t_list *head)
-{
-	t_list	temp;
-
-	temp
-}
