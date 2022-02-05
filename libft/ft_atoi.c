@@ -6,7 +6,7 @@
 /*   By: iugolin <iugolin@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/10 01:31:35 by iugolin           #+#    #+#             */
-/*   Updated: 2022/02/03 19:26:06 by iugolin          ###   ########.fr       */
+/*   Updated: 2022/02/05 19:53:09 by iugolin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,15 @@
 static int	ft_isspace(char c)
 {
 	return (c == 32 || (c >= 9 && c <= 13));
+}
+
+static void	check_digit(char c)
+{
+	if (!ft_isdigit(c) && c != '\0')
+	{
+		write(1, "The program works with digits only!\nTry again.\n", 48);
+		exit(EXIT_FAILURE);
+	}
 }
 
 int	ft_atoi(const char *str)
@@ -37,8 +46,7 @@ int	ft_atoi(const char *str)
 	{
 		number = number * 10 + *str - '0';
 		str++;
-		if (*str == '.')
-			exit(EXIT_FAILURE);
+		check_digit(*str);
 	}
 	if (number > 2147483648 && sign == -1)
 		return (0);

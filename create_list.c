@@ -6,36 +6,36 @@
 /*   By: iugolin <iugolin@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/03 13:36:44 by iugolin           #+#    #+#             */
-/*   Updated: 2022/02/04 17:33:53 by iugolin          ###   ########.fr       */
+/*   Updated: 2022/02/05 21:08:14 by iugolin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-// t_list	*create_list(int argc, char **argv)
-// {
-// 	t_list	*head;
-// 	t_list	*tmp;
-// 	int		i;
+t_list	*create_list(int argc, char **argv)
+{
+	t_list	*head;
+	t_list	*tmp_node;
+	int		i;
 
-// 	i = 1;
-// 	head = (t_list *)malloc(sizeof(t_list));
-// 	if (!head)
-// 		return (NULL);
-// 	head->data = ft_atoi(argv[i]);
-// 	head->next = NULL;
-// 	tmp = head;
-// 	while (argc > 2)
-// 	{
-// 		i++;
-// 		head->next = (t_list *)malloc(sizeof(t_list));
-// 		head = head->next;
-// 		head->data = ft_atoi(argv[i]);
-// 		head->next = NULL;
-// 		argc--;
-// 	}
-// 	return (tmp);
-// }
+	i = 1;
+	head = (t_list *)malloc(sizeof(t_list));
+	if (!head)
+		return (NULL);
+	head->data = ft_atoi(argv[i]);
+	head->next = NULL;
+	tmp_node = head;
+	while (argc > 2)
+	{
+		i++;
+		head->next = (t_list *)malloc(sizeof(t_list));
+		head = head->next;
+		head->data = ft_atoi(argv[i]);
+		head->next = NULL;
+		argc--;
+	}
+	return (tmp_node);
+}
 
 t_list	*create_lst(char **data)
 {
@@ -47,8 +47,8 @@ t_list	*create_lst(char **data)
 	while (data[i])
 	{
 		if (!head_ptr)
-			head_ptr = ft_lstnew(ft_atoi(data[i++]));
-		ft_lstadd_back(&head_ptr, ft_lstnew(ft_atoi(data[i++])));
+			head_ptr = create_node(ft_atoi(data[i++]));
+		push_back(&head_ptr, create_node(ft_atoi(data[i++])));
 	}
 	return (head_ptr);
 }
