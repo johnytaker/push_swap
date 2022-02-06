@@ -6,7 +6,7 @@
 /*   By: iugolin <iugolin@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/05 17:25:44 by iugolin           #+#    #+#             */
-/*   Updated: 2022/02/05 21:06:14 by iugolin          ###   ########.fr       */
+/*   Updated: 2022/02/06 15:26:25 by iugolin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,8 +45,8 @@ void	swap_ab(t_list **lst_a, t_list **lst_b)
 	if ((*lst_a && (*lst_a)->next)
 		&& (*lst_b && (*lst_b)->next))
 	{
-		swap_a(lst_a);
-		swap_b(lst_b);
+		swap(lst_a);
+		swap(lst_b);
 		write(1, "ss\n", 3);
 	}
 }

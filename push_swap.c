@@ -6,7 +6,7 @@
 /*   By: iugolin <iugolin@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/02 19:31:21 by iugolin           #+#    #+#             */
-/*   Updated: 2022/02/05 21:20:28 by iugolin          ###   ########.fr       */
+/*   Updated: 2022/02/06 20:23:27 by iugolin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,20 +17,22 @@ int	main(int argc, char **argv)
 {
 	t_list	*stack_a;
 	t_list	*stack_b;
+	int		i;
+	int		tmp;
+	int		*arr[argc - 1];
 
+	i = 1;
 	stack_b = NULL;
-	if (!(argc > 2))
+	while (argv[i])
+		arr[i - 1] = ft_atoi(argv[i++]);
+	i = 0;
+	while (arr[i])
 	{
-		ft_putendl_fd("Wrong number of arguments", 1);
-		exit(EXIT_FAILURE);
+		if (arr)
 	}
-	else if (!is_input_sorted(argv) || is_input_repeat(argv))
-	{
-		ft_putendl_fd("The stack is already sorted or duplicated", 1);
-		exit(EXIT_FAILURE);
-	}
+	check_parameters(argc, argv);
 	stack_a = create_lst(argv);
-	rotate_a(&stack_a);
+	reverse_rotate_a(&stack_a);
 
 	// swap_a(&stack_a);
 	while (stack_a)

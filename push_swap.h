@@ -6,7 +6,7 @@
 /*   By: iugolin <iugolin@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/02 19:26:59 by iugolin           #+#    #+#             */
-/*   Updated: 2022/02/05 21:19:51 by iugolin          ###   ########.fr       */
+/*   Updated: 2022/02/06 20:12:47 by iugolin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,12 @@
 
 typedef struct s_list
 {
+	int				id;
 	int				data;
 	struct s_list	*next;
 }				t_list;
+
+void	check_parameters(int number, char **data);
 
 t_list	*create_node(int data);
 t_list	*last_node(t_list *lst);
@@ -37,8 +40,12 @@ void	push_a(t_list **lst_a, t_list **lst_b);
 void	push_b(t_list **lst_a, t_list **lst_b);
 
 void	rotate_a(t_list **lst_a);
+void	rotate_b(t_list **lst_b);
+void	rotate_ab(t_list **lst_a, t_list **lst_b);
 
-int		is_input_sorted(char **data);
-int		is_input_repeat(char **data);
+void	reverse_rotate_a(t_list **lst_a);
+void	reverse_rotate_b(t_list **lst_b);
+void	reverse_rotate_ab(t_list **lst_a, t_list **lst_b);
+
 
 #endif
