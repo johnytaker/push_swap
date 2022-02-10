@@ -6,7 +6,7 @@
 #    By: iugolin <iugolin@student.21-school.ru>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/21 18:09:12 by iugolin           #+#    #+#              #
-#    Updated: 2022/02/06 19:13:35 by iugolin          ###   ########.fr        #
+#    Updated: 2022/02/10 18:07:21 by iugolin          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,7 +18,8 @@ SRCS =		create_list.c		\
 			swap_op.c			\
 			push_op.c			\
 			rotate_op.c			\
-			reverse_rotate_op.c
+			reverse_rotate_op.c	\
+			id_utils.c
 
 OBJS = $(SRCS:.c=.o)
 LIBFT = ./libft/libft.a

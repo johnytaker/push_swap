@@ -6,7 +6,7 @@
 /*   By: iugolin <iugolin@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/05 17:25:44 by iugolin           #+#    #+#             */
-/*   Updated: 2022/02/06 15:26:25 by iugolin          ###   ########.fr       */
+/*   Updated: 2022/02/07 14:36:47 by iugolin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,4 +50,3 @@ void	swap_ab(t_list **lst_a, t_list **lst_b)
 		write(1, "ss\n", 3);
 	}
 }
-

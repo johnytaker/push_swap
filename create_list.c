@@ -6,7 +6,7 @@
 /*   By: iugolin <iugolin@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/03 13:36:44 by iugolin           #+#    #+#             */
-/*   Updated: 2022/02/06 19:00:34 by iugolin          ###   ########.fr       */
+/*   Updated: 2022/02/10 18:08:53 by iugolin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,9 +46,10 @@ t_list	*create_lst(char **data)
 	i = 1;
 	while (data[i])
 	{
-		if (!head_ptr)
-			head_ptr = create_node(ft_atoi(data[i++]));
+		head_ptr = create_node(ft_atoi(data[i++]));
 		push_back(&head_ptr, create_node(ft_atoi(data[i++])));
 	}
 	return (head_ptr);
 }
+
+
