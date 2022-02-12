@@ -6,7 +6,7 @@
 /*   By: iugolin <iugolin@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/05 16:02:02 by iugolin           #+#    #+#             */
-/*   Updated: 2022/02/10 19:53:24 by iugolin          ###   ########.fr       */
+/*   Updated: 2022/02/12 13:15:27 by iugolin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,29 +65,50 @@ void	push_front(t_list **lst, t_list *new)
 	}
 }
 
+// t_list	*append_id(t_list **lst, char **data, int size)
+// {
+// 	int		i;
+// 	int		j;
+// 	int		*arr;
+// 	t_list	*ptr;
+
+// 	i = 0;
+// 	j = 0;
+// 	arr = bubble_sort_id(int_arr_create(data, size), size);
+// 	while (arr[i])
+// 	{
+// 		ptr = *lst;
+// 		while (ptr->next)
+// 		{
+// 			if (ptr->data == data[i])
+// 			{
+// 				ptr->id = i;
+// 				break ;
+// 			}
+// 			ptr = ptr->next;
+// 		}
+// 		i++;
+// 	}
+// 	return (*lst);
+// }
+
 t_list	*append_id(t_list **lst, char **data, int size)
 {
 	int		i;
-	int		j;
 	int		*arr;
 	t_list	*ptr;
 
 	i = 0;
-	j = 0;
 	arr = bubble_sort_id(int_arr_create(data, size), size);
-	while (arr[i])
+	ptr = *lst;
+	while (ptr->next)
 	{
-		ptr = *lst;
-		while (ptr->next)
-		{
-			if (ptr->data == data[i])
-			{
-				ptr->id = i;
-				break ;
-			}
-			ptr = ptr->next;
-		}
-		i++;
+		i = 0;
+		while (arr[i] && arr[i] != ptr->data)
+			i++;
+		if (arr[i] == ptr->data)
+			ptr->id = i;
+		ptr = ptr->next;
 	}
 	return (*lst);
 }
