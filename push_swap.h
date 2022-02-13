@@ -6,7 +6,7 @@
 /*   By: iugolin <iugolin@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/02 19:26:59 by iugolin           #+#    #+#             */
-/*   Updated: 2022/02/10 19:53:38 by iugolin          ###   ########.fr       */
+/*   Updated: 2022/02/13 18:01:05 by iugolin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,8 @@
 
 typedef struct s_list
 {
-	long int		id;
-	long int		data;
+	int				id;
+	int				data;
 	struct s_list	*next;
 }				t_list;
 
@@ -30,11 +30,17 @@ t_list	*create_node(int data);
 t_list	*last_node(t_list *lst);
 void	push_back(t_list **lst, t_list *new);
 void	push_front(t_list **lst, t_list *new);
+int		lstsize(t_list **lst);
 t_list	*create_lst(char **data);
-t_list	*append_ids(t_list **lst, char **data, int size);
+t_list	*append_id(t_list **lst, char **data, int size);
 
 int		*int_arr_create(char **data, int number);
 int		*bubble_sort_id(int *data, int size);
+
+int		find_min_number(t_list **lst);
+int		find_max_number(t_list **lst);
+int		find_median(t_list **lst);
+void	push_others_to_b(t_list **lst_a, t_list **lst_b);
 
 void	swap_a(t_list **lst_a);
 void	swap_b(t_list **lst_b);
@@ -50,6 +56,5 @@ void	rotate_ab(t_list **lst_a, t_list **lst_b);
 void	reverse_rotate_a(t_list **lst_a);
 void	reverse_rotate_b(t_list **lst_b);
 void	reverse_rotate_ab(t_list **lst_a, t_list **lst_b);
-
 
 #endif
