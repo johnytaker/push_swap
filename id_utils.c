@@ -6,18 +6,16 @@
 /*   By: iugolin <iugolin@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/07 14:34:51 by iugolin           #+#    #+#             */
-/*   Updated: 2022/02/10 18:11:08 by iugolin          ###   ########.fr       */
+/*   Updated: 2022/02/16 13:44:26 by iugolin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-#include "stdio.h"
-
 
 int	*int_arr_create(char **data, int number)
 {
 	int	*arr;
-	int i;
+	int	i;
 
 	i = 0;
 	arr = (int *)malloc(sizeof(int) * number);
@@ -44,11 +42,32 @@ int	*bubble_sort_id(int *data, int size)
 			{
 				tmp = data[i];
 				data[i] = data[j];
-				data[j]= tmp;
+				data[j] = tmp;
 			}
 			j++;
 		}
 		i++;
 	}
 	return (data);
+}
+
+t_list	*append_id(t_list **lst, char **data, int size)
+{
+	int		i;
+	int		*arr;
+	t_list	*ptr;
+
+	i = 0;
+	arr = bubble_sort_id(int_arr_create(data, size), size);
+	ptr = *lst;
+	while (ptr->next)
+	{
+		i = 0;
+		while (arr[i] && arr[i] != ptr->data)
+			i++;
+		if (arr[i] == ptr->data)
+			ptr->id = i + 1;
+		ptr = ptr->next;
+	}
+	return (*lst);
 }

@@ -6,7 +6,7 @@
 /*   By: iugolin <iugolin@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/02 19:26:59 by iugolin           #+#    #+#             */
-/*   Updated: 2022/02/13 18:01:05 by iugolin          ###   ########.fr       */
+/*   Updated: 2022/02/16 15:25:06 by iugolin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,10 +37,10 @@ t_list	*append_id(t_list **lst, char **data, int size);
 int		*int_arr_create(char **data, int number);
 int		*bubble_sort_id(int *data, int size);
 
-int		find_min_number(t_list **lst);
-int		find_max_number(t_list **lst);
-int		find_median(t_list **lst);
-void	push_others_to_b(t_list **lst_a, t_list **lst_b);
+int		find_smallest_id(t_list **lst);
+int		find_biggest_id(t_list **lst);
+int		find_median_id(t_list **lst);
+// void	push_others_to_b(t_list **lst_a, t_list **lst_b);
 
 void	swap_a(t_list **lst_a);
 void	swap_b(t_list **lst_b);
