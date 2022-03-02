@@ -6,7 +6,7 @@
 /*   By: iugolin <iugolin@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/15 17:00:08 by iugolin           #+#    #+#             */
-/*   Updated: 2022/02/16 16:55:05 by iugolin          ###   ########.fr       */
+/*   Updated: 2022/02/28 18:21:41 by iugolin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,32 +14,32 @@
 
 void	push_b_less_then_median(t_list **lst_a, t_list **lst_b)
 {
-	t_list	*median;
-	int		size;
+	int	median;
+	int	size;
 
-	size = lstsize(lst_a) / 2 - 3;
+	size = lstsize(lst_a);
 	median = find_median_id(lst_a);
 	while (size--)
 	{
-		if ((*lst_a)->id < median->id
+		if ((*lst_a)->id < median
 			&& find_smallest_id(lst_a) != (*lst_a)->id
 			&& find_biggest_id(lst_a) != (*lst_a)->id)
 			push_b(lst_a, lst_b);
-		else
-			rotate_a(lst_a);
+		// else
+		// 	rotate_a(lst_a);
 	}
 }
 
 void	push_b_more_then_median(t_list **lst_a, t_list **lst_b)
 {
-	t_list	*median;
-	int		size;
+	int	median;
+	int	size;
 
-	size = lstsize(lst_a) - 3;
+	size = lstsize(lst_a);
 	median = find_median_id(lst_a);
 	while (size--)
 	{
-		if ((*lst_a)->id > median->id
+		if ((*lst_a)->id > median
 			&& find_smallest_id(lst_a) != (*lst_a)->id
 			&& find_biggest_id(lst_a) != (*lst_a)->id)
 			push_b(lst_a, lst_b);
@@ -58,12 +58,12 @@ void	triple_sort_a(t_list **lst_a)
 	max = find_biggest_id(lst_a);
 	median = find_median_id(lst_a);
 	if ((*lst_a)->id > (*lst_a)->next->id
-		&& (*lst_a)->id < last_node(lst_a)->id)
+		&& (*lst_a)->id < last_node(*lst_a)->id)
 		swap_a(lst_a);
 	if ((*lst_a)->id > (*lst_a)->next->id
-		&& (*lst_a)->id > last_node(lst_a)->id)
+		&& (*lst_a)->id > last_node(*lst_a)->id)
 		rotate_a(lst_a);
 	if ((*lst_a)->id < (*lst_a)->next->id
-		&& (*lst_a)->id > last_node(lst_a)->id)
+		&& (*lst_a)->id > last_node(*lst_a)->id)
 		reverse_rotate_a(lst_a);
 }

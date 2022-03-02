@@ -6,7 +6,7 @@
 /*   By: iugolin <iugolin@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/05 20:05:11 by iugolin           #+#    #+#             */
-/*   Updated: 2022/02/06 17:28:37 by iugolin          ###   ########.fr       */
+/*   Updated: 2022/02/25 13:21:37 by iugolin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,3 +54,4 @@ void	rotate_ab(t_list **lst_a, t_list **lst_b)
 		write(1, "rr\n", 3);
 	}
 }
+

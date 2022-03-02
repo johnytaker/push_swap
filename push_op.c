@@ -6,7 +6,7 @@
 /*   By: iugolin <iugolin@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/05 19:23:24 by iugolin           #+#    #+#             */
-/*   Updated: 2022/02/05 21:07:34 by iugolin          ###   ########.fr       */
+/*   Updated: 2022/02/26 13:42:35 by iugolin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ void	push_a(t_list **lst_a, t_list **lst_b)
 		write(1, "pa\n", 3);
 	}
 }
-
+ 
 void	push_b(t_list **lst_a, t_list **lst_b)
 {
 	t_list	*tmp_node;

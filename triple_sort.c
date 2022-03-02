@@ -6,7 +6,7 @@
 /*   By: iugolin <iugolin@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/10 19:59:55 by iugolin           #+#    #+#             */
-/*   Updated: 2022/02/16 15:20:51 by iugolin          ###   ########.fr       */
+/*   Updated: 2022/02/28 18:23:01 by iugolin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,12 +21,18 @@ int	find_smallest_id(t_list **lst)
 
 int	find_biggest_id(t_list **lst)
 {
-	return (lstsize(lst));
+	int	max_id;
+
+	max_id = lstsize(lst);
+	return (max_id);
 }
 
 int	find_median_id(t_list **lst)
 {
-	return (1 + (lstsize(lst) - 1) / 2);
+	int	medeana;
+
+	medeana = 1 + (lstsize(lst) - 1) / 2;
+	return (medeana);
 }
 
 // void	push_others_to_b(t_list **lst_a, t_list **lst_b)

@@ -6,7 +6,7 @@
 /*   By: iugolin <iugolin@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/05 16:02:02 by iugolin           #+#    #+#             */
-/*   Updated: 2022/02/16 10:55:04 by iugolin          ###   ########.fr       */
+/*   Updated: 2022/02/28 18:01:18 by iugolin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ t_list	*create_node(int data)
 	new_elem = (t_list *)malloc(sizeof(t_list));
 	if (!new_elem)
 		return (NULL);
-	new_elem->id = NULL;
+	new_elem->id = 0;
 	new_elem->data = data;
 	new_elem->next = NULL;
 	return (new_elem);
@@ -35,32 +35,32 @@ t_list	*last_node(t_list *lst)
 	return (lst);
 }
 
-void	push_back(t_list **lst, t_list *new)
+void	push_back(t_list **lst, t_list *node)
 {
 	t_list	*last_elem;
 
 	if (lst)
 	{
 		if (*lst == NULL)
-			*lst = new;
+			*lst = node;
 		else
 		{
 			last_elem = last_node(*lst);
-			last_elem->next = new;
+			last_elem->next = node;
 		}
 	}
 }
 
-void	push_front(t_list **lst, t_list *new)
+void	push_front(t_list **lst, t_list *node)
 {
 	if (lst)
 	{
 		if (*lst == NULL)
-			*lst = new;
+			*lst = node;
 		else
 		{
-			new->next = *lst;
-			*lst = new;
+			node->next = *lst;
+			*lst = node;
 		}
 	}
 }
