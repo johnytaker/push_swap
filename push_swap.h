@@ -6,7 +6,7 @@
 /*   By: iugolin <iugolin@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/02 19:26:59 by iugolin           #+#    #+#             */
-/*   Updated: 2022/02/28 18:00:46 by iugolin          ###   ########.fr       */
+/*   Updated: 2022/03/02 17:27:17 by iugolin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,7 @@ void	append_id(t_list **lst, char **data, int size);
 
 void	push_b_less_then_median(t_list **lst_a, t_list **lst_b);
 void	push_b_more_then_median(t_list **lst_a, t_list **lst_b);
+void	push_all_b(t_list **lst_a, t_list **lst_b);
 void	triple_sort_a(t_list **lst_a);
 
 int		find_smallest_id(t_list **lst);

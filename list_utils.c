@@ -6,7 +6,7 @@
 /*   By: iugolin <iugolin@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/05 16:02:02 by iugolin           #+#    #+#             */
-/*   Updated: 2022/02/28 18:01:18 by iugolin          ###   ########.fr       */
+/*   Updated: 2022/03/02 16:42:08 by iugolin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,10 @@ void	push_front(t_list **lst, t_list *node)
 	if (lst)
 	{
 		if (*lst == NULL)
+		{
 			*lst = node;
+			(*lst)->next = NULL;
+		}
 		else
 		{
 			node->next = *lst;
