@@ -6,7 +6,7 @@
 /*   By: iugolin <iugolin@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/15 17:00:08 by iugolin           #+#    #+#             */
-/*   Updated: 2022/03/02 19:21:31 by iugolin          ###   ########.fr       */
+/*   Updated: 2022/03/02 20:13:50 by iugolin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,9 @@ void	push_b_less_then_median(t_list **lst_a, t_list **lst_b)
 	median = find_median_id(lst_a);
 	while (size--)
 	{
-		if ((*lst_a)->id < median)
-			// && find_smallest_id(lst_a) != (*lst_a)->id
-			// && find_biggest_id(lst_a) != (*lst_a)->id)
+		if ((*lst_a)->id < median
+			&& find_smallest_id(lst_a) != (*lst_a)->id
+			&& find_biggest_id(lst_a) != (*lst_a)->id)
 			push_b(lst_a, lst_b);
 		else
 			rotate_a(lst_a);
@@ -72,12 +72,14 @@ void	push_all_b(t_list **lst_a, t_list **lst_b)
 {
 	int	count;
 
-	count = lstsize(lst_a) - 1;
+	count = lstsize(lst_a);
+	// printf("%d\n", (*lst_a)->data);
 	while (count--)
 	{
-		if ((*lst_a)->id == find_median_id(lst_a))
+		if ((*lst_a)->id == 1)
 			rotate_a(lst_a);
 		else
 			push_b(lst_a, lst_b);
+		// printf("lst_b - %d\n", (*lst_b)->data);
 	}
 }

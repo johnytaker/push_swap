@@ -6,7 +6,7 @@
 /*   By: iugolin <iugolin@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/05 16:02:02 by iugolin           #+#    #+#             */
-/*   Updated: 2022/03/02 16:42:08 by iugolin          ###   ########.fr       */
+/*   Updated: 2022/03/02 20:12:59 by iugolin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,12 +70,14 @@ void	push_front(t_list **lst, t_list *node)
 
 int	lstsize(t_list **lst)
 {
-	int	i;
+	int		i;
+	t_list	*ptr;
 
 	i = 0;
-	while ((*lst)->next)
+	ptr = *lst;
+	while (ptr)
 	{
-		*lst = (*lst)->next;
+		ptr = ptr->next;
 		i++;
 	}
 	return (i);

@@ -6,7 +6,7 @@
 /*   By: iugolin <iugolin@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/02 19:26:59 by iugolin           #+#    #+#             */
-/*   Updated: 2022/03/02 17:27:17 by iugolin          ###   ########.fr       */
+/*   Updated: 2022/03/02 19:56:10 by iugolin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # include <unistd.h>
 # include <stdlib.h>
 # include "libft/libft.h"
+#include <stdio.h>
 
 typedef struct s_list
 {
