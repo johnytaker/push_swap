@@ -14,9 +14,12 @@
 
 int	find_smallest_id(t_list **lst)
 {
-	while ((*lst)->id != 1)
-		(*lst) = (*lst)->next;
-	return ((*lst)->id);
+	t_list	*ptr;
+
+	ptr = *lst;
+	while (ptr->id != 1)
+		ptr = ptr->next;
+	return (ptr->id);
 }
 
 int	find_biggest_id(t_list **lst)

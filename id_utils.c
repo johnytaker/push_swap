@@ -6,7 +6,7 @@
 /*   By: iugolin <iugolin@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/07 14:34:51 by iugolin           #+#    #+#             */
-/*   Updated: 2022/02/28 18:13:30 by iugolin          ###   ########.fr       */
+/*   Updated: 2022/03/03 19:09:58 by iugolin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,4 +79,5 @@ void	append_id(t_list **lst, char **data, int size)
 			ptr->id = i + 1;
 		ptr = ptr->next;
 	}
+	free(arr);
 }

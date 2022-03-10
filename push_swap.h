@@ -6,7 +6,7 @@
 /*   By: iugolin <iugolin@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/02 19:26:59 by iugolin           #+#    #+#             */
-/*   Updated: 2022/03/02 19:56:10 by iugolin          ###   ########.fr       */
+/*   Updated: 2022/03/10 13:38:29 by iugolin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,9 @@
 
 typedef struct s_list
 {
-	int				id;
-	int				data;
+	int			id;
+	int			data;
+	int			score;
 	struct s_list	*next;
 }				t_list;
 
@@ -39,10 +40,15 @@ int		*int_arr_create(char **data);
 void	quick_sort(int *data, int size);
 void	append_id(t_list **lst, char **data, int size);
 
-void	push_b_less_then_median(t_list **lst_a, t_list **lst_b);
-void	push_b_more_then_median(t_list **lst_a, t_list **lst_b);
+int		find_score_b(t_list **lst_b, int b_id);
+int		find_score_a(t_list **lst_a, int b_id);
+int		find_score(t_list **lst_a, t_list **lst_b, int b_id);
+
 void	push_all_b(t_list **lst_a, t_list **lst_b);
+void	push_b_more_then_medeana(t_list **lst_a, t_list **lst_b);
+void	push_b_less_then_medeana(t_list **lst_a, t_list **lst_b);
 void	triple_sort_a(t_list **lst_a);
+void	sort_all(t_list **lst_a, t_list **lst_b);
 
 int		find_smallest_id(t_list **lst);
 int		find_biggest_id(t_list **lst);

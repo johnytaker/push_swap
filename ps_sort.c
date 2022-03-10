@@ -6,45 +6,90 @@
 /*   By: iugolin <iugolin@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/15 17:00:08 by iugolin           #+#    #+#             */
-/*   Updated: 2022/03/02 20:13:50 by iugolin          ###   ########.fr       */
+/*   Updated: 2022/03/09 17:35:41 by iugolin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	push_b_less_then_median(t_list **lst_a, t_list **lst_b)
+// void	push_all_b(t_list **lst_a, t_list **lst_b)
+// {
+// 	int	medeana;
+// 	int	min;
+// 	int	max;
+// 	int	size;
+
+// 	size = lstsize(lst_a);
+// 	medeana = find_median_id(lst_a);
+// 	min = find_smallest_id(lst_a);
+// 	max = find_biggest_id(lst_a);
+// 	while (size--)
+// 	{
+// 		if (medeana == (*lst_a)->id
+// 			|| min == (*lst_a)->id
+// 			|| max == ((*lst_a)->id))
+// 			rotate_a(lst_a);
+// 		else
+// 			push_b(lst_a, lst_b);
+// 	}
+// }
+
+void	push_all_b(t_list **lst_a, t_list **lst_b)
 {
-	int	median;
+	int	medeana;
+	int	min;
+	int	max;
 	int	size;
 
 	size = lstsize(lst_a);
-	median = find_median_id(lst_a);
+	medeana = find_median_id(lst_a);
+	min = find_smallest_id(lst_a);
+	max = find_biggest_id(lst_a);
 	while (size--)
 	{
-		if ((*lst_a)->id < median
-			&& find_smallest_id(lst_a) != (*lst_a)->id
-			&& find_biggest_id(lst_a) != (*lst_a)->id)
-			push_b(lst_a, lst_b);
-		else
+		if (medeana == (*lst_a)->id
+			|| min == (*lst_a)->id
+			|| max == ((*lst_a)->id))
 			rotate_a(lst_a);
+		else if (medeana > (*lst_a)->id)
+		{
+			push_b(lst_a, lst_b);
+			// rotate_b(lst_b);
+		}
+		else
+			push_b(lst_a, lst_b);
 	}
 }
 
-void	push_b_more_then_median(t_list **lst_a, t_list **lst_b)
+void	push_b_less_then_medeana(t_list **lst_a, t_list **lst_b)
 {
-	int	median;
 	int	size;
 
 	size = lstsize(lst_a);
-	median = find_median_id(lst_a);
 	while (size--)
 	{
-		if ((*lst_a)->id > median
-			&& find_smallest_id(lst_a) != (*lst_a)->id
-			&& find_biggest_id(lst_a) != (*lst_a)->id)
-			push_b(lst_a, lst_b);
-		else
+		if ((*lst_a)->id >= find_median_id(lst_a)
+			|| (*lst_a)->id == find_smallest_id(lst_a)
+			|| (*lst_a)->id == find_biggest_id(lst_a))
 			rotate_a(lst_a);
+		else
+			push_b(lst_a, lst_b);
+	}
+}
+
+void	push_b_more_then_medeana(t_list **lst_a, t_list **lst_b)
+{
+	int	size;
+
+	size = lstsize(lst_a);
+	while (size--)
+	{
+		if ((*lst_a)->id <= find_median_id(lst_a)
+			|| (*lst_a)->id == find_smallest_id(lst_a)
+			|| (*lst_a)->id == find_biggest_id(lst_a))
+			rotate_a(lst_a);
+		else
+			push_b(lst_a, lst_b);
 	}
 }
 
@@ -57,29 +102,46 @@ void	triple_sort_a(t_list **lst_a)
 	min = find_smallest_id(lst_a);
 	max = find_biggest_id(lst_a);
 	median = find_median_id(lst_a);
-	if ((*lst_a)->id > (*lst_a)->next->id
-		&& (*lst_a)->id < last_node(*lst_a)->id)
+	if (((*lst_a)->id > (*lst_a)->next->id
+			&& (*lst_a)->next->id < last_node(*lst_a)->id)
+		|| ((*lst_a)->id > (*lst_a)->next->id
+			&& (*lst_a)->next->id > last_node(*lst_a)->id)
+		|| ((*lst_a)->id < (*lst_a)->next->id
+			&& (*lst_a)->next->id > last_node(*lst_a)->id))
 		swap_a(lst_a);
 	if ((*lst_a)->id > (*lst_a)->next->id
-		&& (*lst_a)->id > last_node(*lst_a)->id)
+		&& (*lst_a)->next->id < last_node(*lst_a)->id)
 		rotate_a(lst_a);
 	if ((*lst_a)->id < (*lst_a)->next->id
-		&& (*lst_a)->id > last_node(*lst_a)->id)
+		&& (*lst_a)->next->id > last_node(*lst_a)->id)
 		reverse_rotate_a(lst_a);
 }
 
-void	push_all_b(t_list **lst_a, t_list **lst_b)
+void	sort_all(t_list **lst_a, t_list **lst_b)
 {
-	int	count;
+	int	medeana;
 
-	count = lstsize(lst_a);
-	// printf("%d\n", (*lst_a)->data);
-	while (count--)
+	medeana = find_median_id(lst_a);
+	while (*lst_b)
 	{
-		if ((*lst_a)->id == 1)
+		if ((*lst_b)->id < (*lst_a)->id
+			&& (*lst_b)->id > last_node(*lst_a)->id)
+			push_a(lst_a, lst_b);
+		else if ((*lst_b)->next
+			&& (*lst_a)->id < (*lst_b)->id
+			&& (*lst_b)->id < (*lst_b)->next->id
+			&& (*lst_b)->id < medeana)
+				reverse_rotate_ab(lst_a, lst_b);
+		else if ((*lst_b)->next
+			&& (*lst_a)->id > (*lst_b)->id
+			&& (*lst_b)->id > (*lst_b)->next->id
+			&& (*lst_b)->id > medeana)
+				rotate_ab(lst_a, lst_b);
+		else if ((*lst_b)->id > medeana)
 			rotate_a(lst_a);
 		else
-			push_b(lst_a, lst_b);
-		// printf("lst_b - %d\n", (*lst_b)->data);
+			reverse_rotate_a(lst_a);
 	}
+	while ((*lst_a)->id != 1)
+		reverse_rotate_a(lst_a);
 }
