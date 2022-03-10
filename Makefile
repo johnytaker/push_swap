@@ -6,7 +6,7 @@
 #    By: iugolin <iugolin@student.21-school.ru>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/21 18:09:12 by iugolin           #+#    #+#              #
-#    Updated: 2022/03/06 20:59:52 by iugolin          ###   ########.fr        #
+#    Updated: 2022/03/10 17:48:53 by iugolin          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,7 +22,7 @@ SRCS =		create_list.c		\
 			id_utils.c			\
 			ps_sort.c			\
 			triple_sort.c		\
-			find_score.c
+			score_utils.c
 
 OBJS = $(SRCS:.c=.o)
 LIBFT = ./libft/libft.a

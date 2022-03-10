@@ -6,7 +6,7 @@
 /*   By: iugolin <iugolin@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/02 19:26:59 by iugolin           #+#    #+#             */
-/*   Updated: 2022/03/10 13:38:29 by iugolin          ###   ########.fr       */
+/*   Updated: 2022/03/10 20:57:24 by iugolin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,13 +18,40 @@
 # include "libft/libft.h"
 #include <stdio.h>
 
-typedef struct s_list
+typedef struct s_list t_list;
+typedef struct s_info t_info;
+typedef struct s_stack t_stack;
+
+struct s_list
 {
-	int			id;
-	int			data;
-	int			score;
+	int				id;
+	int				data;
+	int				score;
 	struct s_list	*next;
-}				t_list;
+};
+
+struct s_stack
+{
+	t_list	*head;
+	int		len;
+};
+
+struct s_info
+{
+	t_stack	*a;
+	t_stack	*b;
+	int		min_cost;
+	int		pop_ind;
+	int		ra_ct;
+	int		rb_ct;
+	int		rra_ct;
+	int		rrb_ct;
+	int		rr_ct;
+	int		rrr_ct;
+};
+
+
+void	allocate_stacks_struct(t_info *info);
 
 void	check_parameters(int number, char **data);
 

@@ -6,7 +6,7 @@
 /*   By: iugolin <iugolin@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/03 13:36:44 by iugolin           #+#    #+#             */
-/*   Updated: 2022/03/04 15:31:04 by iugolin          ###   ########.fr       */
+/*   Updated: 2022/03/10 20:01:33 by iugolin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 t_list	*create_lst(char **data)
 {
 	t_list	*head_ptr;
+
 	int		i;
 
 	head_ptr = NULL;

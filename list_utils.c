@@ -6,43 +6,29 @@
 /*   By: iugolin <iugolin@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/05 16:02:02 by iugolin           #+#    #+#             */
-/*   Updated: 2022/03/10 00:21:58 by iugolin          ###   ########.fr       */
+/*   Updated: 2022/03/10 20:57:09 by iugolin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-typedef struct s_info t_info;
-typedef struct s_stack t_stack;
+// void find_score_main(t_info ptr)
+// {
+// 	reset_costs(ptr);
 
-struct s_info
+// 	while(node)
+// 	{
+// 		int cost = find_score(ptr);
+// 		if cost < ptr->min_cost
+// 			ptr->min_cost = cost;
+// 			ptr->pop_ind = node->id;
+// 	}
+// }
+
+void	allocate_stacks_struct(t_info *info)
 {
-	t_stack *a;
-	t_stack *b;
-	int		min_cost;
-	int		pop_ind;
-	int		ra_ct;
-	int		rb_ct;
-	int		rra_ct;
-};
-
-struct s_stack
-{
-	t_list *head;
-	int		len;
-};
-
-void find_score_maain(t_info *ptr)
-{
-	reset_costs(ptr);
-
-	while(node)
-	{
-		int cost = find_score(ptr);
-		if cost < ptr->min_cost
-			ptr->min_cost = cost;
-			ptr->pop_ind = node->id;
-	}
+	info->a = (t_stack *)malloc(sizeof(t_stack));
+	info->b = (t_stack *)malloc(sizeof(t_stack));
 }
 
 t_list	*create_node(int data)

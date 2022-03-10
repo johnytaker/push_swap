@@ -1,16 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   find_score.c                                       :+:      :+:    :+:   */
+/*   score_utils.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: iugolin <iugolin@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/06 19:59:28 by iugolin           #+#    #+#             */
-/*   Updated: 2022/03/07 18:58:34 by iugolin          ###   ########.fr       */
+/*   Updated: 2022/03/10 20:59:35 by iugolin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+
+// static void	reset_costs(t_info *ptr)
+// {
+// 	ptr->min_cost = 0;
+// 	ptr->pop_ind = 0;
+// 	ptr->ra_ct = 0;
+// 	ptr->rb_ct = 0;
+// 	ptr->rra_ct = 0;
+// 	ptr->rrb_ct = 0;
+// 	ptr->rr_ct = 0;
+// 	ptr->rrr_ct = 0;
+// }
 
 int	find_score_b(t_list **lst_b, int b_id)
 {
