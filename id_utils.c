@@ -6,7 +6,7 @@
 /*   By: iugolin <iugolin@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/07 14:34:51 by iugolin           #+#    #+#             */
-/*   Updated: 2022/03/03 19:09:58 by iugolin          ###   ########.fr       */
+/*   Updated: 2022/03/12 19:38:07 by iugolin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ int	*int_arr_create(char **data)
 	while (data[i])
 		i++;
 	arr = (int *)malloc(sizeof(int) * i);
+	if (!arr)
+		return (NULL);
 	i = 0;
 	while (data[i + 1])
 	{

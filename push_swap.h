@@ -6,7 +6,7 @@
 /*   By: iugolin <iugolin@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/02 19:26:59 by iugolin           #+#    #+#             */
-/*   Updated: 2022/03/10 20:57:24 by iugolin          ###   ########.fr       */
+/*   Updated: 2022/03/14 19:33:27 by iugolin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,10 +50,9 @@ struct s_info
 	int		rrr_ct;
 };
 
-
-void	allocate_stacks_struct(t_info *info);
-
 void	check_parameters(int number, char **data);
+
+t_info	*create_main_struct(char **data);
 
 t_list	*create_node(int data);
 t_list	*last_node(t_list *lst);
@@ -67,9 +66,12 @@ int		*int_arr_create(char **data);
 void	quick_sort(int *data, int size);
 void	append_id(t_list **lst, char **data, int size);
 
-int		find_score_b(t_list **lst_b, int b_id);
-int		find_score_a(t_list **lst_a, int b_id);
+int		rotate_a_count(t_list **lst_a, int b_id);
+int		rotate_b_count(t_list **lst_b, int b_id);
 int		find_score(t_list **lst_a, t_list **lst_b, int b_id);
+
+int		reverse_rotate_a_count(t_stack *stack_a, int b_id);
+int		reverse_rotate_b_count(t_stack *stack_b, int b_id);
 
 void	push_all_b(t_list **lst_a, t_list **lst_b);
 void	push_b_more_then_medeana(t_list **lst_a, t_list **lst_b);
