@@ -6,7 +6,7 @@
 /*   By: iugolin <iugolin@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/16 13:59:29 by iugolin           #+#    #+#             */
-/*   Updated: 2022/03/16 19:48:44 by iugolin          ###   ########.fr       */
+/*   Updated: 2022/03/16 20:59:26 by iugolin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,26 +60,32 @@ static void	find_costs(t_info *info, t_list *node)
 		min_cost = min_r;
 	else
 		min_cost = min_rr;
-	if (min_cost > info->min_cost && node->id != info->b->head->id)
-		return ;
-	// puts("here\n");
-	if (min_r < min_rr)
-	{
-		reset_costs(info);
+	// printf("%d | %d\n", min_cost, info->min_cost);
+	if (info->min_cost == DEFAULT_COST)
 		info->min_cost = min_cost;
-		info->ra_ct = ra;
-		info->rb_ct = rb;
-		info->rr_ct = rr;
-		info->pop_ind = node->id;
+	else if (min_cost < info->min_cost)
+	{
+		if (min_r < min_rr)
+		{
+			reset_costs(info);
+			info->min_cost = min_cost;
+			info->ra_ct = ra;
+			info->rb_ct = rb;
+			info->rr_ct = rr;
+			info->pop_ind = node->id;
+		}
+		else
+		{
+			reset_costs(info);
+			info->min_cost = min_cost;
+			info->rra_ct = rra;
+			info->rrb_ct = rrb;
+			info->rrr_ct = rrr;
+			info->pop_ind = node->id;
+		}
 	}
 	else
-	{
-		reset_costs(info);
-		info->rra_ct = rra;
-		info->rrb_ct = rrb;
-		info->rrr_ct = rrr;
-		info->pop_ind = node->id;
-	}
+		return ;
 }
 
 static void	find_costs_manager(t_info *info)

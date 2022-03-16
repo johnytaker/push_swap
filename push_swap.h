@@ -6,7 +6,7 @@
 /*   By: iugolin <iugolin@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/02 19:26:59 by iugolin           #+#    #+#             */
-/*   Updated: 2022/03/16 19:13:56 by iugolin          ###   ########.fr       */
+/*   Updated: 2022/03/16 20:52:44 by iugolin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@
 # include <stdlib.h>
 # include "libft/libft.h"
 #include <stdio.h>
+
+# define DEFAULT_COST -1
 
 typedef struct s_list t_list;
 typedef struct s_info t_info;
