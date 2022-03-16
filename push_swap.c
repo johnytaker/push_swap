@@ -6,7 +6,7 @@
 /*   By: iugolin <iugolin@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/02 19:31:21 by iugolin           #+#    #+#             */
-/*   Updated: 2022/03/14 19:38:12 by iugolin          ###   ########.fr       */
+/*   Updated: 2022/03/16 19:49:24 by iugolin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,24 +19,25 @@ int	main(int argc, char **argv)
 	info = NULL;
 	check_parameters(argc, argv);
 	info = create_main_struct(argv);
-	if (!info)
-		return (NULL);
-	append_id(&info->a->head, argv, argc - 1);
-
-	push_all_b(&info->a->head, &info->b->head);
-	triple_sort_a(&info->a->head);
-	sort_all(&info->a->head, &info->b->head);
-	while (info->a->head)
+	if (info)
 	{
-		printf("%d\n", info->a->head->data);
-		info->a->head = info->a->head->next;
+		append_id(&info->a->head, argv, argc - 1);
+		push_all_b(&info->a->head, &info->b->head);
+		triple_sort_a(&info->a->head);
+		// sort_all(&info->a->head, &info->b->head);
+		insertion(info);
 	}
-	// printf("\n\n");
-	// while (stack_b)
-	// {
-	// 	printf("%d | %d\n", stack_b->data, stack_b->score);
-	// 	stack_b= stack_b->next;
+	// 	while (info->a->head)
+	// 	{
+	// 		printf("%d\n", info->a->head->data);
+	// 		info->a->head = info->a->head->next;
+	// 	}
 	// }
-
+	// printf("\n\n");
+	// while (info->b->head)
+	// {
+	// 	printf("%d | %d\n", info->b->head->data);
+	// 	info->b->head= info->b->head->next;
+	// }
 	return (0);
 }

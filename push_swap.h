@@ -6,7 +6,7 @@
 /*   By: iugolin <iugolin@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/02 19:26:59 by iugolin           #+#    #+#             */
-/*   Updated: 2022/03/14 19:33:27 by iugolin          ###   ########.fr       */
+/*   Updated: 2022/03/16 19:13:56 by iugolin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,6 @@ struct s_list
 {
 	int				id;
 	int				data;
-	int				score;
 	struct s_list	*next;
 };
 
@@ -49,11 +48,12 @@ struct s_info
 	int		rr_ct;
 	int		rrr_ct;
 };
-
+/*				CHECK INPUT DATA			*/
 void	check_parameters(int number, char **data);
-
+/*				CREATE STRUCT				*/
+void	reset_costs(t_info *info);
 t_info	*create_main_struct(char **data);
-
+/*				LIST UTILS					*/
 t_list	*create_node(int data);
 t_list	*last_node(t_list *lst);
 void	push_back(t_list **lst, t_list *node);
@@ -65,23 +65,23 @@ t_list	*create_lst(char **data);
 int		*int_arr_create(char **data);
 void	quick_sort(int *data, int size);
 void	append_id(t_list **lst, char **data, int size);
+int		find_min_id(t_list **lst);
+int		find_max_id(t_list **lst);
+int		find_medeana_id(t_list **lst);
 
-int		rotate_a_count(t_list **lst_a, int b_id);
-int		rotate_b_count(t_list **lst_b, int b_id);
-int		find_score(t_list **lst_a, t_list **lst_b, int b_id);
+int		rotate_a_cost(t_stack *stack_a, t_list *node);
+int		rotate_b_cost(t_stack *stack_b, t_list *node);
 
-int		reverse_rotate_a_count(t_stack *stack_a, int b_id);
-int		reverse_rotate_b_count(t_stack *stack_b, int b_id);
+int		reverse_rotate_a_cost(t_stack *stack_a, t_list *node);
+int		reverse_rotate_b_cost(t_stack *stack_b, t_list *node);
+
+void	insertion(t_info *info);
 
 void	push_all_b(t_list **lst_a, t_list **lst_b);
 void	push_b_more_then_medeana(t_list **lst_a, t_list **lst_b);
 void	push_b_less_then_medeana(t_list **lst_a, t_list **lst_b);
 void	triple_sort_a(t_list **lst_a);
 void	sort_all(t_list **lst_a, t_list **lst_b);
-
-int		find_smallest_id(t_list **lst);
-int		find_biggest_id(t_list **lst);
-int		find_median_id(t_list **lst);
 
 /*					SWAP					*/
 void	swap_a(t_list **lst_a);

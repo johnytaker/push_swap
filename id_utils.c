@@ -6,7 +6,7 @@
 /*   By: iugolin <iugolin@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/07 14:34:51 by iugolin           #+#    #+#             */
-/*   Updated: 2022/03/12 19:38:07 by iugolin          ###   ########.fr       */
+/*   Updated: 2022/03/16 12:16:51 by iugolin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,4 +82,30 @@ void	append_id(t_list **lst, char **data, int size)
 		ptr = ptr->next;
 	}
 	free(arr);
+}
+
+int	find_min_id(t_list **lst)
+{
+	t_list	*ptr;
+
+	ptr = *lst;
+	while (ptr->id != 1)
+		ptr = ptr->next;
+	return (ptr->id);
+}
+
+int	find_max_id(t_list **lst)
+{
+	int	max_id;
+
+	max_id = lstsize(lst);
+	return (max_id);
+}
+
+int	find_medeana_id(t_list **lst)
+{
+	int	medeana;
+
+	medeana = 1 + (lstsize(lst) - 1) / 2;
+	return (medeana);
 }

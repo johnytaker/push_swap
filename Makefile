@@ -6,7 +6,7 @@
 #    By: iugolin <iugolin@student.21-school.ru>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/21 18:09:12 by iugolin           #+#    #+#              #
-#    Updated: 2022/03/14 19:10:03 by iugolin          ###   ########.fr        #
+#    Updated: 2022/03/16 15:17:07 by iugolin          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,15 +15,16 @@ SRCS =		create_list.c		\
 			check_input_data.c	\
 			push_swap.c			\
 			list_utils.c		\
+			struct_utils.c		\
 			swap_op.c			\
 			push_op.c			\
 			rotate_op.c			\
 			reverse_rotate_op.c	\
 			id_utils.c			\
 			ps_sort.c			\
-			triple_sort.c		\
-			r_count_utils.c		\
-			rr_count_utils.c
+			r_cost_utils.c		\
+			rr_cost_utils.c		\
+			insertion_utils.c
 
 OBJS = $(SRCS:.c=.o)
 LIBFT = ./libft/libft.a

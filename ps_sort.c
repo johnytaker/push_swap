@@ -6,7 +6,7 @@
 /*   By: iugolin <iugolin@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/15 17:00:08 by iugolin           #+#    #+#             */
-/*   Updated: 2022/03/09 17:35:41 by iugolin          ###   ########.fr       */
+/*   Updated: 2022/03/16 13:02:13 by iugolin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,9 +42,9 @@ void	push_all_b(t_list **lst_a, t_list **lst_b)
 	int	size;
 
 	size = lstsize(lst_a);
-	medeana = find_median_id(lst_a);
-	min = find_smallest_id(lst_a);
-	max = find_biggest_id(lst_a);
+	medeana = find_medeana_id(lst_a);
+	min = find_min_id(lst_a);
+	max = find_max_id(lst_a);
 	while (size--)
 	{
 		if (medeana == (*lst_a)->id
@@ -68,9 +68,9 @@ void	push_b_less_then_medeana(t_list **lst_a, t_list **lst_b)
 	size = lstsize(lst_a);
 	while (size--)
 	{
-		if ((*lst_a)->id >= find_median_id(lst_a)
-			|| (*lst_a)->id == find_smallest_id(lst_a)
-			|| (*lst_a)->id == find_biggest_id(lst_a))
+		if ((*lst_a)->id >= find_medeana_id(lst_a)
+			|| (*lst_a)->id == find_min_id(lst_a)
+			|| (*lst_a)->id == find_max_id(lst_a))
 			rotate_a(lst_a);
 		else
 			push_b(lst_a, lst_b);
@@ -84,9 +84,9 @@ void	push_b_more_then_medeana(t_list **lst_a, t_list **lst_b)
 	size = lstsize(lst_a);
 	while (size--)
 	{
-		if ((*lst_a)->id <= find_median_id(lst_a)
-			|| (*lst_a)->id == find_smallest_id(lst_a)
-			|| (*lst_a)->id == find_biggest_id(lst_a))
+		if ((*lst_a)->id <= find_medeana_id(lst_a)
+			|| (*lst_a)->id == find_min_id(lst_a)
+			|| (*lst_a)->id == find_max_id(lst_a))
 			rotate_a(lst_a);
 		else
 			push_b(lst_a, lst_b);
@@ -99,9 +99,9 @@ void	triple_sort_a(t_list **lst_a)
 	int	max;
 	int	median;
 
-	min = find_smallest_id(lst_a);
-	max = find_biggest_id(lst_a);
-	median = find_median_id(lst_a);
+	min = find_min_id(lst_a);
+	max = find_max_id(lst_a);
+	median = find_medeana_id(lst_a);
 	if (((*lst_a)->id > (*lst_a)->next->id
 			&& (*lst_a)->next->id < last_node(*lst_a)->id)
 		|| ((*lst_a)->id > (*lst_a)->next->id
@@ -121,7 +121,7 @@ void	sort_all(t_list **lst_a, t_list **lst_b)
 {
 	int	medeana;
 
-	medeana = find_median_id(lst_a);
+	medeana = find_medeana_id(lst_a);
 	while (*lst_b)
 	{
 		if ((*lst_b)->id < (*lst_a)->id
