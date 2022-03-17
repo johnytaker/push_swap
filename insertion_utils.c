@@ -6,7 +6,7 @@
 /*   By: iugolin <iugolin@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/16 13:59:29 by iugolin           #+#    #+#             */
-/*   Updated: 2022/03/16 20:59:26 by iugolin          ###   ########.fr       */
+/*   Updated: 2022/03/17 20:43:56 by iugolin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,11 +58,14 @@ static void	find_costs(t_info *info, t_list *node)
 	}
 	if (min_r < min_rr)
 		min_cost = min_r;
-	else
+	else if (min_r > min_rr)
 		min_cost = min_rr;
 	// printf("%d | %d\n", min_cost, info->min_cost);
 	if (info->min_cost == DEFAULT_COST)
+	{
 		info->min_cost = min_cost;
+		
+	}
 	else if (min_cost < info->min_cost)
 	{
 		if (min_r < min_rr)
@@ -87,6 +90,9 @@ static void	find_costs(t_info *info, t_list *node)
 	else
 		return ;
 }
+
+	// printf ("ra_ct %d | rb_ct %d | rr_ct %d\n", info->ra_ct, info->rb_ct, info->rr_ct);
+	// printf ("rra_ct %d | rrb_ct %d | rrr_ct %d\n", info->rra_ct, info->rrb_ct, info->rrr_ct);
 
 static void	find_costs_manager(t_info *info)
 {
@@ -123,6 +129,9 @@ static void	do_operations(t_info *info)
 
 	ptr_a = info->a->head;
 	ptr_b = info->b->head;
+	// printf ("ra_ct %d | rb_ct %d | rr_ct %d\n", info->ra_ct, info->rb_ct, info->rr_ct);
+	// printf ("rra_ct %d | rrb_ct %d | rrr_ct %d\n", info->rra_ct, info->rrb_ct, info->rrr_ct);
+
 	if (info->ra_ct || info->rb_ct || info->rr_ct)
 	{
 		while (info->ra_ct--)
@@ -145,13 +154,16 @@ static void	do_operations(t_info *info)
 
 void	insertion(t_info *info)
 {
+	t_list	*ptr_a;
 	t_list	*ptr_b;
 
+	ptr_a = info->a->head;
 	ptr_b = info->b->head;
-	while (ptr_b)
-	{
+	// while (ptr_b)
+	// {
 		find_costs_manager(info);
 		do_operations(info);
-		reset_costs(info);
-	}
+		push_a(&ptr_a, &ptr_b);
+		// reset_costs(info);
+	// }
 }

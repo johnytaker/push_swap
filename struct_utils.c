@@ -6,7 +6,7 @@
 /*   By: iugolin <iugolin@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/05 16:02:02 by iugolin           #+#    #+#             */
-/*   Updated: 2022/03/16 21:01:12 by iugolin          ###   ########.fr       */
+/*   Updated: 2022/03/17 18:48:28 by iugolin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,7 @@ static t_stack	*create_stack_b(void)
 
 void	reset_costs(t_info *info)
 {
-	// info->min_cost = 0;
+	info->min_cost = 0;
 	info->pop_ind = 0;
 	info->ra_ct = 0;
 	info->rb_ct = 0;

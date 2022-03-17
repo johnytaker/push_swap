@@ -6,13 +6,13 @@
 /*   By: iugolin <iugolin@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/14 19:10:13 by iugolin           #+#    #+#             */
-/*   Updated: 2022/03/16 19:15:54 by iugolin          ###   ########.fr       */
+/*   Updated: 2022/03/17 15:17:52 by iugolin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	reverse_rotate_a_cost(t_stack *stack_a, t_list *node)
+int	reverse_rotate_a_cost(t_stack *stack_a, t_list *b_node)
 {
 	t_list	*a;
 	int		i;
@@ -20,7 +20,7 @@ int	reverse_rotate_a_cost(t_stack *stack_a, t_list *node)
 	i = 0;
 	a = stack_a->head;
 	stack_a->len = lstsize(&a);
-	while (a->id < node->id)
+	while (a->id < b_node->id)
 	{
 		i++;
 		a = a->next;
@@ -29,7 +29,7 @@ int	reverse_rotate_a_cost(t_stack *stack_a, t_list *node)
 	return (i);
 }
 
-int	reverse_rotate_b_cost(t_stack *stack_b, t_list *node)
+int	reverse_rotate_b_cost(t_stack *stack_b, t_list *b_node)
 {
 	t_list	*b;
 	int		i;
@@ -37,7 +37,7 @@ int	reverse_rotate_b_cost(t_stack *stack_b, t_list *node)
 	i = 0;
 	b = stack_b->head;
 	stack_b->len = lstsize(&b);
-	while (b->id != node->id)
+	while (b->id != b_node->id)
 	{
 		i++;
 		b = b->next;

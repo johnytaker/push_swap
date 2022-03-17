@@ -6,7 +6,7 @@
 /*   By: iugolin <iugolin@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/02 19:26:59 by iugolin           #+#    #+#             */
-/*   Updated: 2022/03/16 20:52:44 by iugolin          ###   ########.fr       */
+/*   Updated: 2022/03/17 15:17:17 by iugolin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,11 +71,11 @@ int		find_min_id(t_list **lst);
 int		find_max_id(t_list **lst);
 int		find_medeana_id(t_list **lst);
 
-int		rotate_a_cost(t_stack *stack_a, t_list *node);
-int		rotate_b_cost(t_stack *stack_b, t_list *node);
+int		rotate_a_cost(t_stack *stack_a, t_list *b_node);
+int		rotate_b_cost(t_stack *stack_b, t_list *b_node);
 
-int		reverse_rotate_a_cost(t_stack *stack_a, t_list *node);
-int		reverse_rotate_b_cost(t_stack *stack_b, t_list *node);
+int		reverse_rotate_a_cost(t_stack *stack_a, t_list *b_node);
+int		reverse_rotate_b_cost(t_stack *stack_b, t_list *b_node);
 
 void	insertion(t_info *info);
 

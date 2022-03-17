@@ -6,7 +6,7 @@
 /*   By: iugolin <iugolin@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/15 17:00:08 by iugolin           #+#    #+#             */
-/*   Updated: 2022/03/16 13:02:13 by iugolin          ###   ########.fr       */
+/*   Updated: 2022/03/17 19:04:59 by iugolin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ void	push_all_b(t_list **lst_a, t_list **lst_b)
 	medeana = find_medeana_id(lst_a);
 	min = find_min_id(lst_a);
 	max = find_max_id(lst_a);
-	while (size--)
+	while (size-- > 1)
 	{
 		if (medeana == (*lst_a)->id
 			|| min == (*lst_a)->id
@@ -54,7 +54,7 @@ void	push_all_b(t_list **lst_a, t_list **lst_b)
 		else if (medeana > (*lst_a)->id)
 		{
 			push_b(lst_a, lst_b);
-			// rotate_b(lst_b);
+			rotate_b(lst_b);
 		}
 		else
 			push_b(lst_a, lst_b);
