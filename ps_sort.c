@@ -6,7 +6,7 @@
 /*   By: iugolin <iugolin@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/15 17:00:08 by iugolin           #+#    #+#             */
-/*   Updated: 2022/03/20 13:35:13 by iugolin          ###   ########.fr       */
+/*   Updated: 2022/03/20 13:51:10 by iugolin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,25 +93,6 @@ void	fill_b(t_info *info)
 // 	}
 // }
 
-// void	triple_sort_a(t_list **lst)
-// {
-// 	// int	first;
-// 	// int	second;
-// 	// int	third;
-
-// 	// first = (*lst)->id;
-// 	// second = (*lst)->next->id;
-// 	// third = last_node(*lst)->id;
-// 	if (((*lst)->id > (*lst)->next->id && (*lst)->next->id < last_node(*lst)->id)
-// 		|| ((*lst)->id > (*lst)->next->id && (*lst)->next->id > last_node(*lst)->id)
-// 		|| ((*lst)->id < (*lst)->next->id && (*lst)->next->id > last_node(*lst)->id))
-// 		swap_a(lst);
-// 	if ((*lst)->id > (*lst)->next->id && (*lst)->next->id < last_node(*lst)->id)
-// 		rotate_a(lst);
-// 	if ((*lst)->id < (*lst)->next->id && (*lst)->next->id > last_node(*lst)->id)
-// 		reverse_rotate_a(lst);
-// }
-
 void	triple_sort_a(t_list **lst)
 {
 	int	first = 0;
@@ -121,13 +102,13 @@ void	triple_sort_a(t_list **lst)
 	first = (*lst)->id;
 	second = (*lst)->next->id;
 	third = last_node(*lst)->id;
-	if (((*lst)->id > (*lst)->next->id && (*lst)->next->id < last_node(*lst)->id)
-		|| ((*lst)->id > (*lst)->next->id && (*lst)->next->id > last_node(*lst)->id)
-		|| ((*lst)->id < (*lst)->next->id && (*lst)->next->id > last_node(*lst)->id))
+	if ((first > second && second < third)
+		|| (first > second && second > third)
+		|| (first < second && second > third))
 		swap_a(lst);
-	if ((*lst)->id > (*lst)->next->id && (*lst)->next->id < last_node(*lst)->id)
+	if (first < second && second > third)
 		rotate_a(lst);
-	if ((*lst)->id < (*lst)->next->id && (*lst)->next->id > last_node(*lst)->id)
+	if (first > second && second < third)
 		reverse_rotate_a(lst);
 }
 
