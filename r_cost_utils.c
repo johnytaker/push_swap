@@ -6,7 +6,7 @@
 /*   By: iugolin <iugolin@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/06 19:59:28 by iugolin           #+#    #+#             */
-/*   Updated: 2022/03/20 13:57:12 by iugolin          ###   ########.fr       */
+/*   Updated: 2022/03/20 18:00:29 by iugolin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int	rotate_a_cost(t_stack *stack_a, int b_id)
 	i = 0;
 	a = stack_a->head;
 	a_id = b_id + 1;
-	while (a && a_id != b_id)
+	while (a && a->id < b_id && a_id != b_id)
 	{
 		i++;
 		a = a->next;

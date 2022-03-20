@@ -6,7 +6,7 @@
 /*   By: iugolin <iugolin@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/05 16:02:02 by iugolin           #+#    #+#             */
-/*   Updated: 2022/03/20 13:22:40 by iugolin          ###   ########.fr       */
+/*   Updated: 2022/03/20 17:57:34 by iugolin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ static t_stack	*create_stack_a(char **data, int size)
 		a->head = create_lst(data);
 	if (a->head)
 	{
-		if (!append_id(&a->head, data, size - 1))
+		if (!append_id(a, data, size - 1))
 		{
 			free(a);
 			return (NULL);
@@ -30,9 +30,6 @@ static t_stack	*create_stack_a(char **data, int size)
 		a->min_id = find_min_id(&a->head);
 		a->median_id = find_median_id(&a->head);
 		a->max_id = find_max_id(&a->head);
-		// a->min_id = find_min_data(&a->head);
-		// a->median_id = find_middle_data(&a->head);
-		// a->max_id = find_max_data(&a->head);
 	}
 	else
 		free(a);
@@ -48,9 +45,9 @@ static t_stack	*create_stack_b(t_stack *stack_a)
 	{
 		b->head = NULL;
 		b->len = 0;
-		b->min_id = stack_a->min_id;;
+		b->min_id = stack_a->min_id;
 		b->median_id = stack_a->median_id;
-		b->max_id = stack_a->max_id;;
+		b->max_id = stack_a->max_id;
 	}
 	return (b);
 }

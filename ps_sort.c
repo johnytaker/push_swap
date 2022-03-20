@@ -6,33 +6,11 @@
 /*   By: iugolin <iugolin@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/15 17:00:08 by iugolin           #+#    #+#             */
-/*   Updated: 2022/03/20 13:51:10 by iugolin          ###   ########.fr       */
+/*   Updated: 2022/03/20 17:22:28 by iugolin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-
-// void	push_all_b(t_list **lst_a, t_list **lst_b)
-// {
-// 	int	medeana;
-// 	int	min;
-// 	int	max;
-// 	int	size;
-
-// 	size = lstsize(lst_a);
-// 	medeana = find_median_id(lst_a);
-// 	min = find_smallest_id(lst_a);
-// 	max = find_biggest_id(lst_a);
-// 	while (size--)
-// 	{
-// 		if (medeana == (*lst_a)->id
-// 			|| min == (*lst_a)->id
-// 			|| max == ((*lst_a)->id))
-// 			rotate_a(lst_a);
-// 		else
-// 			push_b(lst_a, lst_b);
-// 	}
-// }
 
 void	fill_b(t_info *info)
 {
@@ -93,23 +71,25 @@ void	fill_b(t_info *info)
 // 	}
 // }
 
-void	triple_sort_a(t_list **lst)
+void	triple_sort_a(t_stack *stack_a)
 {
-	int	first = 0;
-	int	second = 0;
-	int	third = 0;
+	int	first;
+	int	second;
+	int	third;
+	t_list	*ptr;
 
-	first = (*lst)->id;
-	second = (*lst)->next->id;
-	third = last_node(*lst)->id;
+	ptr = stack_a->head;
+	first = ptr->id;
+	second = ptr->next->id;
+	third = last_node(ptr)->id;
 	if ((first > second && second < third)
 		|| (first > second && second > third)
 		|| (first < second && second > third))
-		swap_a(lst);
+		swap_a(&ptr);
 	if (first < second && second > third)
-		rotate_a(lst);
+		rotate_a(&ptr);
 	if (first > second && second < third)
-		reverse_rotate_a(lst);
+		reverse_rotate_a(&ptr);
 }
 
 // void	sort_all(t_list **lst_a, t_list **lst_b)

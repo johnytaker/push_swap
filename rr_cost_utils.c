@@ -6,7 +6,7 @@
 /*   By: iugolin <iugolin@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/14 19:10:13 by iugolin           #+#    #+#             */
-/*   Updated: 2022/03/20 13:57:06 by iugolin          ###   ########.fr       */
+/*   Updated: 2022/03/20 18:00:25 by iugolin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,7 @@ int	reverse_rotate_a_cost(t_stack *stack_a, int b_id)
 	a = stack_a->head;
 	len = stack_a->len;
 	a_id = b_id + 1;
-	while (a && a_id != b_id)
+	while (a && a->id < b_id && a_id != b_id)
 	{
 		len--;
 		a = a->next;

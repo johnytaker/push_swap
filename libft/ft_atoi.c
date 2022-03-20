@@ -6,7 +6,7 @@
 /*   By: iugolin <iugolin@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/10 01:31:35 by iugolin           #+#    #+#             */
-/*   Updated: 2022/02/28 15:51:55 by iugolin          ###   ########.fr       */
+/*   Updated: 2022/03/20 17:24:55 by iugolin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,8 +50,6 @@ int	ft_atoi(const char *str)
 		sign *= -1;
 		str++;
 	}
-	else if (*str == '+')
-		str++;
 	check_digit(*str);
 	while (ft_isdigit(*str))
 	{

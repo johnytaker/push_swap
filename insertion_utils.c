@@ -6,14 +6,12 @@
 /*   By: iugolin <iugolin@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/16 13:59:29 by iugolin           #+#    #+#             */
-/*   Updated: 2022/03/20 14:03:05 by iugolin          ###   ########.fr       */
+/*   Updated: 2022/03/20 19:20:53 by iugolin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-	// printf ("ra_ct %d | rb_ct %d | rr_ct %d\n", info->ra_ct, info->rb_ct, info->rr_ct);
-	// printf ("rra_ct %d | rrb_ct %d | rrr_ct %d\n", info->rra_ct, info->rrb_ct, info->rrr_ct);
 static void	find_costs(t_info *info, int b_id)
 {
 	int	ra;
@@ -26,8 +24,8 @@ static void	find_costs(t_info *info, int b_id)
 	rb = rotate_b_cost(info->b, b_id);
 	rra = reverse_rotate_a_cost(info->a, b_id);
 	rrb = reverse_rotate_b_cost(info->b, b_id);
-	printf ("ra -  %d | rb -  %d\n", info->ra_ct, info->rb_ct);
-	printf ("rra -  %d | rrb -  %d\n", info->rra_ct, info->rrb_ct);
+	// printf ("ra -  %d | rb -  %d\n", info->ra_ct, info->rb_ct);
+	// printf ("rra -  %d | rrb -  %d\n", info->rra_ct, info->rrb_ct);
 	if (ra + rb <= rra + rrb)
 	{
 		min_cost = ra + rb;
@@ -50,8 +48,8 @@ static void	find_costs(t_info *info, int b_id)
 		info->rb_ct = rb;
 		info->rra_ct = rra;
 		info->rrb_ct = rrb;
-		printf ("ra_ct -  %d | rb_ct -  %d\n", info->ra_ct, info->rb_ct);
-		printf ("rra_ct -  %d | rrb_ct -  %d\n", info->rra_ct, info->rrb_ct);
+		// printf ("ra_ct -  %d | rb_ct -  %d\n", info->ra_ct, info->rb_ct);
+		// printf ("rra_ct -  %d | rrb_ct -  %d\n", info->rra_ct, info->rrb_ct);
 	}
 	else if (info->min_cost <= min_cost)
 		return ;
