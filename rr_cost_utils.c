@@ -6,42 +6,74 @@
 /*   By: iugolin <iugolin@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/14 19:10:13 by iugolin           #+#    #+#             */
-/*   Updated: 2022/03/17 15:17:52 by iugolin          ###   ########.fr       */
+/*   Updated: 2022/03/19 12:59:20 by iugolin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	reverse_rotate_a_cost(t_stack *stack_a, t_list *b_node)
+// int	reverse_rotate_a_cost(t_stack *stack_a, t_list *b_node)
+// {
+// 	t_list	*a;
+// 	int		i;
+
+// 	i = 0;
+// 	a = stack_a->head;
+// 	stack_a->len = lstsize(&a);
+// 	while (a->id < b_node->id)
+// 	{
+// 		i++;
+// 		a = a->next;
+// 	}
+// 	i = stack_a->len - i;
+// 	return (i);
+// }
+
+// int	reverse_rotate_b_cost(t_stack *stack_b, t_list *b_node)
+// {
+// 	t_list	*b;
+// 	int		i;
+
+// 	i = 0;
+// 	b = stack_b->head;
+// 	stack_b->len = lstsize(&b);
+// 	while (b->id != b_node->id)
+// 	{
+// 		i++;
+// 		b = b->next;
+// 	}
+// 	i = stack_b->len - i;
+// 	return (i);
+// }
+
+int	reverse_rotate_a_cost(t_stack *stack_a, int b_id)
 {
 	t_list	*a;
-	int		i;
+	int		len;
+	int		a_id;
 
-	i = 0;
 	a = stack_a->head;
-	stack_a->len = lstsize(&a);
-	while (a->id < b_node->id)
+	len = stack_a->len;
+	a_id = b_id + 1;
+	while (a && b_id != a_id)
 	{
-		i++;
+		len--;
 		a = a->next;
 	}
-	i = stack_a->len - i;
-	return (i);
+	return (len);
 }
 
-int	reverse_rotate_b_cost(t_stack *stack_b, t_list *b_node)
+int	reverse_rotate_b_cost(t_stack *stack_b, int b_id)
 {
 	t_list	*b;
-	int		i;
+	int		len;
 
-	i = 0;
 	b = stack_b->head;
-	stack_b->len = lstsize(&b);
-	while (b->id != b_node->id)
+	len = stack_b->len;
+	while (b && b_id != b->id)
 	{
-		i++;
+		len--;
 		b = b->next;
 	}
-	i = stack_b->len - i;
-	return (i);
+	return (len);
 }

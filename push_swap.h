@@ -6,7 +6,7 @@
 /*   By: iugolin <iugolin@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/02 19:26:59 by iugolin           #+#    #+#             */
-/*   Updated: 2022/03/17 15:17:17 by iugolin          ###   ########.fr       */
+/*   Updated: 2022/03/20 13:12:27 by iugolin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 # include <unistd.h>
 # include <stdlib.h>
 # include "libft/libft.h"
-#include <stdio.h>
+# include <stdio.h>
 
 # define DEFAULT_COST -1
 
@@ -35,6 +35,9 @@ struct s_stack
 {
 	t_list	*head;
 	int		len;
+	int		min_id;
+	int		median_id;
+	int		max_id;
 };
 
 struct s_info
@@ -47,14 +50,13 @@ struct s_info
 	int		rb_ct;
 	int		rra_ct;
 	int		rrb_ct;
-	int		rr_ct;
-	int		rrr_ct;
 };
 /*				CHECK INPUT DATA			*/
 void	check_parameters(int number, char **data);
 /*				CREATE STRUCT				*/
 void	reset_costs(t_info *info);
-t_info	*create_main_struct(char **data);
+void	reset_default_costs(t_info *info);
+t_info	*create_main_struct(char **data, int size);
 /*				LIST UTILS					*/
 t_list	*create_node(int data);
 t_list	*last_node(t_list *lst);
@@ -64,25 +66,30 @@ int		lstsize(t_list **lst);
 
 t_list	*create_lst(char **data);
 
-int		*int_arr_create(char **data);
-void	quick_sort(int *data, int size);
-void	append_id(t_list **lst, char **data, int size);
 int		find_min_id(t_list **lst);
 int		find_max_id(t_list **lst);
-int		find_medeana_id(t_list **lst);
+int		find_median_id(t_list **lst);
 
-int		rotate_a_cost(t_stack *stack_a, t_list *b_node);
-int		rotate_b_cost(t_stack *stack_b, t_list *b_node);
+// int		find_min_data(t_list **lst);
+// int		find_max_data(t_list **lst);
+// int		find_middle_data(t_list **lst);
 
-int		reverse_rotate_a_cost(t_stack *stack_a, t_list *b_node);
-int		reverse_rotate_b_cost(t_stack *stack_b, t_list *b_node);
+int		*int_arr_create(char **data);
+void	insertion_sort_arr(int *data, int size);
+int		append_id(t_list **lst, char **data, int size);
+
+int		rotate_a_cost(t_stack *stack_a,  int b_id);
+int		rotate_b_cost(t_stack *stack_b,  int b_id);
+
+int		reverse_rotate_a_cost(t_stack *stack_a,  int b_id);
+int		reverse_rotate_b_cost(t_stack *stack_b,  int b_id);
 
 void	insertion(t_info *info);
+void	finish_sort(t_stack *stack_a);
 
-void	push_all_b(t_list **lst_a, t_list **lst_b);
-void	push_b_more_then_medeana(t_list **lst_a, t_list **lst_b);
-void	push_b_less_then_medeana(t_list **lst_a, t_list **lst_b);
-void	triple_sort_a(t_list **lst_a);
+void	fill_b(t_info *info);
+
+void	triple_sort_a(t_list **lst);
 void	sort_all(t_list **lst_a, t_list **lst_b);
 
 /*					SWAP					*/

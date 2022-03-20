@@ -6,7 +6,7 @@
 /*   By: iugolin <iugolin@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/07 14:34:51 by iugolin           #+#    #+#             */
-/*   Updated: 2022/03/16 12:16:51 by iugolin          ###   ########.fr       */
+/*   Updated: 2022/03/19 21:03:41 by iugolin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,67 +21,63 @@ int	*int_arr_create(char **data)
 	while (data[i])
 		i++;
 	arr = (int *)malloc(sizeof(int) * i);
-	if (!arr)
-		return (NULL);
-	i = 0;
-	while (data[i + 1])
+	if (arr)
 	{
-		arr[i] = ft_atoi(data[i + 1]);
-		i++;
+		i = 0;
+		while (data[i + 1])
+		{
+			arr[i] = ft_atoi(data[i + 1]);
+			i++;
+		}
 	}
 	return (arr);
 }
 
-void	quick_sort(int *data, int size)
+void	insertion_sort_arr(int *data, int size)
 {
 	int	i;
 	int	j;
-	int	mid;
-	int	tmp;
+	int	temp;
 
-	i = 0;
-	j = size - 1;
-	mid = data[size / 2];
-	do
+	i = 1;
+	while (i < size)
 	{
-		while (data[i] < mid)
-			i++;
-		while (data[j] > mid)
-			j--;
-		if (i <= j)
+		j = i;
+		while (j >= 0 && data[j] < data[j - 1])
 		{
-			tmp = data[i];
-			data[i] = data[j];
-			data[j] = tmp;
-			i++;
+			temp = data[j];
+			data[j] = data[j - 1];
+			data[j - 1] = temp;
 			j--;
 		}
-	} while (i <= j);
-	if (j > 0)
-		quick_sort(data, j + 1);
-	if (i < size)
-		quick_sort(&data[i], size - i);
+		i++;
+	}
 }
 
-void	append_id(t_list **lst, char **data, int size)
+int	append_id(t_list **lst, char **data, int size)
 {
 	int		i;
 	int		*arr;
 	t_list	*ptr;
 
 	arr = int_arr_create(data);
-	quick_sort(arr, size);
-	ptr = *lst;
-	while (ptr)
+	if (arr)
 	{
-		i = 0;
-		while (arr[i] && arr[i] != ptr->data)
-			i++;
-		if (arr[i] == ptr->data)
+		insertion_sort_arr(arr, size);
+		ptr = *lst;
+		while (ptr)
+		{
+			i = 0;
+			while (arr[i] && arr[i] != ptr->data)
+				i++;
 			ptr->id = i + 1;
-		ptr = ptr->next;
+			ptr = ptr->next;
+		}
+		free(arr);
+		return (1);
 	}
-	free(arr);
+	else
+		return (0);
 }
 
 int	find_min_id(t_list **lst)
@@ -89,23 +85,65 @@ int	find_min_id(t_list **lst)
 	t_list	*ptr;
 
 	ptr = *lst;
-	while (ptr->id != 1)
+	while (ptr && ptr->id != 1)
 		ptr = ptr->next;
 	return (ptr->id);
 }
 
 int	find_max_id(t_list **lst)
 {
-	int	max_id;
-
-	max_id = lstsize(lst);
-	return (max_id);
+	return (lstsize(lst));
 }
 
-int	find_medeana_id(t_list **lst)
+int	find_median_id(t_list **lst)
 {
-	int	medeana;
+	int		median;
 
-	medeana = 1 + (lstsize(lst) - 1) / 2;
-	return (medeana);
+	median = 1 + (lstsize(lst) - 1) / 2;
+	return (median);
 }
+
+// int	find_min_data(t_list **lst)
+// {
+// 	t_list	*ptr;
+// 	int		min_nb;
+
+// 	ptr = *lst;
+// 	min_nb = ptr->data;
+// 	while (ptr)
+// 	{
+// 		if (min_nb < ptr->data)
+// 			min_nb = ptr->data;
+// 		ptr = ptr->next;
+// 	}
+// 	return (min_nb);
+// }
+
+// int	find_max_data(t_list **lst)
+// {
+// 	t_list	*ptr;
+// 	int		max_nb;
+
+// 	ptr = *lst;
+// 	max_nb = ptr->data;
+// 	while (ptr)
+// 	{
+// 		if (max_nb > ptr->data)
+// 			max_nb = ptr->data;
+// 		ptr = ptr->next;
+// 	}
+// 	return (max_nb);
+// }
+
+// int	find_middle_data(t_list **lst)
+// {
+// 	t_list	*ptr;
+// 	int	median;
+
+// 	ptr = (*lst);
+// 	median = 1 + (lstsize(lst) - 1) / 2;
+// 	while (ptr->next && (ptr->id != median))
+// 		ptr = ptr->next;
+// 	return (ptr->data);
+// }
+

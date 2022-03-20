@@ -1,45 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   r_cost_utils.c                                     :+:      :+:    :+:   */
+/*   ft_strcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: iugolin <iugolin@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/06 19:59:28 by iugolin           #+#    #+#             */
-/*   Updated: 2022/03/19 21:02:40 by iugolin          ###   ########.fr       */
+/*   Created: 2021/10/09 22:27:57 by iugolin           #+#    #+#             */
+/*   Updated: 2022/03/19 09:33:39 by iugolin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "libft.h"
 
-int	rotate_a_cost(t_stack *stack_a, int b_id)
+int	ft_strcmp(const char *s1, const char *s2)
 {
-	t_list	*a;
-	int		i;
-	int		a_id;
+	unsigned char	*temp_s1;
+	unsigned char	*temp_s2;
 
-	i = 0;
-	a = stack_a->head;
-	a_id = b_id + 1;
-	while (a && a_id != b_id)
+	temp_s1 = (unsigned char *)s1;
+	temp_s2 = (unsigned char *)s2;
+	while (*temp_s1 && (*temp_s1 == *temp_s2))
 	{
-		i++;
-		a = a->next;
+		temp_s1++;
+		temp_s2++;
 	}
-	return (i);
-}
-
-int	rotate_b_cost(t_stack *stack_b, int b_id)
-{
-	t_list	*b;
-	int		i;
-
-	b = stack_b->head;
-	i = 0;
-	while (b->next && b_id != b->id)
-	{
-		i++;
-		b = b->next;
-	}
-	return (i);
+	if (*temp_s1 == '\0')
+		return (1);
+	else
+		return (0);
 }
