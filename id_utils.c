@@ -6,7 +6,7 @@
 /*   By: iugolin <iugolin@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/07 14:34:51 by iugolin           #+#    #+#             */
-/*   Updated: 2022/03/21 16:07:25 by iugolin          ###   ########.fr       */
+/*   Updated: 2022/03/21 23:46:47 by iugolin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -195,15 +195,16 @@ int	find_median_id(t_list **lst)
 // 	return (max_nb);
 // }
 
-// int	find_middle_data(t_list **lst)
+// int	find_middle_data(t_info *info)
 // {
-// 	t_list	*ptr;
+// 	int	min_data;
+// 	int	max_data;
 // 	int	median;
 
-// 	ptr = (*lst);
-// 	median = 1 + (lstsize(lst) - 1) / 2;
-// 	while (ptr->next && (ptr->id != median))
-// 		ptr = ptr->next;
-// 	return (ptr->data);
+// 	min_data = find_min_data(&info->a->head);
+// 	max_data = find_max_data(&info->a->head);
+
+// 	median = min_data + (max_data - min_data) / 2;
+// 	return (median);
 // }
 

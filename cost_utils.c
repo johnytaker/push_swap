@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   r_cost_utils.c                                     :+:      :+:    :+:   */
+/*   cost_utils.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: iugolin <iugolin@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/06 19:59:28 by iugolin           #+#    #+#             */
-/*   Updated: 2022/03/20 18:00:29 by iugolin          ###   ########.fr       */
+/*   Updated: 2022/03/21 23:47:51 by iugolin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,12 +16,12 @@ int	rotate_a_cost(t_stack *stack_a, int b_id)
 {
 	t_list	*a;
 	int		i;
-	int		a_id;
+	int		wished_id;
 
 	i = 0;
 	a = stack_a->head;
-	a_id = b_id + 1;
-	while (a && a->id < b_id && a_id != b_id)
+	wished_id = b_id + 1;
+	while (a && a->id != wished_id)
 	{
 		i++;
 		a = a->next;
@@ -42,4 +42,36 @@ int	rotate_b_cost(t_stack *stack_b, int b_id)
 		b = b->next;
 	}
 	return (i);
+}
+
+int	reverse_rotate_a_cost(t_stack *stack_a, int b_id)
+{
+	t_list	*a;
+	int		len;
+	int		wished_id;
+
+	a = stack_a->head;
+	len = stack_a->len;
+	wished_id = b_id + 1;
+	while (a && a->id != wished_id)
+	{
+		len--;
+		a = a->next;
+	}
+	return (len);
+}
+
+int	reverse_rotate_b_cost(t_stack *stack_b, int b_id)
+{
+	t_list	*b;
+	int		len;
+
+	b = stack_b->head;
+	len = stack_b->len;
+	while (b && b->id != b_id)
+	{
+		len--;
+		b = b->next;
+	}
+	return (len);
 }

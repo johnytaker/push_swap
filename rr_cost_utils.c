@@ -6,7 +6,7 @@
 /*   By: iugolin <iugolin@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/14 19:10:13 by iugolin           #+#    #+#             */
-/*   Updated: 2022/03/20 18:00:25 by iugolin          ###   ########.fr       */
+/*   Updated: 2022/03/21 22:21:03 by iugolin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,34 +46,4 @@
 // 	return (i);
 // }
 
-int	reverse_rotate_a_cost(t_stack *stack_a, int b_id)
-{
-	t_list	*a;
-	int		len;
-	int		a_id;
 
-	a = stack_a->head;
-	len = stack_a->len;
-	a_id = b_id + 1;
-	while (a && a->id < b_id && a_id != b_id)
-	{
-		len--;
-		a = a->next;
-	}
-	return (len);
-}
-
-int	reverse_rotate_b_cost(t_stack *stack_b, int b_id)
-{
-	t_list	*b;
-	int		len;
-
-	b = stack_b->head;
-	len = stack_b->len;
-	while (b && b->id != b_id)
-	{
-		len--;
-		b = b->next;
-	}
-	return (len);
-}

@@ -6,7 +6,7 @@
 /*   By: iugolin <iugolin@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/15 17:00:08 by iugolin           #+#    #+#             */
-/*   Updated: 2022/03/21 20:10:00 by iugolin          ###   ########.fr       */
+/*   Updated: 2022/03/21 22:08:40 by iugolin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -101,29 +101,6 @@ void	triple_sort_a(t_stack *stack_a)
 	if (stack_a->head->id > stack_a->head->next->id)
 		swap_a(&stack_a->head);
 }
-
-// if ((*list_a)->value > (*list_a)->next->value
-//   && (*list_a)->value < (*list_a)->next->next->value)
-//   sa(list_a);
-//  else if ((*list_a)->value > (*list_a)->next->value
-//   && (*list_a)->next->value > (*list_a)->next->next->value)
-//  {
-//   sa(list_a);
-//   rra(list_a);
-//  }
-//  else if ((*list_a)->next->next->value > (*list_a)->next->value
-//   && ((*list_a)->next->next->value < (*list_a)->value))
-//   ra(list_a);
-//  else if ((*list_a)->next->next->value > (*list_a)->value
-//   && (*list_a)->next->next->value < (*list_a)->next->value)
-//  {
-//   sa(list_a);
-//   ra(list_a);
-//  }
-//  else if ((*list_a)->value > (*list_a)->next->next->value
-//   && (*list_a)->value < (*list_a)->next->value)
-//   rra(list_a);
-// }
 
 // void	sort_all(t_list **lst_a, t_list **lst_b)
 // {
