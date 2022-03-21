@@ -6,7 +6,7 @@
 /*   By: iugolin <iugolin@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/15 17:00:08 by iugolin           #+#    #+#             */
-/*   Updated: 2022/03/20 17:22:28 by iugolin          ###   ########.fr       */
+/*   Updated: 2022/03/21 20:10:00 by iugolin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,26 +71,59 @@ void	fill_b(t_info *info)
 // 	}
 // }
 
+// void	triple_sort_a(t_stack *stack_a)
+// {
+// 	int	first;
+// 	int	second;
+// 	int	third;
+
+// 	first = stack_a->head->id;
+// 	second = stack_a->head->next->id;
+// 	third = stack_a->head->next->next->id;
+// 	if (first > second && second < third && first < third)
+// 		swap_a(&stack_a->head);
+// 	else if (first > second && second > third)
+// 		|| (first > second && second > third)
+// 		|| (first < second && second > third))
+// 		swap_a(&stack_a->head);
+// 	if (first > second && second < third && first > third)
+// 		rotate_a(&stack_a->head);
+// 	if (first < second && second > third)
+// 		reverse_rotate_a(&stack_a->head);
+// }
+
 void	triple_sort_a(t_stack *stack_a)
 {
-	int	first;
-	int	second;
-	int	third;
-	t_list	*ptr;
-
-	ptr = stack_a->head;
-	first = ptr->id;
-	second = ptr->next->id;
-	third = last_node(ptr)->id;
-	if ((first > second && second < third)
-		|| (first > second && second > third)
-		|| (first < second && second > third))
-		swap_a(&ptr);
-	if (first < second && second > third)
-		rotate_a(&ptr);
-	if (first > second && second < third)
-		reverse_rotate_a(&ptr);
+	if (stack_a->head->id == stack_a->max_id)
+		rotate_a(&stack_a->head);
+	if (stack_a->head->next->id == stack_a->max_id)
+		reverse_rotate_a(&stack_a->head);
+	if (stack_a->head->id > stack_a->head->next->id)
+		swap_a(&stack_a->head);
 }
+
+// if ((*list_a)->value > (*list_a)->next->value
+//   && (*list_a)->value < (*list_a)->next->next->value)
+//   sa(list_a);
+//  else if ((*list_a)->value > (*list_a)->next->value
+//   && (*list_a)->next->value > (*list_a)->next->next->value)
+//  {
+//   sa(list_a);
+//   rra(list_a);
+//  }
+//  else if ((*list_a)->next->next->value > (*list_a)->next->value
+//   && ((*list_a)->next->next->value < (*list_a)->value))
+//   ra(list_a);
+//  else if ((*list_a)->next->next->value > (*list_a)->value
+//   && (*list_a)->next->next->value < (*list_a)->next->value)
+//  {
+//   sa(list_a);
+//   ra(list_a);
+//  }
+//  else if ((*list_a)->value > (*list_a)->next->next->value
+//   && (*list_a)->value < (*list_a)->next->value)
+//   rra(list_a);
+// }
 
 // void	sort_all(t_list **lst_a, t_list **lst_b)
 // {
