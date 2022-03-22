@@ -6,7 +6,7 @@
 /*   By: iugolin <iugolin@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/16 13:59:29 by iugolin           #+#    #+#             */
-/*   Updated: 2022/03/22 01:51:16 by iugolin          ###   ########.fr       */
+/*   Updated: 2022/03/22 15:25:04 by iugolin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,18 +26,65 @@ static void	find_costs(t_info *info, int b_id)
 	rrb = reverse_rotate_cost(info->b, b_id);
 	// printf ("ra -  %d | rb -  %d\n", info->ra_ct, info->rb_ct);
 	// printf ("rra -  %d | rrb -  %d\n", info->rra_ct, info->rrb_ct);
-	if (ra + rb <= rra + rrb)
+	// if (ra + rb <= rra + rrb)
+	// {
+	// 	min_cost = ra + rb;
+	// 	rra = 0;
+	// 	rrb = 0;
+	// }
+	// else
+	// {
+	// 	min_cost = rra + rrb;
+	// 	ra = 0;
+	// 	rb = 0;
+	// }
+	int	smallest_a;
+	if (ra && rra)
 	{
-		min_cost = ra + rb;
-		rra = 0;
-		rrb = 0;
+		if (ra <= rra)
+			smallest_a = ra;
+		else
+			smallest_a = rra;
 	}
 	else
 	{
-		min_cost = rra + rrb;
-		ra = 0;
-		rb = 0;
+		if (ra)
+			smallest_a = ra;
+		else
+			smallest_a = rra;
 	}
+	if (smallest_a == ra)
+		ra = ra;
+	else
+		ra = 0;
+	if (smallest_a == rra)
+		rra = rra;
+	else
+		rra = 0;
+	int	smallest_b;
+	if (rb && rrb)
+	{
+		if (rb <= rrb)
+			smallest_b = rb;
+		else
+			smallest_b = rrb;
+	}
+	else
+	{
+		if (rb)
+			smallest_b = rb;
+		else
+			smallest_b = rrb;
+	}
+	if (smallest_b == rb)
+		rb = rb;
+	else
+		rb = 0;
+	if (smallest_b == rrb)
+		rrb = rrb;
+	else
+		rrb = 0;
+	min_cost = smallest_a + smallest_b;
 	if (info->min_cost == DEFAULT_COST
 		|| info->min_cost > min_cost)
 	{
@@ -72,15 +119,15 @@ static void	do_operation(char *op_name, t_info *info)
 {
 	if (ft_strcmp("ra", op_name))
 		rotate_a(&info->a->head);
-	if (ft_strcmp("rb", op_name))
+	else if (ft_strcmp("rb", op_name))
 		rotate_b(&info->b->head);
-	if (ft_strcmp("rra", op_name))
+	else if (ft_strcmp("rra", op_name))
 		reverse_rotate_a(&info->a->head);
-	if (ft_strcmp("rrb", op_name))
+	else if (ft_strcmp("rrb", op_name))
 		reverse_rotate_b(&info->b->head);
-	if (ft_strcmp("rr", op_name))
+	else if (ft_strcmp("rr", op_name))
 		rotate_ab(&info->a->head, &info->b->head);
-	if (ft_strcmp("rrr", op_name))
+	else if (ft_strcmp("rrr", op_name))
 		reverse_rotate_ab(&info->a->head, &info->b->head);
 }
 
