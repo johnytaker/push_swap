@@ -6,7 +6,7 @@
 /*   By: iugolin <iugolin@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/02 19:26:59 by iugolin           #+#    #+#             */
-/*   Updated: 2022/03/21 19:20:31 by iugolin          ###   ########.fr       */
+/*   Updated: 2022/03/22 01:54:40 by iugolin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,29 +66,26 @@ int		lstsize(t_list **lst);
 
 t_list	*create_lst(char **data);
 
-int		find_min_id(t_list **lst);
-int		find_max_id(t_list **lst);
-int		find_median_id(t_list **lst);
-
 // int		find_min_data(t_list **lst);
 // int		find_max_data(t_list **lst);
 // int		find_middle_data(t_list **lst);
 
+int		find_min_id(t_list **lst);
+int		find_max_id(t_list **lst);
+int		find_median_id(t_list **lst);
+
+int		*int_arr_create(char **data);
+int		*insertion_sort_arr(int *data, int size);
 int		append_id(t_stack *stack_a, char **data, int size);
 
-int		rotate_a_cost(t_stack *stack_a,  int b_id);
-int		rotate_b_cost(t_stack *stack_b,  int b_id);
-
-int		reverse_rotate_a_cost(t_stack *stack_a,  int b_id);
-int		reverse_rotate_b_cost(t_stack *stack_b,  int b_id);
+int		rotate_cost(t_stack *stack, int id);
+int		reverse_rotate_cost(t_stack *stack, int id);
 
 void	insertion(t_info *info);
-void	finish_sort(t_stack *stack_a);
 
 void	fill_b(t_info *info);
 
 void	triple_sort_a(t_stack *stack_a);
-void	sort_all(t_list **lst_a, t_list **lst_b);
 
 /*					SWAP					*/
 void	swap_a(t_list **lst_a);

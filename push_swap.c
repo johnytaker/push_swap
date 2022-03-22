@@ -6,7 +6,7 @@
 /*   By: iugolin <iugolin@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/02 19:31:21 by iugolin           #+#    #+#             */
-/*   Updated: 2022/03/21 23:18:22 by iugolin          ###   ########.fr       */
+/*   Updated: 2022/03/22 01:13:21 by iugolin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,8 @@ int	main(int argc, char **argv)
 		fill_b(info);
 		triple_sort_a(info->a);
 		insertion(info);
-		if (info->a->head->id != info->a->min_id)
-			finish_sort(info->a);
+		// if (info->a->head->id != info->a->min_id)
+		// 	finish_sort(info->a);
 		while (info->a->head)
 		{
 			printf("%d | %d\n", info->a->head->data, info->a->head->id);

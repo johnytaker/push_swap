@@ -6,13 +6,13 @@
 /*   By: iugolin <iugolin@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/07 14:34:51 by iugolin           #+#    #+#             */
-/*   Updated: 2022/03/21 23:46:47 by iugolin          ###   ########.fr       */
+/*   Updated: 2022/03/22 01:52:27 by iugolin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-static int	*int_arr_create(char **data)
+int	*int_arr_create(char **data)
 {
 	int	*arr;
 	int	i;
@@ -33,85 +33,54 @@ static int	*int_arr_create(char **data)
 	return (arr);
 }
 
-// static int	*insertion_sort_arr(int *data, int size)
-// {
-// 	int	i;
-// 	int	j;
-// 	int	temp;
+int	*insertion_sort_arr(int *data, int size)
+{
+	int	i;
+	int	j;
+	int	temp;
 
-// 	i = 1;
-// 	while (i < size)
-// 	{
-// 		j = i;
-// 		while (j >= 0 && data[j] < data[j - 1])
-// 		{
-// 			temp = data[j];
-// 			data[j] = data[j - 1];
-// 			data[j - 1] = temp;
-// 			j--;
-// 		}
-// 		i++;
-// 	}
-// 	return (data);
-// }
+	i = 1;
+	while (i < size)
+	{
+		j = i;
+		while (j >= 0 && data[j] < data[j - 1])
+		{
+			temp = data[j];
+			data[j] = data[j - 1];
+			data[j - 1] = temp;
+			j--;
+		}
+		i++;
+	}
+	return (data);
+}
 
-static int	*bubble_sort_id(int *data, int size)
- {
- 	int	i;
- 	int	j;
- 	int	tmp;
+// int	*bubble_sort_id(int *data, int size)
+//  {
+//  	int	i;
+//  	int	j;
+//  	int	tmp;
 
- 	i = 0;
- 	j = 0;
- 	tmp = 0;
- 	while (i < size)
- 	{
- 		j = i + 1;
- 		while (j < size)
- 		{
- 			if (data[i] > data[j])
- 			{
- 				tmp = data[i];
- 				data[i] = data[j];
- 				data[j]= tmp;
- 			}
- 			j++;
- 		}
- 		i++;
- 	}
- 	return (data);
- }
-
-// void	quick_sort(int *data, int size)
-// {
-// 	int	i;
-// 	int	j;
-// 	int	mid;
-// 	int	tmp;
-
-// 	i = 0;
-// 	j = size - 1;
-// 	mid = data[size / 2];
-// 	do
-// 	{
-// 		while (data[i] < mid)
-//  			i++;
-// 		while (data[j] > mid)
-// 			j--;
-// 		if (i <= j)
-// 		{
-// 			tmp = data[i];
-// 			data[i] = data[j];
-// 			data[j] = tmp;
-// 			i++;
-// 			j--;
-// 		}
-// 		} while (i <= j);
-// 		if (j > 0)
-// 			quick_sort(data, j + 1);
-// 		if (i < size)
-// 			quick_sort(&data[i], size - i);
-// }
+//  	i = 0;
+//  	j = 0;
+//  	tmp = 0;
+//  	while (i < size)
+//  	{
+//  		j = i + 1;
+//  		while (j < size)
+//  		{
+//  			if (data[i] > data[j])
+//  			{
+//  				tmp = data[i];
+//  				data[i] = data[j];
+//  				data[j]= tmp;
+//  			}
+//  			j++;
+//  		}
+//  		i++;
+//  	}
+//  	return (data);
+//  }
 
 int	append_id(t_stack *stack_a, char **data, int size)
 {
@@ -123,12 +92,11 @@ int	append_id(t_stack *stack_a, char **data, int size)
 	ptr = stack_a->head;
 	if (arr)
 	{
-		arr = bubble_sort_id(arr, size);
-		// quick_sort(arr, size);
+		arr = insertion_sort_arr(arr, size);
 		while (ptr)
 		{
 			i = 0;
-			while (arr[i] && arr[i] != ptr->data)
+			while (arr[i] != ptr->data)
 				i++;
 			ptr->id = i + 1;
 			ptr = ptr->next;

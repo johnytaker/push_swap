@@ -6,7 +6,7 @@
 /*   By: iugolin <iugolin@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/16 13:59:29 by iugolin           #+#    #+#             */
-/*   Updated: 2022/03/21 23:47:14 by iugolin          ###   ########.fr       */
+/*   Updated: 2022/03/22 01:51:16 by iugolin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,10 +20,10 @@ static void	find_costs(t_info *info, int b_id)
 	int	rrb;
 	int	min_cost;
 
-	ra = rotate_a_cost(info->a, b_id);
-	rb = rotate_b_cost(info->b, b_id);
-	rra = reverse_rotate_a_cost(info->a, b_id);
-	rrb = reverse_rotate_b_cost(info->b, b_id);
+	ra = rotate_cost(info->a, b_id + 1);
+	rb = rotate_cost(info->b, b_id);
+	rra = reverse_rotate_cost(info->a, b_id + 1);
+	rrb = reverse_rotate_cost(info->b, b_id);
 	// printf ("ra -  %d | rb -  %d\n", info->ra_ct, info->rb_ct);
 	// printf ("rra -  %d | rrb -  %d\n", info->rra_ct, info->rrb_ct);
 	if (ra + rb <= rra + rrb)
@@ -126,20 +126,7 @@ static void	do_operations(t_info *info)
 	}
 }
 
-void	insertion(t_info *info)
-{
-	while (info->b->head)
-	{
-		find_costs_manager(info);
-		do_operations(info);
-		push_a(&info->a->head, &info->b->head);
-		info->a->len++;
-		info->b->len--;
-		reset_default_costs(info);
-	}
-}
-
-void	finish_sort(t_stack *stack_a)
+static void	roll_to_sorted_position(t_stack *stack_a)
 {
 	t_list	*ptr;
 	int		i;
@@ -162,3 +149,19 @@ void	finish_sort(t_stack *stack_a)
 			reverse_rotate_a(&stack_a->head);
 	}
 }
+
+void	insertion(t_info *info)
+{
+	while (info->b->len != 0)
+	{
+		find_costs_manager(info);
+		do_operations(info);
+		push_a(&info->a->head, &info->b->head);
+		info->a->len++;
+		info->b->len--;
+		reset_default_costs(info);
+	}
+	if (info->a->head->id != info->a->min_id)
+		roll_to_sorted_position(info->a);
+}
+
