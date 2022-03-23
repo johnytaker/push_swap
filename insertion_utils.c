@@ -6,7 +6,7 @@
 /*   By: iugolin <iugolin@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/23 14:28:26 by iugolin           #+#    #+#             */
-/*   Updated: 2022/03/23 22:52:33 by iugolin          ###   ########.fr       */
+/*   Updated: 2022/03/24 01:17:22 by iugolin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,6 +62,7 @@ static void	find_costs(t_info *info, int b_id)
 		info->rb_ct = b_str.r;
 		info->rra_ct = a_str.rr;
 		info->rrb_ct = b_str.rr;
+		// print_found_cost(info);
 	}
 	else if (info->min_cost <= min_cost)
 		return ;

@@ -6,7 +6,7 @@
 /*   By: iugolin <iugolin@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/06 19:59:28 by iugolin           #+#    #+#             */
-/*   Updated: 2022/03/23 22:42:14 by iugolin          ###   ########.fr       */
+/*   Updated: 2022/03/24 01:18:53 by iugolin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,29 +21,27 @@ int	rotate_a_cost(t_stack *stack_a, int b_id, int last_id)
 	a = stack_a->head;
 	while (a)
 	{
-		if (b_id < a->id && b_id > last_id)
-			break ;
-		if (last_id == stack_a->min_id)
+		if (!(b_id < a->id && b_id > last_id))
 		{
-			if (b_id > a->id)
+			if ((last_id == stack_a->min_id) && (b_id > a->id))
 				i++;
-		}
-		else if (last_id != stack_a->min_id)
-		{
-			if (last_id == stack_a->max_id)
+			else
 			{
-				if (b_id > a->id)
+				if ((last_id == stack_a->max_id) && (b_id > a->id))
 					i++;
+				else
+				{
+					if (last_id < a->id)
+						i++;
+					if (last_id > a->id && b_id > a->id)
+						i++;
+				}
 			}
-			else if (last_id != stack_a->max_id)
-			{
-				if (last_id < a->id)
-					i++;
-				else if (last_id > a->id && b_id > a->id)
-					i++;
-			}
+			a = a->next;
 		}
-		a = a->next;
+		else
+			break ;
+
 	}
 	return (i);
 }
@@ -57,14 +55,11 @@ int	rotate_a_cost(t_stack *stack_a, int b_id, int last_id)
 // 	a = stack_a->head;
 // 	while (a)
 // 	{
-// 		if (b_id < a->id && b_id > last_id)
-// 			break ;
-// 		if (a->id == stack_a->min_id)
-// 			i++;
-// 		else if (a->id > b_id && last_id > b_id)
-// 			i++;
-// 		else if (a->id < b_id && last_id < b_id)
-// 		a = a->next;
+// 		if (a->id > b_id && last_id < b_id)
+// 			return (i);
+
+// 		{
+
 // 	}
 // 	return (i);
 // }
