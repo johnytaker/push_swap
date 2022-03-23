@@ -6,7 +6,7 @@
 /*   By: iugolin <iugolin@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/07 14:34:51 by iugolin           #+#    #+#             */
-/*   Updated: 2022/03/23 12:12:29 by iugolin          ###   ########.fr       */
+/*   Updated: 2022/03/23 22:54:07 by iugolin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,54 +33,54 @@ static int	*int_arr_create(char **data)
 	return (arr);
 }
 
-static int	*insertion_sort_arr(int *data, int size)
+// static int	*insertion_sort_arr(int *data, int size)
+// {
+// 	int	i;
+// 	int	j;
+// 	int	temp;
+
+// 	i = 1;
+// 	while (i < size)
+// 	{
+// 		j = i;
+// 		while (j >= 0 && data[j] < data[j - 1])
+// 		{
+// 			temp = data[j];
+// 			data[j] = data[j - 1];
+// 			data[j - 1] = temp;
+// 			j--;
+// 		}
+// 		i++;
+// 	}
+// 	return (data);
+// }
+
+static int	*bubble_sort_id(int *data, int size)
 {
 	int	i;
 	int	j;
-	int	temp;
+	int	tmp;
 
-	i = 1;
+	i = 0;
+	j = 0;
+	tmp = 0;
 	while (i < size)
 	{
-		j = i;
-		while (j >= 0 && data[j] < data[j - 1])
+		j = i + 1;
+		while (j < size)
 		{
-			temp = data[j];
-			data[j] = data[j - 1];
-			data[j - 1] = temp;
-			j--;
+			if (data[i] > data[j])
+			{
+				tmp = data[i];
+				data[i] = data[j];
+				data[j] = tmp;
+			}
+			j++;
 		}
 		i++;
 	}
 	return (data);
 }
-
-// static int	*bubble_sort_id(int *data, int size)
-//  {
-//  	int	i;
-//  	int	j;
-//  	int	tmp;
-
-//  	i = 0;
-//  	j = 0;
-//  	tmp = 0;
-//  	while (i < size)
-//  	{
-//  		j = i + 1;
-//  		while (j < size)
-//  		{
-//  			if (data[i] > data[j])
-//  			{
-//  				tmp = data[i];
-//  				data[i] = data[j];
-//  				data[j]= tmp;
-//  			}
-//  			j++;
-//  		}
-//  		i++;
-//  	}
-//  	return (data);
-//  }
 
 int	append_id(t_stack *stack_a, char **data, int size)
 {
@@ -92,7 +92,8 @@ int	append_id(t_stack *stack_a, char **data, int size)
 	ptr = stack_a->head;
 	if (arr)
 	{
-		arr = insertion_sort_arr(arr, size);
+		// arr = insertion_sort_arr(arr, size);
+		arr = bubble_sort_id(arr, size);
 		while (ptr)
 		{
 			i = 0;

@@ -6,7 +6,7 @@
 /*   By: iugolin <iugolin@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/16 11:52:02 by iugolin           #+#    #+#             */
-/*   Updated: 2022/03/23 11:49:50 by iugolin          ###   ########.fr       */
+/*   Updated: 2022/03/23 22:51:48 by iugolin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,11 +31,8 @@ t_list	*last_node(t_list *lst)
 	t_list	*ptr;
 
 	ptr = lst;
-	if (ptr)
-	{
-		while (ptr->next)
-			ptr = ptr->next;
-	}
+	while (ptr && ptr->next)
+		ptr = ptr->next;
 	return (ptr);
 }
 

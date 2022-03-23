@@ -6,7 +6,7 @@
 /*   By: iugolin <iugolin@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/02 19:31:21 by iugolin           #+#    #+#             */
-/*   Updated: 2022/03/23 12:33:28 by iugolin          ###   ########.fr       */
+/*   Updated: 2022/03/23 20:05:06 by iugolin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ int	main(int argc, char **argv)
 	info = NULL;
 	check_parameters(argc, argv);
 	info = create_main_struct(argv, argc);
-	print_max_min_mid(info->a);
+	// print_max_min_mid(info->a);
 	// print_one_stack_with_id(info->a);
 	if (info)
 	{
@@ -30,9 +30,9 @@ int	main(int argc, char **argv)
 		// print_one_stack_with_id(info->b, "B");
 		insertion(info);
 		if (info->a->head->id != info->a->min_id)
-			finish_sort(info->a);
-		// printf("\n### FINAL STATE\n");
-		// print_stacks_with_ids(info->a, info->b);
+			make_stack_great_again(info->a);
+		printf("\n### FINAL STATE\n");
+		print_stacks_with_ids(info->a, info->b);
 	}
 	return (0);
 }

@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ps_sort.c                                          :+:      :+:    :+:   */
+/*   pre_sort_utils.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: iugolin <iugolin@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/15 17:00:08 by iugolin           #+#    #+#             */
-/*   Updated: 2022/03/23 12:01:42 by iugolin          ###   ########.fr       */
+/*   Updated: 2022/03/23 18:06:14 by iugolin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,5 +46,5 @@ void	triple_sort_a(t_stack *stack_a)
 	if (stack_a->head->next->id == stack_a->max_id)
 		do_reverse_rotate(&stack_a->head, "rra");
 	if (stack_a->head->id > stack_a->head->next->id)
-		swap_a(&stack_a->head);
+		do_swap(&stack_a->head, "sa");
 }

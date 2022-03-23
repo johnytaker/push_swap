@@ -6,11 +6,12 @@
 #    By: iugolin <iugolin@student.21-school.ru>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/21 18:09:12 by iugolin           #+#    #+#              #
-#    Updated: 2022/03/23 12:37:55 by iugolin          ###   ########.fr        #
+#    Updated: 2022/03/23 22:53:23 by iugolin          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = push_swap
+
 SRCS =		create_list.c		\
 			check_input_data.c	\
 			push_swap.c			\
@@ -21,9 +22,10 @@ SRCS =		create_list.c		\
 			rotate_op.c			\
 			reverse_rotate_op.c	\
 			id_utils.c			\
-			ps_sort.c			\
+			pre_sort_utils.c	\
 			cost_utils.c		\
 			insertion_utils.c	\
+			insertion_utils_2.c	\
 			print_utils.c
 
 OBJS = $(SRCS:.c=.o)
