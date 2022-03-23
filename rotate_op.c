@@ -6,7 +6,7 @@
 /*   By: iugolin <iugolin@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/05 20:05:11 by iugolin           #+#    #+#             */
-/*   Updated: 2022/02/25 13:21:37 by iugolin          ###   ########.fr       */
+/*   Updated: 2022/03/23 12:09:57 by iugolin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,21 +26,12 @@ static void	rotate(t_list **lst)
 	*lst = head;
 }
 
-void	rotate_a(t_list **lst_a)
+void	do_rotate(t_list **lst, char *op_name)
 {
-	if (*lst_a && ((*lst_a)->next))
+	if (*lst && ((*lst)->next))
 	{
-		rotate(lst_a);
-		write(1, "ra\n", 3);
-	}
-}
-
-void	rotate_b(t_list **lst_b)
-{
-	if (*lst_b && ((*lst_b)->next))
-	{
-		rotate(lst_b);
-		write(1, "rb\n", 3);
+		rotate(lst);
+		print_op(op_name);
 	}
 }
 
@@ -51,7 +42,6 @@ void	rotate_ab(t_list **lst_a, t_list **lst_b)
 	{
 		rotate(lst_a);
 		rotate(lst_b);
-		write(1, "rr\n", 3);
+		print_op("rr");
 	}
 }
-

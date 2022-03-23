@@ -6,101 +6,71 @@
 /*   By: iugolin <iugolin@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/16 13:59:29 by iugolin           #+#    #+#             */
-/*   Updated: 2022/03/22 15:25:04 by iugolin          ###   ########.fr       */
+/*   Updated: 2022/03/23 16:41:33 by iugolin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
+int	min_nbr(int x, int y)
+{
+	if (x <= y)
+		return (x);
+	return (y);
+}
+
+int	get_min_cost(int x, int y)
+{
+	if (x && y)
+		return (min_nbr(x, y));
+	else if (x)
+		return (x);
+	return (y);
+}
+
+int	get_last_id(t_list *head)
+{
+	while (head && head->next)
+		head = head->next;
+	return (head->id);
+}
+
+void	calc_costs(t_decisions *ptr, int r, int rr)
+{
+	ptr->cost = get_min_cost(r, rr);
+	ptr->r = 0;
+	ptr->rr = 0;
+	if (ptr->cost == r)
+		ptr->r = r;
+	if (ptr->cost == rr)
+		ptr->rr = rr;
+}
+
 static void	find_costs(t_info *info, int b_id)
 {
-	int	ra;
-	int	rb;
-	int	rra;
-	int	rrb;
-	int	min_cost;
+	t_decisions	a_str;
+	t_decisions	b_str;
+	int			min_cost;
 
-	ra = rotate_cost(info->a, b_id + 1);
-	rb = rotate_cost(info->b, b_id);
-	rra = reverse_rotate_cost(info->a, b_id + 1);
-	rrb = reverse_rotate_cost(info->b, b_id);
-	// printf ("ra -  %d | rb -  %d\n", info->ra_ct, info->rb_ct);
-	// printf ("rra -  %d | rrb -  %d\n", info->rra_ct, info->rrb_ct);
-	// if (ra + rb <= rra + rrb)
-	// {
-	// 	min_cost = ra + rb;
-	// 	rra = 0;
-	// 	rrb = 0;
-	// }
-	// else
-	// {
-	// 	min_cost = rra + rrb;
-	// 	ra = 0;
-	// 	rb = 0;
-	// }
-	int	smallest_a;
-	if (ra && rra)
-	{
-		if (ra <= rra)
-			smallest_a = ra;
-		else
-			smallest_a = rra;
-	}
-	else
-	{
-		if (ra)
-			smallest_a = ra;
-		else
-			smallest_a = rra;
-	}
-	if (smallest_a == ra)
-		ra = ra;
-	else
-		ra = 0;
-	if (smallest_a == rra)
-		rra = rra;
-	else
-		rra = 0;
-	int	smallest_b;
-	if (rb && rrb)
-	{
-		if (rb <= rrb)
-			smallest_b = rb;
-		else
-			smallest_b = rrb;
-	}
-	else
-	{
-		if (rb)
-			smallest_b = rb;
-		else
-			smallest_b = rrb;
-	}
-	if (smallest_b == rb)
-		rb = rb;
-	else
-		rb = 0;
-	if (smallest_b == rrb)
-		rrb = rrb;
-	else
-		rrb = 0;
-	min_cost = smallest_a + smallest_b;
+	calc_costs(&a_str,
+		rotate_a_cost(info->a, b_id, get_last_id(info->a->head)),
+		reverse_rotate_a_cost_orig(info->a, b_id));
+	calc_costs(&b_str, rotate_b_cost(info->b, b_id),
+		reverse_rotate_b_cost(info->b, b_id));
+	min_cost = a_str.cost + b_str.cost;
 	if (info->min_cost == DEFAULT_COST
 		|| info->min_cost > min_cost)
 	{
 		reset_costs(info);
 		info->min_cost = min_cost;
 		info->pop_ind = b_id;
-		info->ra_ct = ra;
-		info->rb_ct = rb;
-		info->rra_ct = rra;
-		info->rrb_ct = rrb;
-		// printf ("ra_ct -  %d | rb_ct -  %d\n", info->ra_ct, info->rb_ct);
-		// printf ("rra_ct -  %d | rrb_ct -  %d\n", info->rra_ct, info->rrb_ct);
+		info->ra_ct = a_str.r;
+		info->rb_ct = b_str.r;
+		info->rra_ct = a_str.rr;
+		info->rrb_ct = b_str.rr;
 	}
 	else if (info->min_cost <= min_cost)
 		return ;
-
 }
 
 static void	find_costs_manager(t_info *info)
@@ -114,58 +84,63 @@ static void	find_costs_manager(t_info *info)
 		ptr = ptr->next;
 	}
 }
+	// print_found_cost(info);
 
 static void	do_operation(char *op_name, t_info *info)
 {
 	if (ft_strcmp("ra", op_name))
-		rotate_a(&info->a->head);
+		do_rotate(&info->a->head, "ra");
 	else if (ft_strcmp("rb", op_name))
-		rotate_b(&info->b->head);
+		do_rotate(&info->b->head, "rb");
 	else if (ft_strcmp("rra", op_name))
-		reverse_rotate_a(&info->a->head);
+		do_reverse_rotate(&info->a->head, "rra");
 	else if (ft_strcmp("rrb", op_name))
-		reverse_rotate_b(&info->b->head);
-	else if (ft_strcmp("rr", op_name))
+		do_reverse_rotate(&info->b->head, "rrb");
+	else if (ft_strcmp("rr", op_name) && !ft_strcmp("rrr", op_name))
 		rotate_ab(&info->a->head, &info->b->head);
 	else if (ft_strcmp("rrr", op_name))
 		reverse_rotate_ab(&info->a->head, &info->b->head);
 }
 
-static void	do_operations(t_info *info)
+static void	direct_roll(t_info *info)
 {
-	while (info->ra_ct && info->rb_ct)
-	{
-		do_operation("rr", info);
-		info->ra_ct--;
-		info->rb_ct--;
-	}
 	while (info->ra_ct || info->rb_ct)
 	{
-		if (info->ra_ct)
+		if (info->ra_ct && info->rb_ct)
+		{
+			do_operation("rr", info);
+			info->ra_ct--;
+			info->rb_ct--;
+		}
+		else if (info->ra_ct && !info->rb_ct)
 		{
 			do_operation("ra", info);
 			info->ra_ct--;
 		}
-		if (info->rb_ct)
+		else if (info->rb_ct && !info->ra_ct)
 		{
 			do_operation("rb", info);
 			info->rb_ct--;
 		}
 	}
-	while (info->rra_ct && info->rrb_ct)
-	{
-		do_operation("rrr", info);
-		info->rra_ct--;
-		info->rrb_ct--;
-	}
+}
+
+static void	reverse_roll(t_info *info)
+{
 	while (info->rra_ct || info->rrb_ct)
 	{
-		if (info->rra_ct)
+		if (info->rra_ct && info->rrb_ct)
+		{
+			do_operation("rrr", info);
+			info->rra_ct--;
+			info->rrb_ct--;
+		}
+		else if (info->rra_ct && !info->rrb_ct)
 		{
 			do_operation("rra", info);
 			info->rra_ct--;
 		}
-		if (info->rrb_ct)
+		else if (info->rrb_ct && !info->rra_ct)
 		{
 			do_operation("rrb", info);
 			info->rrb_ct--;
@@ -173,7 +148,22 @@ static void	do_operations(t_info *info)
 	}
 }
 
-static void	roll_to_sorted_position(t_stack *stack_a)
+void	insertion(t_info *info)
+{
+	while (info->b->head)
+	{
+		find_costs_manager(info);
+		direct_roll(info);
+		reverse_roll(info);
+		push_a(&info->a->head, &info->b->head);
+		info->a->len++;
+		info->b->len--;
+		reset_default_costs(info);
+	}
+}
+	// print_stacks_with_ids(info->a, info->b);
+
+void	finish_sort(t_stack *stack_a)
 {
 	t_list	*ptr;
 	int		i;
@@ -191,24 +181,8 @@ static void	roll_to_sorted_position(t_stack *stack_a)
 	while (stack_a->head->id != stack_a->min_id)
 	{
 		if (i < (size / 2))
-			rotate_a(&stack_a->head);
+			do_rotate(&stack_a->head, "ra");
 		else if (i > (size / 2))
-			reverse_rotate_a(&stack_a->head);
+			do_reverse_rotate(&stack_a->head, "rra");
 	}
 }
-
-void	insertion(t_info *info)
-{
-	while (info->b->len != 0)
-	{
-		find_costs_manager(info);
-		do_operations(info);
-		push_a(&info->a->head, &info->b->head);
-		info->a->len++;
-		info->b->len--;
-		reset_default_costs(info);
-	}
-	if (info->a->head->id != info->a->min_id)
-		roll_to_sorted_position(info->a);
-}
-

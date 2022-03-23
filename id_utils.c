@@ -6,13 +6,13 @@
 /*   By: iugolin <iugolin@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/07 14:34:51 by iugolin           #+#    #+#             */
-/*   Updated: 2022/03/22 01:52:27 by iugolin          ###   ########.fr       */
+/*   Updated: 2022/03/23 12:12:29 by iugolin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	*int_arr_create(char **data)
+static int	*int_arr_create(char **data)
 {
 	int	*arr;
 	int	i;
@@ -33,7 +33,7 @@ int	*int_arr_create(char **data)
 	return (arr);
 }
 
-int	*insertion_sort_arr(int *data, int size)
+static int	*insertion_sort_arr(int *data, int size)
 {
 	int	i;
 	int	j;
@@ -55,7 +55,7 @@ int	*insertion_sort_arr(int *data, int size)
 	return (data);
 }
 
-// int	*bubble_sort_id(int *data, int size)
+// static int	*bubble_sort_id(int *data, int size)
 //  {
 //  	int	i;
 //  	int	j;
@@ -96,7 +96,7 @@ int	append_id(t_stack *stack_a, char **data, int size)
 		while (ptr)
 		{
 			i = 0;
-			while (arr[i] != ptr->data)
+			while (arr[i] != ptr->value)
 				i++;
 			ptr->id = i + 1;
 			ptr = ptr->next;
@@ -118,61 +118,12 @@ int	find_min_id(t_list **lst)
 	return (ptr->id);
 }
 
-int	find_max_id(t_list **lst)
-{
-	return (lstsize(lst));
-}
-
 int	find_median_id(t_list **lst)
 {
-	int		median;
-
-	median = 1 + (lstsize(lst) - 1) / 2;
-	return (median);
+	return (1 + (lstsize(lst) - 1) / 2);
 }
 
-// int	find_min_data(t_list **lst)
+// int	find_max_id(t_list **lst)
 // {
-// 	t_list	*ptr;
-// 	int		min_nb;
-
-// 	ptr = *lst;
-// 	min_nb = ptr->data;
-// 	while (ptr)
-// 	{
-// 		if (min_nb < ptr->data)
-// 			min_nb = ptr->data;
-// 		ptr = ptr->next;
-// 	}
-// 	return (min_nb);
+// 	return (lstsize(lst));
 // }
-
-// int	find_max_data(t_list **lst)
-// {
-// 	t_list	*ptr;
-// 	int		max_nb;
-
-// 	ptr = *lst;
-// 	max_nb = ptr->data;
-// 	while (ptr)
-// 	{
-// 		if (max_nb > ptr->data)
-// 			max_nb = ptr->data;
-// 		ptr = ptr->next;
-// 	}
-// 	return (max_nb);
-// }
-
-// int	find_middle_data(t_info *info)
-// {
-// 	int	min_data;
-// 	int	max_data;
-// 	int	median;
-
-// 	min_data = find_min_data(&info->a->head);
-// 	max_data = find_max_data(&info->a->head);
-
-// 	median = min_data + (max_data - min_data) / 2;
-// 	return (median);
-// }
-

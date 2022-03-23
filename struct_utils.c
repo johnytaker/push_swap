@@ -6,7 +6,7 @@
 /*   By: iugolin <iugolin@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/05 16:02:02 by iugolin           #+#    #+#             */
-/*   Updated: 2022/03/21 22:26:17 by iugolin          ###   ########.fr       */
+/*   Updated: 2022/03/23 12:10:51 by iugolin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ static t_stack	*create_stack_a(char **data, int size)
 		a->len = lstsize(&a->head);
 		a->min_id = find_min_id(&a->head);
 		a->median_id = find_median_id(&a->head);
-		a->max_id = find_max_id(&a->head);
+		a->max_id = a->len;
 	}
 	else
 		free(a);

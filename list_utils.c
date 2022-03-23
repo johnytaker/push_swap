@@ -6,13 +6,13 @@
 /*   By: iugolin <iugolin@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/16 11:52:02 by iugolin           #+#    #+#             */
-/*   Updated: 2022/03/20 19:05:37 by iugolin          ###   ########.fr       */
+/*   Updated: 2022/03/23 11:49:50 by iugolin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-t_list	*create_node(int data)
+t_list	*create_node(int value)
 {
 	t_list	*new_elem;
 
@@ -20,7 +20,7 @@ t_list	*create_node(int data)
 	if (new_elem)
 	{
 		new_elem->id = 0;
-		new_elem->data = data;
+		new_elem->value = value;
 		new_elem->next = NULL;
 	}
 	return (new_elem);
