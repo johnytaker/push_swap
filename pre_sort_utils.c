@@ -6,7 +6,7 @@
 /*   By: iugolin <iugolin@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/15 17:00:08 by iugolin           #+#    #+#             */
-/*   Updated: 2022/03/24 20:17:56 by iugolin          ###   ########.fr       */
+/*   Updated: 2022/03/24 20:21:00 by iugolin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,7 +83,7 @@ void	sort_small_numbers(t_info *info, int size)
 		fifth_sort(info);
 }
 
-void	malloc_free(t_info *info)
-{
-	while
-}
+// void	malloc_free(t_info *info)
+// {
+// 	while
+// }

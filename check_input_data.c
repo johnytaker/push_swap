@@ -6,7 +6,7 @@
 /*   By: iugolin <iugolin@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/03 17:06:45 by iugolin           #+#    #+#             */
-/*   Updated: 2022/03/24 17:41:51 by iugolin          ###   ########.fr       */
+/*   Updated: 2022/03/24 20:31:46 by iugolin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,6 @@ void	check_parameters(int number, char **data)
 	}
 	else if (!is_input_sorted(data))
 	{
-		ft_putendl_fd("Error", 1);
-		exit(EXIT_FAILURE);
+		exit(EXIT_SUCCESS);
 	}
 }
