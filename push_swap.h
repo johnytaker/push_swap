@@ -6,7 +6,7 @@
 /*   By: iugolin <iugolin@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/02 19:26:59 by iugolin           #+#    #+#             */
-/*   Updated: 2022/03/24 18:00:40 by iugolin          ###   ########.fr       */
+/*   Updated: 2022/03/24 20:13:11 by iugolin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,8 +88,10 @@ void	insertion(t_info *info);
 void	make_stack_great_again(t_stack *stack_a);
 /*				PRE SORT UTILS				*/
 void	fill_b(t_info *info);
-void	triple_sort_a(t_stack *stack_a);
+void	double_sort(t_stack *stack);
+void	triple_sort(t_stack *stack);
 void	fifth_sort(t_info *info);
+void	sort_small_numbers(t_info *info, int size);
 /*					SWAP					*/
 void	do_swap(t_list **lst, char *op_name);
 void	swap_ab(t_list **lst_a, t_list **lst_b);

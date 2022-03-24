@@ -6,7 +6,7 @@
 /*   By: iugolin <iugolin@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/15 17:00:08 by iugolin           #+#    #+#             */
-/*   Updated: 2022/03/24 18:01:55 by iugolin          ###   ########.fr       */
+/*   Updated: 2022/03/24 20:17:56 by iugolin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,42 +39,51 @@ void	fill_b(t_info *info)
 	}
 }
 
-void	triple_sort_a(t_stack *stack_a)
+void	double_sort(t_stack *stack)
 {
-	if (stack_a->len < 3 && stack_a->head->id > stack_a->head->next->id)
-	{
-		do_swap(&stack_a->head, "sa");
-		exit(EXIT_SUCCESS);
-	}
-	else if (stack_a->len < 3 && stack_a->head->id < stack_a->head->next->id)
-		exit(EXIT_SUCCESS);
-	if (stack_a->head->id == stack_a->max_id)
-		do_rotate(&stack_a->head, "ra");
-	if (stack_a->head->next->id == stack_a->max_id)
-		do_reverse_rotate(&stack_a->head, "rra");
-	if (stack_a->head->id > stack_a->head->next->id)
-		do_swap(&stack_a->head, "sa");
+	if (stack->head->id > stack->head->next->id)
+		do_swap(&stack->head, "sa");
+}
+
+void	triple_sort(t_stack *stack)
+{
+	if (stack->head->id == stack->max_id)
+		do_rotate(&stack->head, "ra");
+	if (stack->head->next->id == stack->max_id)
+		do_reverse_rotate(&stack->head, "rra");
+	if (stack->head->id > stack->head->next->id)
+		do_swap(&stack->head, "sa");
 }
 
 void	fifth_sort(t_info *info)
 {
-	t_list	*ptr_a;
-	t_list	*ptr_b;
-	int		i;
+	int		size;
 
-	ptr_a = info->a->head;
-	ptr_b = info->b->head;
-	i = 1;
-	while (ptr_a->id != i && i < 3)
+	size = info->a->len;
+	while (size--)
 	{
-		ptr_a = ptr_a->next;
-		if (ptr_a->id == i)
-		{
-			push_b(&ptr_a, &ptr_b);
-			i++;
-		}
+		if (info->a->head->id == 1 || info->a->head->id == 2)
+			push_b(&info->a->head, &info->b->head);
+		else
+			do_rotate(&info->a->head, "ra");
 	}
-	triple_sort_a(info->a);
+	double_sort(info->b);
+	triple_sort(info->a);
 	push_a(&info->a->head, &info->b->head);
 	push_a(&info->a->head, &info->b->head);
+}
+
+void	sort_small_numbers(t_info *info, int size)
+{
+	if (size == 2)
+		double_sort(info->a);
+	else if (size == 3)
+		triple_sort (info->a);
+	else if (size == 5)
+		fifth_sort(info);
+}
+
+void	malloc_free(t_info *info)
+{
+	while
 }
