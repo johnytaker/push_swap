@@ -6,7 +6,7 @@
 /*   By: iugolin <iugolin@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/02 19:31:21 by iugolin           #+#    #+#             */
-/*   Updated: 2022/03/23 20:05:06 by iugolin          ###   ########.fr       */
+/*   Updated: 2022/03/24 14:16:18 by iugolin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,12 @@ int	main(int argc, char **argv)
 		insertion(info);
 		if (info->a->head->id != info->a->min_id)
 			make_stack_great_again(info->a);
+		// push_b(&info->a->head, &info->b->head);
+		// push_b(&info->a->head, &info->b->head);
+		// print_stacks_with_ids(info->a, info->b);
+		// do_reverse_rotate(&info->a->head, "rra");
+		// do_reverse_rotate(&info->b->head, "rrb");
+		// reverse_rotate_ab(&info->a->head, &info->b->head);
 		printf("\n### FINAL STATE\n");
 		print_stacks_with_ids(info->a, info->b);
 	}

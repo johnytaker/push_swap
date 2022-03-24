@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   insertion_utils_3.c                                :+:      :+:    :+:   */
+/*   insertion_utils_2.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: iugolin <iugolin@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/23 17:35:56 by iugolin           #+#    #+#             */
-/*   Updated: 2022/03/23 19:01:53 by iugolin          ###   ########.fr       */
+/*   Updated: 2022/03/24 14:16:55 by iugolin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,9 +85,11 @@ void	insertion(t_info *info)
 		info->a->len++;
 		info->b->len--;
 		reset_default_costs(info);
+		// if (info->a->head->id == 56)
+		// 	break ;
+		// print_stacks_with_ids(info->a, info->b);
 	}
 }
-	// print_stacks_with_ids(info->a, info->b);
 
 void	make_stack_great_again(t_stack *stack_a)
 {
