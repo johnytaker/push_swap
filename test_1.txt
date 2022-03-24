@@ -1,0 +1,3745 @@
+sa
+arr TRUE
+arr[0] = 0
+0 2 4 6 7 8 10 11 12 15 17 18 19 20 22 28 29 30 33 35 37 39 41 42 46 48 51 52 54 55 56 57 61 66 68 69 71 73 74 77 79 81 82 85 86 87 93 94 99 100 
+max = 50, mid = 25, min = 1
+pb
+pb
+pb
+rb
+pb
+pb
+pb
+pb
+rb
+pb
+rb
+ra
+pb
+rb
+pb
+pb
+rb
+pb
+rb
+pb
+pb
+rb
+pb
+rb
+pb
+rb
+pb
+rb
+pb
+pb
+pb
+rb
+ra
+pb
+pb
+pb
+rb
+pb
+pb
+pb
+ra
+pb
+rb
+pb
+pb
+rb
+pb
+pb
+pb
+pb
+pb
+pb
+pb
+rb
+pb
+rb
+pb
+rb
+pb
+pb
+rb
+pb
+rb
+pb
+rb
+pb
+rb
+pb
+rb
+pb
+pb
+pb
+rb
+rra
+
+### On start of sort - stacks state
+
+A		|	    B
+0(1)	|	33(19)
+46(25)	|	20(14)
+100(50)	|	10(7)
+_(_)	|	11(8)
+_(_)	|	19(13)
+_(_)	|	15(10)
+_(_)	|	30(18)
+_(_)	|	8(6)
+_(_)	|	28(16)
+_(_)	|	17(11)
+_(_)	|	42(24)
+_(_)	|	41(23)
+_(_)	|	37(21)
+_(_)	|	22(15)
+_(_)	|	35(20)
+_(_)	|	6(4)
+_(_)	|	2(2)
+_(_)	|	7(5)
+_(_)	|	39(22)
+_(_)	|	29(17)
+_(_)	|	18(12)
+_(_)	|	4(3)
+_(_)	|	12(9)
+_(_)	|	79(41)
+_(_)	|	99(49)
+_(_)	|	87(46)
+_(_)	|	54(29)
+_(_)	|	77(40)
+_(_)	|	66(34)
+_(_)	|	68(35)
+_(_)	|	94(48)
+_(_)	|	71(37)
+_(_)	|	73(38)
+_(_)	|	69(36)
+_(_)	|	51(27)
+_(_)	|	81(42)
+_(_)	|	85(44)
+_(_)	|	57(32)
+_(_)	|	52(28)
+_(_)	|	56(31)
+_(_)	|	82(43)
+_(_)	|	86(45)
+_(_)	|	55(30)
+_(_)	|	74(39)
+_(_)	|	61(33)
+_(_)	|	93(47)
+_(_)	|	48(26)
+
+
+### Sorting states
+b_id 19	cost 48	ra 1 rra 0 rb 0 rrb 47	 last_id 50
+b_id 14	cost 2	ra 1 rra 0 rb 1 rrb 0	 last_id 50
+b_id 7	cost 3	ra 1 rra 0 rb 2 rrb 0	 last_id 50
+b_id 8	cost 4	ra 1 rra 0 rb 3 rrb 0	 last_id 50
+b_id 13	cost 5	ra 1 rra 0 rb 4 rrb 0	 last_id 50
+b_id 10	cost 6	ra 1 rra 0 rb 5 rrb 0	 last_id 50
+b_id 18	cost 7	ra 1 rra 0 rb 6 rrb 0	 last_id 50
+b_id 6	cost 8	ra 1 rra 0 rb 7 rrb 0	 last_id 50
+b_id 16	cost 9	ra 1 rra 0 rb 8 rrb 0	 last_id 50
+b_id 11	cost 10	ra 1 rra 0 rb 9 rrb 0	 last_id 50
+b_id 24	cost 11	ra 1 rra 0 rb 10 rrb 0	 last_id 50
+b_id 23	cost 12	ra 1 rra 0 rb 11 rrb 0	 last_id 50
+b_id 21	cost 13	ra 1 rra 0 rb 12 rrb 0	 last_id 50
+b_id 15	cost 14	ra 1 rra 0 rb 13 rrb 0	 last_id 50
+b_id 20	cost 15	ra 1 rra 0 rb 14 rrb 0	 last_id 50
+b_id 4	cost 16	ra 1 rra 0 rb 15 rrb 0	 last_id 50
+b_id 2	cost 17	ra 1 rra 0 rb 16 rrb 0	 last_id 50
+b_id 5	cost 18	ra 1 rra 0 rb 17 rrb 0	 last_id 50
+b_id 22	cost 19	ra 1 rra 0 rb 18 rrb 0	 last_id 50
+b_id 17	cost 20	ra 1 rra 0 rb 19 rrb 0	 last_id 50
+b_id 12	cost 21	ra 1 rra 0 rb 20 rrb 0	 last_id 50
+b_id 3	cost 22	ra 1 rra 0 rb 21 rrb 0	 last_id 50
+b_id 9	cost 23	ra 1 rra 0 rb 22 rrb 0	 last_id 50
+b_id 41	cost 25	ra 2 rra 0 rb 23 rrb 0	 last_id 50
+b_id 49	cost 24	ra 0 rra 1 rb 0 rrb 23	 last_id 50
+b_id 46	cost 24	ra 2 rra 0 rb 0 rrb 22	 last_id 50
+b_id 29	cost 23	ra 2 rra 0 rb 0 rrb 21	 last_id 50
+b_id 40	cost 22	ra 2 rra 0 rb 0 rrb 20	 last_id 50
+b_id 34	cost 21	ra 2 rra 0 rb 0 rrb 19	 last_id 50
+b_id 35	cost 20	ra 2 rra 0 rb 0 rrb 18	 last_id 50
+b_id 48	cost 19	ra 2 rra 0 rb 0 rrb 17	 last_id 50
+b_id 37	cost 18	ra 2 rra 0 rb 0 rrb 16	 last_id 50
+b_id 38	cost 17	ra 2 rra 0 rb 0 rrb 15	 last_id 50
+b_id 36	cost 16	ra 2 rra 0 rb 0 rrb 14	 last_id 50
+b_id 27	cost 15	ra 2 rra 0 rb 0 rrb 13	 last_id 50
+b_id 42	cost 14	ra 2 rra 0 rb 0 rrb 12	 last_id 50
+b_id 44	cost 13	ra 2 rra 0 rb 0 rrb 11	 last_id 50
+b_id 32	cost 12	ra 2 rra 0 rb 0 rrb 10	 last_id 50
+b_id 28	cost 11	ra 2 rra 0 rb 0 rrb 9	 last_id 50
+b_id 31	cost 10	ra 2 rra 0 rb 0 rrb 8	 last_id 50
+b_id 43	cost 9	ra 2 rra 0 rb 0 rrb 7	 last_id 50
+b_id 45	cost 8	ra 2 rra 0 rb 0 rrb 6	 last_id 50
+b_id 30	cost 7	ra 2 rra 0 rb 0 rrb 5	 last_id 50
+b_id 39	cost 6	ra 2 rra 0 rb 0 rrb 4	 last_id 50
+b_id 33	cost 5	ra 2 rra 0 rb 0 rrb 3	 last_id 50
+b_id 47	cost 4	ra 2 rra 0 rb 0 rrb 2	 last_id 50
+b_id 26	cost 3	ra 2 rra 0 rb 0 rrb 1	 last_id 50
+
+Found cost
+min cost 2 pop_id 14
+ra 1 rra 0
+rb 1 rrb 0
+
+WE DO rr
+rr
+pa
+
+A		|	    B
+20(14)	|	10(7)
+46(25)	|	11(8)
+100(50)	|	19(13)
+0(1)	|	15(10)
+_(_)	|	30(18)
+_(_)	|	8(6)
+_(_)	|	28(16)
+_(_)	|	17(11)
+_(_)	|	42(24)
+_(_)	|	41(23)
+_(_)	|	37(21)
+_(_)	|	22(15)
+_(_)	|	35(20)
+_(_)	|	6(4)
+_(_)	|	2(2)
+_(_)	|	7(5)
+_(_)	|	39(22)
+_(_)	|	29(17)
+_(_)	|	18(12)
+_(_)	|	4(3)
+_(_)	|	12(9)
+_(_)	|	79(41)
+_(_)	|	99(49)
+_(_)	|	87(46)
+_(_)	|	54(29)
+_(_)	|	77(40)
+_(_)	|	66(34)
+_(_)	|	68(35)
+_(_)	|	94(48)
+_(_)	|	71(37)
+_(_)	|	73(38)
+_(_)	|	69(36)
+_(_)	|	51(27)
+_(_)	|	81(42)
+_(_)	|	85(44)
+_(_)	|	57(32)
+_(_)	|	52(28)
+_(_)	|	56(31)
+_(_)	|	82(43)
+_(_)	|	86(45)
+_(_)	|	55(30)
+_(_)	|	74(39)
+_(_)	|	61(33)
+_(_)	|	93(47)
+_(_)	|	48(26)
+_(_)	|	33(19)
+
+b_id 7	cost 46	ra 0 rra 0 rb 0 rrb 46	 last_id 1
+b_id 8	cost 1	ra 0 rra 0 rb 1 rrb 0	 last_id 1
+b_id 13	cost 6	ra 0 rra 4 rb 2 rrb 0	 last_id 1
+b_id 10	cost 3	ra 0 rra 0 rb 3 rrb 0	 last_id 1
+b_id 18	cost 5	ra 1 rra 0 rb 4 rrb 0	 last_id 1
+b_id 6	cost 5	ra 0 rra 0 rb 5 rrb 0	 last_id 1
+b_id 16	cost 7	ra 1 rra 0 rb 6 rrb 0	 last_id 1
+b_id 11	cost 7	ra 0 rra 0 rb 7 rrb 0	 last_id 1
+b_id 24	cost 9	ra 1 rra 0 rb 8 rrb 0	 last_id 1
+b_id 23	cost 10	ra 1 rra 0 rb 9 rrb 0	 last_id 1
+b_id 21	cost 11	ra 1 rra 0 rb 10 rrb 0	 last_id 1
+b_id 15	cost 12	ra 1 rra 0 rb 11 rrb 0	 last_id 1
+b_id 20	cost 13	ra 1 rra 0 rb 12 rrb 0	 last_id 1
+b_id 4	cost 13	ra 0 rra 0 rb 13 rrb 0	 last_id 1
+b_id 2	cost 14	ra 0 rra 0 rb 14 rrb 0	 last_id 1
+b_id 5	cost 15	ra 0 rra 0 rb 15 rrb 0	 last_id 1
+b_id 22	cost 17	ra 1 rra 0 rb 16 rrb 0	 last_id 1
+b_id 17	cost 18	ra 1 rra 0 rb 17 rrb 0	 last_id 1
+b_id 12	cost 18	ra 0 rra 0 rb 18 rrb 0	 last_id 1
+b_id 3	cost 19	ra 0 rra 0 rb 19 rrb 0	 last_id 1
+b_id 9	cost 20	ra 0 rra 0 rb 20 rrb 0	 last_id 1
+b_id 41	cost 23	ra 2 rra 0 rb 21 rrb 0	 last_id 1
+b_id 49	cost 24	ra 2 rra 2 rb 22 rrb 0	 last_id 1
+b_id 46	cost 25	ra 2 rra 0 rb 23 rrb 23	 last_id 1
+b_id 29	cost 24	ra 2 rra 0 rb 0 rrb 22	 last_id 1
+b_id 40	cost 23	ra 2 rra 0 rb 0 rrb 21	 last_id 1
+b_id 34	cost 22	ra 2 rra 0 rb 0 rrb 20	 last_id 1
+b_id 35	cost 21	ra 2 rra 0 rb 0 rrb 19	 last_id 1
+b_id 48	cost 20	ra 2 rra 0 rb 0 rrb 18	 last_id 1
+b_id 37	cost 19	ra 2 rra 0 rb 0 rrb 17	 last_id 1
+b_id 38	cost 18	ra 2 rra 0 rb 0 rrb 16	 last_id 1
+b_id 36	cost 17	ra 2 rra 0 rb 0 rrb 15	 last_id 1
+b_id 27	cost 16	ra 2 rra 0 rb 0 rrb 14	 last_id 1
+b_id 42	cost 15	ra 2 rra 0 rb 0 rrb 13	 last_id 1
+b_id 44	cost 14	ra 2 rra 0 rb 0 rrb 12	 last_id 1
+b_id 32	cost 13	ra 2 rra 0 rb 0 rrb 11	 last_id 1
+b_id 28	cost 12	ra 2 rra 0 rb 0 rrb 10	 last_id 1
+b_id 31	cost 11	ra 2 rra 0 rb 0 rrb 9	 last_id 1
+b_id 43	cost 10	ra 2 rra 0 rb 0 rrb 8	 last_id 1
+b_id 45	cost 9	ra 2 rra 0 rb 0 rrb 7	 last_id 1
+b_id 30	cost 8	ra 2 rra 0 rb 0 rrb 6	 last_id 1
+b_id 39	cost 7	ra 2 rra 0 rb 0 rrb 5	 last_id 1
+b_id 33	cost 6	ra 2 rra 0 rb 0 rrb 4	 last_id 1
+b_id 47	cost 5	ra 2 rra 0 rb 0 rrb 3	 last_id 1
+b_id 26	cost 4	ra 2 rra 0 rb 0 rrb 2	 last_id 1
+b_id 19	cost 2	ra 1 rra 0 rb 0 rrb 1	 last_id 1
+
+Found cost
+min cost 1 pop_id 8
+ra 0 rra 0
+rb 1 rrb 0
+
+WE DO rb
+rb
+pa
+
+A		|	    B
+11(8)	|	19(13)
+20(14)	|	15(10)
+46(25)	|	30(18)
+100(50)	|	8(6)
+0(1)	|	28(16)
+_(_)	|	17(11)
+_(_)	|	42(24)
+_(_)	|	41(23)
+_(_)	|	37(21)
+_(_)	|	22(15)
+_(_)	|	35(20)
+_(_)	|	6(4)
+_(_)	|	2(2)
+_(_)	|	7(5)
+_(_)	|	39(22)
+_(_)	|	29(17)
+_(_)	|	18(12)
+_(_)	|	4(3)
+_(_)	|	12(9)
+_(_)	|	79(41)
+_(_)	|	99(49)
+_(_)	|	87(46)
+_(_)	|	54(29)
+_(_)	|	77(40)
+_(_)	|	66(34)
+_(_)	|	68(35)
+_(_)	|	94(48)
+_(_)	|	71(37)
+_(_)	|	73(38)
+_(_)	|	69(36)
+_(_)	|	51(27)
+_(_)	|	81(42)
+_(_)	|	85(44)
+_(_)	|	57(32)
+_(_)	|	52(28)
+_(_)	|	56(31)
+_(_)	|	82(43)
+_(_)	|	86(45)
+_(_)	|	55(30)
+_(_)	|	74(39)
+_(_)	|	61(33)
+_(_)	|	93(47)
+_(_)	|	48(26)
+_(_)	|	33(19)
+_(_)	|	10(7)
+
+b_id 13	cost 46	ra 1 rra 0 rb 0 rrb 45	 last_id 1
+b_id 10	cost 2	ra 1 rra 0 rb 1 rrb 0	 last_id 1
+b_id 18	cost 4	ra 2 rra 0 rb 2 rrb 0	 last_id 1
+b_id 6	cost 3	ra 0 rra 0 rb 3 rrb 0	 last_id 1
+b_id 16	cost 6	ra 2 rra 0 rb 4 rrb 0	 last_id 1
+b_id 11	cost 6	ra 1 rra 0 rb 5 rrb 0	 last_id 1
+b_id 24	cost 8	ra 2 rra 0 rb 6 rrb 0	 last_id 1
+b_id 23	cost 9	ra 2 rra 0 rb 7 rrb 0	 last_id 1
+b_id 21	cost 10	ra 2 rra 0 rb 8 rrb 0	 last_id 1
+b_id 15	cost 11	ra 2 rra 0 rb 9 rrb 0	 last_id 1
+b_id 20	cost 12	ra 2 rra 0 rb 10 rrb 0	 last_id 1
+b_id 4	cost 11	ra 0 rra 0 rb 11 rrb 0	 last_id 1
+b_id 2	cost 12	ra 0 rra 0 rb 12 rrb 0	 last_id 1
+b_id 5	cost 13	ra 0 rra 0 rb 13 rrb 0	 last_id 1
+b_id 22	cost 16	ra 2 rra 0 rb 14 rrb 0	 last_id 1
+b_id 17	cost 17	ra 2 rra 0 rb 15 rrb 0	 last_id 1
+b_id 12	cost 17	ra 1 rra 0 rb 16 rrb 0	 last_id 1
+b_id 3	cost 17	ra 0 rra 0 rb 17 rrb 0	 last_id 1
+b_id 9	cost 19	ra 1 rra 0 rb 18 rrb 0	 last_id 1
+b_id 41	cost 22	ra 3 rra 0 rb 19 rrb 0	 last_id 1
+b_id 49	cost 22	ra 0 rra 2 rb 20 rrb 0	 last_id 1
+b_id 46	cost 24	ra 3 rra 0 rb 21 rrb 0	 last_id 1
+b_id 29	cost 25	ra 3 rra 0 rb 22 rrb 0	 last_id 1
+b_id 40	cost 25	ra 3 rra 0 rb 0 rrb 22	 last_id 1
+b_id 34	cost 24	ra 3 rra 0 rb 0 rrb 21	 last_id 1
+b_id 35	cost 23	ra 3 rra 0 rb 0 rrb 20	 last_id 1
+b_id 48	cost 22	ra 3 rra 0 rb 0 rrb 19	 last_id 1
+b_id 37	cost 21	ra 3 rra 0 rb 0 rrb 18	 last_id 1
+b_id 38	cost 20	ra 3 rra 0 rb 0 rrb 17	 last_id 1
+b_id 36	cost 19	ra 3 rra 0 rb 0 rrb 16	 last_id 1
+b_id 27	cost 18	ra 3 rra 0 rb 0 rrb 15	 last_id 1
+b_id 42	cost 17	ra 3 rra 0 rb 0 rrb 14	 last_id 1
+b_id 44	cost 16	ra 3 rra 0 rb 0 rrb 13	 last_id 1
+b_id 32	cost 15	ra 3 rra 0 rb 0 rrb 12	 last_id 1
+b_id 28	cost 14	ra 3 rra 0 rb 0 rrb 11	 last_id 1
+b_id 31	cost 13	ra 3 rra 0 rb 0 rrb 10	 last_id 1
+b_id 43	cost 12	ra 3 rra 0 rb 0 rrb 9	 last_id 1
+b_id 45	cost 11	ra 3 rra 0 rb 0 rrb 8	 last_id 1
+b_id 30	cost 10	ra 3 rra 0 rb 0 rrb 7	 last_id 1
+b_id 39	cost 9	ra 3 rra 0 rb 0 rrb 6	 last_id 1
+b_id 33	cost 8	ra 3 rra 0 rb 0 rrb 5	 last_id 1
+b_id 47	cost 7	ra 3 rra 0 rb 0 rrb 4	 last_id 1
+b_id 26	cost 6	ra 3 rra 0 rb 0 rrb 3	 last_id 1
+b_id 19	cost 4	ra 2 rra 0 rb 0 rrb 2	 last_id 1
+b_id 7	cost 6	ra 0 rra 5 rb 0 rrb 1	 last_id 1
+
+Found cost
+min cost 2 pop_id 10
+ra 1 rra 0
+rb 1 rrb 0
+
+WE DO rr
+rr
+pa
+
+A		|	    B
+15(10)	|	30(18)
+20(14)	|	8(6)
+46(25)	|	28(16)
+100(50)	|	17(11)
+0(1)	|	42(24)
+11(8)	|	41(23)
+_(_)	|	37(21)
+_(_)	|	22(15)
+_(_)	|	35(20)
+_(_)	|	6(4)
+_(_)	|	2(2)
+_(_)	|	7(5)
+_(_)	|	39(22)
+_(_)	|	29(17)
+_(_)	|	18(12)
+_(_)	|	4(3)
+_(_)	|	12(9)
+_(_)	|	79(41)
+_(_)	|	99(49)
+_(_)	|	87(46)
+_(_)	|	54(29)
+_(_)	|	77(40)
+_(_)	|	66(34)
+_(_)	|	68(35)
+_(_)	|	94(48)
+_(_)	|	71(37)
+_(_)	|	73(38)
+_(_)	|	69(36)
+_(_)	|	51(27)
+_(_)	|	81(42)
+_(_)	|	85(44)
+_(_)	|	57(32)
+_(_)	|	52(28)
+_(_)	|	56(31)
+_(_)	|	82(43)
+_(_)	|	86(45)
+_(_)	|	55(30)
+_(_)	|	74(39)
+_(_)	|	61(33)
+_(_)	|	93(47)
+_(_)	|	48(26)
+_(_)	|	33(19)
+_(_)	|	10(7)
+_(_)	|	19(13)
+
+b_id 18	cost 46	ra 2 rra 0 rb 0 rrb 44	 last_id 8
+b_id 6	cost 6	ra 5 rra 0 rb 1 rrb 0	 last_id 8
+b_id 16	cost 4	ra 2 rra 0 rb 2 rrb 0	 last_id 8
+b_id 11	cost 4	ra 1 rra 0 rb 3 rrb 0	 last_id 8
+b_id 24	cost 6	ra 2 rra 0 rb 4 rrb 0	 last_id 8
+b_id 23	cost 7	ra 2 rra 0 rb 5 rrb 0	 last_id 8
+b_id 21	cost 8	ra 2 rra 0 rb 6 rrb 0	 last_id 8
+b_id 15	cost 9	ra 2 rra 0 rb 7 rrb 0	 last_id 8
+b_id 20	cost 10	ra 2 rra 0 rb 8 rrb 0	 last_id 8
+b_id 4	cost 14	ra 5 rra 0 rb 9 rrb 0	 last_id 8
+b_id 2	cost 15	ra 5 rra 0 rb 10 rrb 0	 last_id 8
+b_id 5	cost 16	ra 5 rra 0 rb 11 rrb 0	 last_id 8
+b_id 22	cost 14	ra 2 rra 0 rb 12 rrb 0	 last_id 8
+b_id 17	cost 15	ra 2 rra 0 rb 13 rrb 0	 last_id 8
+b_id 12	cost 15	ra 1 rra 0 rb 14 rrb 0	 last_id 8
+b_id 3	cost 20	ra 5 rra 0 rb 15 rrb 0	 last_id 8
+b_id 9	cost 22	ra 0 rra 6 rb 16 rrb 0	 last_id 8
+b_id 41	cost 20	ra 3 rra 0 rb 17 rrb 0	 last_id 8
+b_id 49	cost 21	ra 3 rra 3 rb 18 rrb 0	 last_id 8
+b_id 46	cost 22	ra 3 rra 0 rb 19 rrb 0	 last_id 8
+b_id 29	cost 23	ra 3 rra 0 rb 20 rrb 0	 last_id 8
+b_id 40	cost 24	ra 3 rra 0 rb 21 rrb 0	 last_id 8
+b_id 34	cost 25	ra 3 rra 0 rb 22 rrb 22	 last_id 8
+b_id 35	cost 24	ra 3 rra 0 rb 0 rrb 21	 last_id 8
+b_id 48	cost 23	ra 3 rra 0 rb 0 rrb 20	 last_id 8
+b_id 37	cost 22	ra 3 rra 0 rb 0 rrb 19	 last_id 8
+b_id 38	cost 21	ra 3 rra 0 rb 0 rrb 18	 last_id 8
+b_id 36	cost 20	ra 3 rra 0 rb 0 rrb 17	 last_id 8
+b_id 27	cost 19	ra 3 rra 0 rb 0 rrb 16	 last_id 8
+b_id 42	cost 18	ra 3 rra 0 rb 0 rrb 15	 last_id 8
+b_id 44	cost 17	ra 3 rra 0 rb 0 rrb 14	 last_id 8
+b_id 32	cost 16	ra 3 rra 0 rb 0 rrb 13	 last_id 8
+b_id 28	cost 15	ra 3 rra 0 rb 0 rrb 12	 last_id 8
+b_id 31	cost 14	ra 3 rra 0 rb 0 rrb 11	 last_id 8
+b_id 43	cost 13	ra 3 rra 0 rb 0 rrb 10	 last_id 8
+b_id 45	cost 12	ra 3 rra 0 rb 0 rrb 9	 last_id 8
+b_id 30	cost 11	ra 3 rra 0 rb 0 rrb 8	 last_id 8
+b_id 39	cost 10	ra 3 rra 0 rb 0 rrb 7	 last_id 8
+b_id 33	cost 9	ra 3 rra 0 rb 0 rrb 6	 last_id 8
+b_id 47	cost 8	ra 3 rra 0 rb 0 rrb 5	 last_id 8
+b_id 26	cost 7	ra 3 rra 0 rb 0 rrb 4	 last_id 8
+b_id 19	cost 5	ra 2 rra 0 rb 0 rrb 3	 last_id 8
+b_id 7	cost 3	ra 0 rra 1 rb 0 rrb 2	 last_id 8
+b_id 13	cost 2	ra 1 rra 0 rb 0 rrb 1	 last_id 8
+
+Found cost
+min cost 2 pop_id 13
+ra 1 rra 0
+rb 0 rrb 1
+
+WE DO ra
+ra
+WE DO rrb
+rrb
+pa
+
+A		|	    B
+19(13)	|	30(18)
+20(14)	|	8(6)
+46(25)	|	28(16)
+100(50)	|	17(11)
+0(1)	|	42(24)
+11(8)	|	41(23)
+15(10)	|	37(21)
+_(_)	|	22(15)
+_(_)	|	35(20)
+_(_)	|	6(4)
+_(_)	|	2(2)
+_(_)	|	7(5)
+_(_)	|	39(22)
+_(_)	|	29(17)
+_(_)	|	18(12)
+_(_)	|	4(3)
+_(_)	|	12(9)
+_(_)	|	79(41)
+_(_)	|	99(49)
+_(_)	|	87(46)
+_(_)	|	54(29)
+_(_)	|	77(40)
+_(_)	|	66(34)
+_(_)	|	68(35)
+_(_)	|	94(48)
+_(_)	|	71(37)
+_(_)	|	73(38)
+_(_)	|	69(36)
+_(_)	|	51(27)
+_(_)	|	81(42)
+_(_)	|	85(44)
+_(_)	|	57(32)
+_(_)	|	52(28)
+_(_)	|	56(31)
+_(_)	|	82(43)
+_(_)	|	86(45)
+_(_)	|	55(30)
+_(_)	|	74(39)
+_(_)	|	61(33)
+_(_)	|	93(47)
+_(_)	|	48(26)
+_(_)	|	33(19)
+_(_)	|	10(7)
+
+b_id 18	cost 45	ra 2 rra 0 rb 0 rrb 43	 last_id 10
+b_id 6	cost 6	ra 5 rra 0 rb 1 rrb 0	 last_id 10
+b_id 16	cost 4	ra 2 rra 0 rb 2 rrb 0	 last_id 10
+b_id 11	cost 3	ra 0 rra 0 rb 3 rrb 0	 last_id 10
+b_id 24	cost 6	ra 2 rra 0 rb 4 rrb 0	 last_id 10
+b_id 23	cost 7	ra 2 rra 0 rb 5 rrb 0	 last_id 10
+b_id 21	cost 8	ra 2 rra 0 rb 6 rrb 0	 last_id 10
+b_id 15	cost 9	ra 2 rra 0 rb 7 rrb 0	 last_id 10
+b_id 20	cost 10	ra 2 rra 0 rb 8 rrb 0	 last_id 10
+b_id 4	cost 14	ra 5 rra 0 rb 9 rrb 0	 last_id 10
+b_id 2	cost 15	ra 5 rra 0 rb 10 rrb 0	 last_id 10
+b_id 5	cost 16	ra 5 rra 0 rb 11 rrb 0	 last_id 10
+b_id 22	cost 14	ra 2 rra 0 rb 12 rrb 0	 last_id 10
+b_id 17	cost 15	ra 2 rra 0 rb 13 rrb 0	 last_id 10
+b_id 12	cost 21	ra 0 rra 7 rb 14 rrb 0	 last_id 10
+b_id 3	cost 20	ra 5 rra 0 rb 15 rrb 0	 last_id 10
+b_id 9	cost 17	ra 0 rra 1 rb 16 rrb 0	 last_id 10
+b_id 41	cost 20	ra 3 rra 0 rb 17 rrb 0	 last_id 10
+b_id 49	cost 21	ra 3 rra 0 rb 18 rrb 0	 last_id 10
+b_id 46	cost 22	ra 3 rra 0 rb 19 rrb 0	 last_id 10
+b_id 29	cost 23	ra 3 rra 0 rb 20 rrb 0	 last_id 10
+b_id 40	cost 24	ra 3 rra 0 rb 21 rrb 0	 last_id 10
+b_id 34	cost 24	ra 3 rra 0 rb 0 rrb 21	 last_id 10
+b_id 35	cost 23	ra 3 rra 0 rb 0 rrb 20	 last_id 10
+b_id 48	cost 22	ra 3 rra 0 rb 0 rrb 19	 last_id 10
+b_id 37	cost 21	ra 3 rra 0 rb 0 rrb 18	 last_id 10
+b_id 38	cost 20	ra 3 rra 0 rb 0 rrb 17	 last_id 10
+b_id 36	cost 19	ra 3 rra 0 rb 0 rrb 16	 last_id 10
+b_id 27	cost 18	ra 3 rra 0 rb 0 rrb 15	 last_id 10
+b_id 42	cost 17	ra 3 rra 0 rb 0 rrb 14	 last_id 10
+b_id 44	cost 16	ra 3 rra 0 rb 0 rrb 13	 last_id 10
+b_id 32	cost 15	ra 3 rra 0 rb 0 rrb 12	 last_id 10
+b_id 28	cost 14	ra 3 rra 0 rb 0 rrb 11	 last_id 10
+b_id 31	cost 13	ra 3 rra 0 rb 0 rrb 10	 last_id 10
+b_id 43	cost 12	ra 3 rra 0 rb 0 rrb 9	 last_id 10
+b_id 45	cost 11	ra 3 rra 0 rb 0 rrb 8	 last_id 10
+b_id 30	cost 10	ra 3 rra 0 rb 0 rrb 7	 last_id 10
+b_id 39	cost 9	ra 3 rra 0 rb 0 rrb 6	 last_id 10
+b_id 33	cost 8	ra 3 rra 0 rb 0 rrb 5	 last_id 10
+b_id 47	cost 7	ra 3 rra 0 rb 0 rrb 4	 last_id 10
+b_id 26	cost 6	ra 3 rra 0 rb 0 rrb 3	 last_id 10
+b_id 19	cost 4	ra 2 rra 0 rb 0 rrb 2	 last_id 10
+b_id 7	cost 3	ra 0 rra 2 rb 0 rrb 1	 last_id 10
+
+Found cost
+min cost 3 pop_id 11
+ra 0 rra 0
+rb 3 rrb 0
+
+WE DO rb
+rb
+WE DO rb
+rb
+WE DO rb
+rb
+pa
+
+A		|	    B
+17(11)	|	42(24)
+19(13)	|	41(23)
+20(14)	|	37(21)
+46(25)	|	22(15)
+100(50)	|	35(20)
+0(1)	|	6(4)
+11(8)	|	2(2)
+15(10)	|	7(5)
+_(_)	|	39(22)
+_(_)	|	29(17)
+_(_)	|	18(12)
+_(_)	|	4(3)
+_(_)	|	12(9)
+_(_)	|	79(41)
+_(_)	|	99(49)
+_(_)	|	87(46)
+_(_)	|	54(29)
+_(_)	|	77(40)
+_(_)	|	66(34)
+_(_)	|	68(35)
+_(_)	|	94(48)
+_(_)	|	71(37)
+_(_)	|	73(38)
+_(_)	|	69(36)
+_(_)	|	51(27)
+_(_)	|	81(42)
+_(_)	|	85(44)
+_(_)	|	57(32)
+_(_)	|	52(28)
+_(_)	|	56(31)
+_(_)	|	82(43)
+_(_)	|	86(45)
+_(_)	|	55(30)
+_(_)	|	74(39)
+_(_)	|	61(33)
+_(_)	|	93(47)
+_(_)	|	48(26)
+_(_)	|	33(19)
+_(_)	|	10(7)
+_(_)	|	30(18)
+_(_)	|	8(6)
+_(_)	|	28(16)
+
+b_id 24	cost 45	ra 3 rra 0 rb 0 rrb 42	 last_id 10
+b_id 23	cost 4	ra 3 rra 0 rb 1 rrb 0	 last_id 10
+b_id 21	cost 5	ra 3 rra 0 rb 2 rrb 0	 last_id 10
+b_id 15	cost 6	ra 3 rra 0 rb 3 rrb 0	 last_id 10
+b_id 20	cost 7	ra 3 rra 0 rb 4 rrb 0	 last_id 10
+b_id 4	cost 11	ra 6 rra 0 rb 5 rrb 0	 last_id 10
+b_id 2	cost 12	ra 6 rra 0 rb 6 rrb 0	 last_id 10
+b_id 5	cost 13	ra 6 rra 0 rb 7 rrb 0	 last_id 10
+b_id 22	cost 11	ra 3 rra 0 rb 8 rrb 0	 last_id 10
+b_id 17	cost 12	ra 3 rra 0 rb 9 rrb 0	 last_id 10
+b_id 12	cost 11	ra 1 rra 0 rb 10 rrb 0	 last_id 10
+b_id 3	cost 17	ra 6 rra 0 rb 11 rrb 0	 last_id 10
+b_id 9	cost 13	ra 0 rra 1 rb 12 rrb 0	 last_id 10
+b_id 41	cost 17	ra 4 rra 0 rb 13 rrb 0	 last_id 10
+b_id 49	cost 18	ra 4 rra 4 rb 14 rrb 0	 last_id 10
+b_id 46	cost 19	ra 4 rra 0 rb 15 rrb 0	 last_id 10
+b_id 29	cost 20	ra 4 rra 0 rb 16 rrb 0	 last_id 10
+b_id 40	cost 21	ra 4 rra 0 rb 17 rrb 0	 last_id 10
+b_id 34	cost 22	ra 4 rra 0 rb 18 rrb 0	 last_id 10
+b_id 35	cost 23	ra 4 rra 0 rb 19 rrb 0	 last_id 10
+b_id 48	cost 24	ra 4 rra 0 rb 20 rrb 0	 last_id 10
+b_id 37	cost 25	ra 4 rra 0 rb 21 rrb 21	 last_id 10
+b_id 38	cost 24	ra 4 rra 0 rb 0 rrb 20	 last_id 10
+b_id 36	cost 23	ra 4 rra 0 rb 0 rrb 19	 last_id 10
+b_id 27	cost 22	ra 4 rra 0 rb 0 rrb 18	 last_id 10
+b_id 42	cost 21	ra 4 rra 0 rb 0 rrb 17	 last_id 10
+b_id 44	cost 20	ra 4 rra 0 rb 0 rrb 16	 last_id 10
+b_id 32	cost 19	ra 4 rra 0 rb 0 rrb 15	 last_id 10
+b_id 28	cost 18	ra 4 rra 0 rb 0 rrb 14	 last_id 10
+b_id 31	cost 17	ra 4 rra 0 rb 0 rrb 13	 last_id 10
+b_id 43	cost 16	ra 4 rra 0 rb 0 rrb 12	 last_id 10
+b_id 45	cost 15	ra 4 rra 0 rb 0 rrb 11	 last_id 10
+b_id 30	cost 14	ra 4 rra 0 rb 0 rrb 10	 last_id 10
+b_id 39	cost 13	ra 4 rra 0 rb 0 rrb 9	 last_id 10
+b_id 33	cost 12	ra 4 rra 0 rb 0 rrb 8	 last_id 10
+b_id 47	cost 11	ra 4 rra 0 rb 0 rrb 7	 last_id 10
+b_id 26	cost 10	ra 4 rra 0 rb 0 rrb 6	 last_id 10
+b_id 19	cost 8	ra 3 rra 0 rb 0 rrb 5	 last_id 10
+b_id 7	cost 6	ra 0 rra 2 rb 0 rrb 4	 last_id 10
+b_id 18	cost 6	ra 3 rra 0 rb 0 rrb 3	 last_id 10
+b_id 6	cost 8	ra 6 rra 0 rb 0 rrb 2	 last_id 10
+b_id 16	cost 4	ra 3 rra 0 rb 0 rrb 1	 last_id 10
+
+Found cost
+min cost 4 pop_id 23
+ra 3 rra 0
+rb 1 rrb 0
+
+WE DO rr
+rr
+WE DO ra
+ra
+WE DO ra
+ra
+pa
+
+A		|	    B
+41(23)	|	37(21)
+46(25)	|	22(15)
+100(50)	|	35(20)
+0(1)	|	6(4)
+11(8)	|	2(2)
+15(10)	|	7(5)
+17(11)	|	39(22)
+19(13)	|	29(17)
+20(14)	|	18(12)
+_(_)	|	4(3)
+_(_)	|	12(9)
+_(_)	|	79(41)
+_(_)	|	99(49)
+_(_)	|	87(46)
+_(_)	|	54(29)
+_(_)	|	77(40)
+_(_)	|	66(34)
+_(_)	|	68(35)
+_(_)	|	94(48)
+_(_)	|	71(37)
+_(_)	|	73(38)
+_(_)	|	69(36)
+_(_)	|	51(27)
+_(_)	|	81(42)
+_(_)	|	85(44)
+_(_)	|	57(32)
+_(_)	|	52(28)
+_(_)	|	56(31)
+_(_)	|	82(43)
+_(_)	|	86(45)
+_(_)	|	55(30)
+_(_)	|	74(39)
+_(_)	|	61(33)
+_(_)	|	93(47)
+_(_)	|	48(26)
+_(_)	|	33(19)
+_(_)	|	10(7)
+_(_)	|	30(18)
+_(_)	|	8(6)
+_(_)	|	28(16)
+_(_)	|	42(24)
+
+b_id 21	cost 41	ra 0 rra 0 rb 0 rrb 41	 last_id 14
+b_id 15	cost 1	ra 0 rra 0 rb 1 rrb 0	 last_id 14
+b_id 20	cost 2	ra 0 rra 0 rb 2 rrb 0	 last_id 14
+b_id 4	cost 7	ra 4 rra 0 rb 3 rrb 0	 last_id 14
+b_id 2	cost 8	ra 4 rra 0 rb 4 rrb 0	 last_id 14
+b_id 5	cost 9	ra 4 rra 0 rb 5 rrb 0	 last_id 14
+b_id 22	cost 15	ra 0 rra 9 rb 6 rrb 0	 last_id 14
+b_id 17	cost 7	ra 0 rra 0 rb 7 rrb 0	 last_id 14
+b_id 12	cost 10	ra 0 rra 2 rb 8 rrb 0	 last_id 14
+b_id 3	cost 13	ra 4 rra 0 rb 9 rrb 0	 last_id 14
+b_id 9	cost 14	ra 0 rra 4 rb 10 rrb 0	 last_id 14
+b_id 41	cost 13	ra 2 rra 0 rb 11 rrb 0	 last_id 14
+b_id 49	cost 14	ra 2 rra 0 rb 12 rrb 0	 last_id 14
+b_id 46	cost 15	ra 2 rra 0 rb 13 rrb 0	 last_id 14
+b_id 29	cost 16	ra 2 rra 0 rb 14 rrb 0	 last_id 14
+b_id 40	cost 17	ra 2 rra 0 rb 15 rrb 0	 last_id 14
+b_id 34	cost 18	ra 2 rra 0 rb 16 rrb 0	 last_id 14
+b_id 35	cost 19	ra 2 rra 0 rb 17 rrb 0	 last_id 14
+b_id 48	cost 20	ra 2 rra 0 rb 18 rrb 0	 last_id 14
+b_id 37	cost 21	ra 2 rra 0 rb 19 rrb 0	 last_id 14
+b_id 38	cost 22	ra 2 rra 0 rb 20 rrb 0	 last_id 14
+b_id 36	cost 22	ra 2 rra 0 rb 0 rrb 20	 last_id 14
+b_id 27	cost 21	ra 2 rra 0 rb 0 rrb 19	 last_id 14
+b_id 42	cost 20	ra 2 rra 0 rb 0 rrb 18	 last_id 14
+b_id 44	cost 19	ra 2 rra 0 rb 0 rrb 17	 last_id 14
+b_id 32	cost 18	ra 2 rra 0 rb 0 rrb 16	 last_id 14
+b_id 28	cost 17	ra 2 rra 0 rb 0 rrb 15	 last_id 14
+b_id 31	cost 16	ra 2 rra 0 rb 0 rrb 14	 last_id 14
+b_id 43	cost 15	ra 2 rra 0 rb 0 rrb 13	 last_id 14
+b_id 45	cost 14	ra 2 rra 0 rb 0 rrb 12	 last_id 14
+b_id 30	cost 13	ra 2 rra 0 rb 0 rrb 11	 last_id 14
+b_id 39	cost 12	ra 2 rra 0 rb 0 rrb 10	 last_id 14
+b_id 33	cost 11	ra 2 rra 0 rb 0 rrb 9	 last_id 14
+b_id 47	cost 10	ra 2 rra 0 rb 0 rrb 8	 last_id 14
+b_id 26	cost 9	ra 2 rra 0 rb 0 rrb 7	 last_id 14
+b_id 19	cost 6	ra 0 rra 0 rb 0 rrb 6	 last_id 14
+b_id 7	cost 9	ra 4 rra 0 rb 0 rrb 5	 last_id 14
+b_id 18	cost 4	ra 0 rra 0 rb 0 rrb 4	 last_id 14
+b_id 6	cost 7	ra 4 rra 0 rb 0 rrb 3	 last_id 14
+b_id 16	cost 2	ra 0 rra 0 rb 0 rrb 2	 last_id 14
+b_id 24	cost 2	ra 1 rra 0 rb 0 rrb 1	 last_id 14
+
+Found cost
+min cost 1 pop_id 15
+ra 0 rra 0
+rb 1 rrb 0
+
+WE DO rb
+rb
+pa
+
+A		|	    B
+22(15)	|	35(20)
+41(23)	|	6(4)
+46(25)	|	2(2)
+100(50)	|	7(5)
+0(1)	|	39(22)
+11(8)	|	29(17)
+15(10)	|	18(12)
+17(11)	|	4(3)
+19(13)	|	12(9)
+20(14)	|	79(41)
+_(_)	|	99(49)
+_(_)	|	87(46)
+_(_)	|	54(29)
+_(_)	|	77(40)
+_(_)	|	66(34)
+_(_)	|	68(35)
+_(_)	|	94(48)
+_(_)	|	71(37)
+_(_)	|	73(38)
+_(_)	|	69(36)
+_(_)	|	51(27)
+_(_)	|	81(42)
+_(_)	|	85(44)
+_(_)	|	57(32)
+_(_)	|	52(28)
+_(_)	|	56(31)
+_(_)	|	82(43)
+_(_)	|	86(45)
+_(_)	|	55(30)
+_(_)	|	74(39)
+_(_)	|	61(33)
+_(_)	|	93(47)
+_(_)	|	48(26)
+_(_)	|	33(19)
+_(_)	|	10(7)
+_(_)	|	30(18)
+_(_)	|	8(6)
+_(_)	|	28(16)
+_(_)	|	42(24)
+_(_)	|	37(21)
+
+b_id 20	cost 41	ra 1 rra 0 rb 0 rrb 40	 last_id 14
+b_id 4	cost 6	ra 5 rra 0 rb 1 rrb 0	 last_id 14
+b_id 2	cost 7	ra 5 rra 0 rb 2 rrb 0	 last_id 14
+b_id 5	cost 8	ra 5 rra 0 rb 3 rrb 0	 last_id 14
+b_id 22	cost 5	ra 1 rra 0 rb 4 rrb 0	 last_id 14
+b_id 17	cost 6	ra 1 rra 0 rb 5 rrb 0	 last_id 14
+b_id 12	cost 8	ra 0 rra 2 rb 6 rrb 0	 last_id 14
+b_id 3	cost 12	ra 5 rra 0 rb 7 rrb 0	 last_id 14
+b_id 9	cost 12	ra 0 rra 4 rb 8 rrb 0	 last_id 14
+b_id 41	cost 12	ra 3 rra 0 rb 9 rrb 0	 last_id 14
+b_id 49	cost 13	ra 3 rra 0 rb 10 rrb 0	 last_id 14
+b_id 46	cost 14	ra 3 rra 0 rb 11 rrb 0	 last_id 14
+b_id 29	cost 15	ra 3 rra 0 rb 12 rrb 0	 last_id 14
+b_id 40	cost 16	ra 3 rra 0 rb 13 rrb 0	 last_id 14
+b_id 34	cost 17	ra 3 rra 0 rb 14 rrb 0	 last_id 14
+b_id 35	cost 18	ra 3 rra 0 rb 15 rrb 0	 last_id 14
+b_id 48	cost 19	ra 3 rra 0 rb 16 rrb 0	 last_id 14
+b_id 37	cost 20	ra 3 rra 0 rb 17 rrb 0	 last_id 14
+b_id 38	cost 21	ra 3 rra 0 rb 18 rrb 0	 last_id 14
+b_id 36	cost 22	ra 3 rra 0 rb 19 rrb 0	 last_id 14
+b_id 27	cost 23	ra 3 rra 0 rb 20 rrb 20	 last_id 14
+b_id 42	cost 22	ra 3 rra 0 rb 0 rrb 19	 last_id 14
+b_id 44	cost 21	ra 3 rra 0 rb 0 rrb 18	 last_id 14
+b_id 32	cost 20	ra 3 rra 0 rb 0 rrb 17	 last_id 14
+b_id 28	cost 19	ra 3 rra 0 rb 0 rrb 16	 last_id 14
+b_id 31	cost 18	ra 3 rra 0 rb 0 rrb 15	 last_id 14
+b_id 43	cost 17	ra 3 rra 0 rb 0 rrb 14	 last_id 14
+b_id 45	cost 16	ra 3 rra 0 rb 0 rrb 13	 last_id 14
+b_id 30	cost 15	ra 3 rra 0 rb 0 rrb 12	 last_id 14
+b_id 39	cost 14	ra 3 rra 0 rb 0 rrb 11	 last_id 14
+b_id 33	cost 13	ra 3 rra 0 rb 0 rrb 10	 last_id 14
+b_id 47	cost 12	ra 3 rra 0 rb 0 rrb 9	 last_id 14
+b_id 26	cost 11	ra 3 rra 0 rb 0 rrb 8	 last_id 14
+b_id 19	cost 8	ra 1 rra 0 rb 0 rrb 7	 last_id 14
+b_id 7	cost 11	ra 5 rra 5 rb 0 rrb 6	 last_id 14
+b_id 18	cost 6	ra 1 rra 0 rb 0 rrb 5	 last_id 14
+b_id 6	cost 9	ra 5 rra 0 rb 0 rrb 4	 last_id 14
+b_id 16	cost 4	ra 1 rra 0 rb 0 rrb 3	 last_id 14
+b_id 24	cost 4	ra 2 rra 0 rb 0 rrb 2	 last_id 14
+b_id 21	cost 2	ra 1 rra 0 rb 0 rrb 1	 last_id 14
+
+Found cost
+min cost 2 pop_id 21
+ra 1 rra 0
+rb 0 rrb 1
+
+WE DO ra
+ra
+WE DO rrb
+rrb
+pa
+
+A		|	    B
+37(21)	|	35(20)
+41(23)	|	6(4)
+46(25)	|	2(2)
+100(50)	|	7(5)
+0(1)	|	39(22)
+11(8)	|	29(17)
+15(10)	|	18(12)
+17(11)	|	4(3)
+19(13)	|	12(9)
+20(14)	|	79(41)
+22(15)	|	99(49)
+_(_)	|	87(46)
+_(_)	|	54(29)
+_(_)	|	77(40)
+_(_)	|	66(34)
+_(_)	|	68(35)
+_(_)	|	94(48)
+_(_)	|	71(37)
+_(_)	|	73(38)
+_(_)	|	69(36)
+_(_)	|	51(27)
+_(_)	|	81(42)
+_(_)	|	85(44)
+_(_)	|	57(32)
+_(_)	|	52(28)
+_(_)	|	56(31)
+_(_)	|	82(43)
+_(_)	|	86(45)
+_(_)	|	55(30)
+_(_)	|	74(39)
+_(_)	|	61(33)
+_(_)	|	93(47)
+_(_)	|	48(26)
+_(_)	|	33(19)
+_(_)	|	10(7)
+_(_)	|	30(18)
+_(_)	|	8(6)
+_(_)	|	28(16)
+_(_)	|	42(24)
+
+b_id 20	cost 50	ra 0 rra 11 rb 0 rrb 39	 last_id 15
+b_id 4	cost 6	ra 5 rra 0 rb 1 rrb 0	 last_id 15
+b_id 2	cost 7	ra 5 rra 0 rb 2 rrb 0	 last_id 15
+b_id 5	cost 8	ra 5 rra 0 rb 3 rrb 0	 last_id 15
+b_id 22	cost 5	ra 1 rra 0 rb 4 rrb 0	 last_id 15
+b_id 17	cost 5	ra 0 rra 0 rb 5 rrb 0	 last_id 15
+b_id 12	cost 9	ra 0 rra 3 rb 6 rrb 0	 last_id 15
+b_id 3	cost 12	ra 5 rra 0 rb 7 rrb 0	 last_id 15
+b_id 9	cost 13	ra 0 rra 5 rb 8 rrb 0	 last_id 15
+b_id 41	cost 12	ra 3 rra 0 rb 9 rrb 0	 last_id 15
+b_id 49	cost 13	ra 3 rra 0 rb 10 rrb 0	 last_id 15
+b_id 46	cost 14	ra 3 rra 0 rb 11 rrb 0	 last_id 15
+b_id 29	cost 15	ra 3 rra 0 rb 12 rrb 0	 last_id 15
+b_id 40	cost 16	ra 3 rra 0 rb 13 rrb 0	 last_id 15
+b_id 34	cost 17	ra 3 rra 0 rb 14 rrb 0	 last_id 15
+b_id 35	cost 18	ra 3 rra 0 rb 15 rrb 0	 last_id 15
+b_id 48	cost 19	ra 3 rra 0 rb 16 rrb 0	 last_id 15
+b_id 37	cost 20	ra 3 rra 0 rb 17 rrb 0	 last_id 15
+b_id 38	cost 21	ra 3 rra 0 rb 18 rrb 0	 last_id 15
+b_id 36	cost 22	ra 3 rra 0 rb 19 rrb 0	 last_id 15
+b_id 27	cost 22	ra 3 rra 0 rb 0 rrb 19	 last_id 15
+b_id 42	cost 21	ra 3 rra 0 rb 0 rrb 18	 last_id 15
+b_id 44	cost 20	ra 3 rra 0 rb 0 rrb 17	 last_id 15
+b_id 32	cost 19	ra 3 rra 0 rb 0 rrb 16	 last_id 15
+b_id 28	cost 18	ra 3 rra 0 rb 0 rrb 15	 last_id 15
+b_id 31	cost 17	ra 3 rra 0 rb 0 rrb 14	 last_id 15
+b_id 43	cost 16	ra 3 rra 0 rb 0 rrb 13	 last_id 15
+b_id 45	cost 15	ra 3 rra 0 rb 0 rrb 12	 last_id 15
+b_id 30	cost 14	ra 3 rra 0 rb 0 rrb 11	 last_id 15
+b_id 39	cost 13	ra 3 rra 0 rb 0 rrb 10	 last_id 15
+b_id 33	cost 12	ra 3 rra 0 rb 0 rrb 9	 last_id 15
+b_id 47	cost 11	ra 3 rra 0 rb 0 rrb 8	 last_id 15
+b_id 26	cost 10	ra 3 rra 0 rb 0 rrb 7	 last_id 15
+b_id 19	cost 6	ra 0 rra 0 rb 0 rrb 6	 last_id 15
+b_id 7	cost 10	ra 5 rra 0 rb 0 rrb 5	 last_id 15
+b_id 18	cost 4	ra 0 rra 0 rb 0 rrb 4	 last_id 15
+b_id 6	cost 8	ra 5 rra 0 rb 0 rrb 3	 last_id 15
+b_id 16	cost 2	ra 0 rra 0 rb 0 rrb 2	 last_id 15
+b_id 24	cost 3	ra 2 rra 0 rb 0 rrb 1	 last_id 15
+
+Found cost
+min cost 2 pop_id 16
+ra 0 rra 0
+rb 0 rrb 2
+
+WE DO rrb
+rrb
+WE DO rrb
+rrb
+pa
+
+A		|	    B
+28(16)	|	42(24)
+37(21)	|	35(20)
+41(23)	|	6(4)
+46(25)	|	2(2)
+100(50)	|	7(5)
+0(1)	|	39(22)
+11(8)	|	29(17)
+15(10)	|	18(12)
+17(11)	|	4(3)
+19(13)	|	12(9)
+20(14)	|	79(41)
+22(15)	|	99(49)
+_(_)	|	87(46)
+_(_)	|	54(29)
+_(_)	|	77(40)
+_(_)	|	66(34)
+_(_)	|	68(35)
+_(_)	|	94(48)
+_(_)	|	71(37)
+_(_)	|	73(38)
+_(_)	|	69(36)
+_(_)	|	51(27)
+_(_)	|	81(42)
+_(_)	|	85(44)
+_(_)	|	57(32)
+_(_)	|	52(28)
+_(_)	|	56(31)
+_(_)	|	82(43)
+_(_)	|	86(45)
+_(_)	|	55(30)
+_(_)	|	74(39)
+_(_)	|	61(33)
+_(_)	|	93(47)
+_(_)	|	48(26)
+_(_)	|	33(19)
+_(_)	|	10(7)
+_(_)	|	30(18)
+_(_)	|	8(6)
+
+b_id 24	cost 41	ra 3 rra 0 rb 0 rrb 38	 last_id 15
+b_id 20	cost 2	ra 1 rra 0 rb 1 rrb 0	 last_id 15
+b_id 4	cost 8	ra 6 rra 0 rb 2 rrb 0	 last_id 15
+b_id 2	cost 9	ra 6 rra 0 rb 3 rrb 0	 last_id 15
+b_id 5	cost 10	ra 6 rra 0 rb 4 rrb 0	 last_id 15
+b_id 22	cost 7	ra 2 rra 0 rb 5 rrb 0	 last_id 15
+b_id 17	cost 7	ra 1 rra 0 rb 6 rrb 0	 last_id 15
+b_id 12	cost 10	ra 0 rra 3 rb 7 rrb 0	 last_id 15
+b_id 3	cost 14	ra 6 rra 0 rb 8 rrb 0	 last_id 15
+b_id 9	cost 14	ra 0 rra 5 rb 9 rrb 0	 last_id 15
+b_id 41	cost 14	ra 4 rra 0 rb 10 rrb 0	 last_id 15
+b_id 49	cost 15	ra 4 rra 0 rb 11 rrb 0	 last_id 15
+b_id 46	cost 16	ra 4 rra 0 rb 12 rrb 0	 last_id 15
+b_id 29	cost 17	ra 4 rra 0 rb 13 rrb 0	 last_id 15
+b_id 40	cost 18	ra 4 rra 0 rb 14 rrb 0	 last_id 15
+b_id 34	cost 19	ra 4 rra 0 rb 15 rrb 0	 last_id 15
+b_id 35	cost 20	ra 4 rra 0 rb 16 rrb 0	 last_id 15
+b_id 48	cost 21	ra 4 rra 0 rb 17 rrb 0	 last_id 15
+b_id 37	cost 22	ra 4 rra 0 rb 18 rrb 0	 last_id 15
+b_id 38	cost 23	ra 4 rra 0 rb 19 rrb 19	 last_id 15
+b_id 36	cost 22	ra 4 rra 0 rb 0 rrb 18	 last_id 15
+b_id 27	cost 21	ra 4 rra 0 rb 0 rrb 17	 last_id 15
+b_id 42	cost 20	ra 4 rra 0 rb 0 rrb 16	 last_id 15
+b_id 44	cost 19	ra 4 rra 0 rb 0 rrb 15	 last_id 15
+b_id 32	cost 18	ra 4 rra 0 rb 0 rrb 14	 last_id 15
+b_id 28	cost 17	ra 4 rra 0 rb 0 rrb 13	 last_id 15
+b_id 31	cost 16	ra 4 rra 0 rb 0 rrb 12	 last_id 15
+b_id 43	cost 15	ra 4 rra 0 rb 0 rrb 11	 last_id 15
+b_id 45	cost 14	ra 4 rra 0 rb 0 rrb 10	 last_id 15
+b_id 30	cost 13	ra 4 rra 0 rb 0 rrb 9	 last_id 15
+b_id 39	cost 12	ra 4 rra 0 rb 0 rrb 8	 last_id 15
+b_id 33	cost 11	ra 4 rra 0 rb 0 rrb 7	 last_id 15
+b_id 47	cost 10	ra 4 rra 0 rb 0 rrb 6	 last_id 15
+b_id 26	cost 9	ra 4 rra 0 rb 0 rrb 5	 last_id 15
+b_id 19	cost 5	ra 1 rra 0 rb 0 rrb 4	 last_id 15
+b_id 7	cost 9	ra 6 rra 6 rb 0 rrb 3	 last_id 15
+b_id 18	cost 3	ra 1 rra 0 rb 0 rrb 2	 last_id 15
+b_id 6	cost 7	ra 6 rra 0 rb 0 rrb 1	 last_id 15
+
+Found cost
+min cost 2 pop_id 20
+ra 1 rra 0
+rb 1 rrb 0
+
+WE DO rr
+rr
+pa
+
+A		|	    B
+35(20)	|	6(4)
+37(21)	|	2(2)
+41(23)	|	7(5)
+46(25)	|	39(22)
+100(50)	|	29(17)
+0(1)	|	18(12)
+11(8)	|	4(3)
+15(10)	|	12(9)
+17(11)	|	79(41)
+19(13)	|	99(49)
+20(14)	|	87(46)
+22(15)	|	54(29)
+28(16)	|	77(40)
+_(_)	|	66(34)
+_(_)	|	68(35)
+_(_)	|	94(48)
+_(_)	|	71(37)
+_(_)	|	73(38)
+_(_)	|	69(36)
+_(_)	|	51(27)
+_(_)	|	81(42)
+_(_)	|	85(44)
+_(_)	|	57(32)
+_(_)	|	52(28)
+_(_)	|	56(31)
+_(_)	|	82(43)
+_(_)	|	86(45)
+_(_)	|	55(30)
+_(_)	|	74(39)
+_(_)	|	61(33)
+_(_)	|	93(47)
+_(_)	|	48(26)
+_(_)	|	33(19)
+_(_)	|	10(7)
+_(_)	|	30(18)
+_(_)	|	8(6)
+_(_)	|	42(24)
+
+b_id 4	cost 43	ra 6 rra 0 rb 0 rrb 37	 last_id 16
+b_id 2	cost 7	ra 6 rra 0 rb 1 rrb 0	 last_id 16
+b_id 5	cost 8	ra 6 rra 0 rb 2 rrb 0	 last_id 16
+b_id 22	cost 5	ra 2 rra 0 rb 3 rrb 0	 last_id 16
+b_id 17	cost 4	ra 0 rra 0 rb 4 rrb 0	 last_id 16
+b_id 12	cost 9	ra 0 rra 4 rb 5 rrb 0	 last_id 16
+b_id 3	cost 12	ra 6 rra 0 rb 6 rrb 0	 last_id 16
+b_id 9	cost 13	ra 0 rra 6 rb 7 rrb 0	 last_id 16
+b_id 41	cost 12	ra 4 rra 0 rb 8 rrb 0	 last_id 16
+b_id 49	cost 13	ra 4 rra 0 rb 9 rrb 0	 last_id 16
+b_id 46	cost 14	ra 4 rra 0 rb 10 rrb 0	 last_id 16
+b_id 29	cost 15	ra 4 rra 0 rb 11 rrb 0	 last_id 16
+b_id 40	cost 16	ra 4 rra 0 rb 12 rrb 0	 last_id 16
+b_id 34	cost 17	ra 4 rra 0 rb 13 rrb 0	 last_id 16
+b_id 35	cost 18	ra 4 rra 0 rb 14 rrb 0	 last_id 16
+b_id 48	cost 19	ra 4 rra 0 rb 15 rrb 0	 last_id 16
+b_id 37	cost 20	ra 4 rra 0 rb 16 rrb 0	 last_id 16
+b_id 38	cost 21	ra 4 rra 0 rb 17 rrb 0	 last_id 16
+b_id 36	cost 22	ra 4 rra 0 rb 18 rrb 0	 last_id 16
+b_id 27	cost 22	ra 4 rra 0 rb 0 rrb 18	 last_id 16
+b_id 42	cost 21	ra 4 rra 0 rb 0 rrb 17	 last_id 16
+b_id 44	cost 20	ra 4 rra 0 rb 0 rrb 16	 last_id 16
+b_id 32	cost 19	ra 4 rra 0 rb 0 rrb 15	 last_id 16
+b_id 28	cost 18	ra 4 rra 0 rb 0 rrb 14	 last_id 16
+b_id 31	cost 17	ra 4 rra 0 rb 0 rrb 13	 last_id 16
+b_id 43	cost 16	ra 4 rra 0 rb 0 rrb 12	 last_id 16
+b_id 45	cost 15	ra 4 rra 0 rb 0 rrb 11	 last_id 16
+b_id 30	cost 14	ra 4 rra 0 rb 0 rrb 10	 last_id 16
+b_id 39	cost 13	ra 4 rra 0 rb 0 rrb 9	 last_id 16
+b_id 33	cost 12	ra 4 rra 0 rb 0 rrb 8	 last_id 16
+b_id 47	cost 11	ra 4 rra 0 rb 0 rrb 7	 last_id 16
+b_id 26	cost 10	ra 4 rra 0 rb 0 rrb 6	 last_id 16
+b_id 19	cost 18	ra 0 rra 13 rb 0 rrb 5	 last_id 16
+b_id 7	cost 10	ra 6 rra 0 rb 0 rrb 4	 last_id 16
+b_id 18	cost 3	ra 0 rra 0 rb 0 rrb 3	 last_id 16
+b_id 6	cost 8	ra 6 rra 0 rb 0 rrb 2	 last_id 16
+b_id 24	cost 4	ra 3 rra 0 rb 0 rrb 1	 last_id 16
+
+Found cost
+min cost 3 pop_id 18
+ra 0 rra 0
+rb 0 rrb 3
+
+WE DO rrb
+rrb
+WE DO rrb
+rrb
+WE DO rrb
+rrb
+pa
+
+A		|	    B
+30(18)	|	8(6)
+35(20)	|	42(24)
+37(21)	|	6(4)
+41(23)	|	2(2)
+46(25)	|	7(5)
+100(50)	|	39(22)
+0(1)	|	29(17)
+11(8)	|	18(12)
+15(10)	|	4(3)
+17(11)	|	12(9)
+19(13)	|	79(41)
+20(14)	|	99(49)
+22(15)	|	87(46)
+28(16)	|	54(29)
+_(_)	|	77(40)
+_(_)	|	66(34)
+_(_)	|	68(35)
+_(_)	|	94(48)
+_(_)	|	71(37)
+_(_)	|	73(38)
+_(_)	|	69(36)
+_(_)	|	51(27)
+_(_)	|	81(42)
+_(_)	|	85(44)
+_(_)	|	57(32)
+_(_)	|	52(28)
+_(_)	|	56(31)
+_(_)	|	82(43)
+_(_)	|	86(45)
+_(_)	|	55(30)
+_(_)	|	74(39)
+_(_)	|	61(33)
+_(_)	|	93(47)
+_(_)	|	48(26)
+_(_)	|	33(19)
+_(_)	|	10(7)
+
+b_id 6	cost 43	ra 7 rra 0 rb 0 rrb 36	 last_id 16
+b_id 24	cost 5	ra 4 rra 0 rb 1 rrb 0	 last_id 16
+b_id 4	cost 9	ra 7 rra 0 rb 2 rrb 0	 last_id 16
+b_id 2	cost 10	ra 7 rra 0 rb 3 rrb 0	 last_id 16
+b_id 5	cost 11	ra 7 rra 0 rb 4 rrb 0	 last_id 16
+b_id 22	cost 8	ra 3 rra 0 rb 5 rrb 0	 last_id 16
+b_id 17	cost 20	ra 0 rra 14 rb 6 rrb 0	 last_id 16
+b_id 12	cost 11	ra 0 rra 4 rb 7 rrb 0	 last_id 16
+b_id 3	cost 15	ra 7 rra 0 rb 8 rrb 0	 last_id 16
+b_id 9	cost 15	ra 0 rra 6 rb 9 rrb 0	 last_id 16
+b_id 41	cost 15	ra 5 rra 0 rb 10 rrb 0	 last_id 16
+b_id 49	cost 16	ra 5 rra 0 rb 11 rrb 0	 last_id 16
+b_id 46	cost 17	ra 5 rra 0 rb 12 rrb 0	 last_id 16
+b_id 29	cost 18	ra 5 rra 0 rb 13 rrb 0	 last_id 16
+b_id 40	cost 19	ra 5 rra 0 rb 14 rrb 0	 last_id 16
+b_id 34	cost 20	ra 5 rra 0 rb 15 rrb 0	 last_id 16
+b_id 35	cost 21	ra 5 rra 0 rb 16 rrb 0	 last_id 16
+b_id 48	cost 22	ra 5 rra 0 rb 17 rrb 0	 last_id 16
+b_id 37	cost 23	ra 5 rra 0 rb 18 rrb 18	 last_id 16
+b_id 38	cost 22	ra 5 rra 0 rb 0 rrb 17	 last_id 16
+b_id 36	cost 21	ra 5 rra 0 rb 0 rrb 16	 last_id 16
+b_id 27	cost 20	ra 5 rra 0 rb 0 rrb 15	 last_id 16
+b_id 42	cost 19	ra 5 rra 0 rb 0 rrb 14	 last_id 16
+b_id 44	cost 18	ra 5 rra 0 rb 0 rrb 13	 last_id 16
+b_id 32	cost 17	ra 5 rra 0 rb 0 rrb 12	 last_id 16
+b_id 28	cost 16	ra 5 rra 0 rb 0 rrb 11	 last_id 16
+b_id 31	cost 15	ra 5 rra 0 rb 0 rrb 10	 last_id 16
+b_id 43	cost 14	ra 5 rra 0 rb 0 rrb 9	 last_id 16
+b_id 45	cost 13	ra 5 rra 0 rb 0 rrb 8	 last_id 16
+b_id 30	cost 12	ra 5 rra 0 rb 0 rrb 7	 last_id 16
+b_id 39	cost 11	ra 5 rra 0 rb 0 rrb 6	 last_id 16
+b_id 33	cost 10	ra 5 rra 0 rb 0 rrb 5	 last_id 16
+b_id 47	cost 9	ra 5 rra 0 rb 0 rrb 4	 last_id 16
+b_id 26	cost 8	ra 5 rra 0 rb 0 rrb 3	 last_id 16
+b_id 19	cost 3	ra 1 rra 0 rb 0 rrb 2	 last_id 16
+b_id 7	cost 8	ra 7 rra 7 rb 0 rrb 1	 last_id 16
+
+Found cost
+min cost 3 pop_id 19
+ra 1 rra 0
+rb 0 rrb 2
+
+WE DO ra
+ra
+WE DO rrb
+rrb
+WE DO rrb
+rrb
+pa
+
+A		|	    B
+33(19)	|	10(7)
+35(20)	|	8(6)
+37(21)	|	42(24)
+41(23)	|	6(4)
+46(25)	|	2(2)
+100(50)	|	7(5)
+0(1)	|	39(22)
+11(8)	|	29(17)
+15(10)	|	18(12)
+17(11)	|	4(3)
+19(13)	|	12(9)
+20(14)	|	79(41)
+22(15)	|	99(49)
+28(16)	|	87(46)
+30(18)	|	54(29)
+_(_)	|	77(40)
+_(_)	|	66(34)
+_(_)	|	68(35)
+_(_)	|	94(48)
+_(_)	|	71(37)
+_(_)	|	73(38)
+_(_)	|	69(36)
+_(_)	|	51(27)
+_(_)	|	81(42)
+_(_)	|	85(44)
+_(_)	|	57(32)
+_(_)	|	52(28)
+_(_)	|	56(31)
+_(_)	|	82(43)
+_(_)	|	86(45)
+_(_)	|	55(30)
+_(_)	|	74(39)
+_(_)	|	61(33)
+_(_)	|	93(47)
+_(_)	|	48(26)
+
+b_id 7	cost 42	ra 7 rra 0 rb 0 rrb 35	 last_id 18
+b_id 6	cost 8	ra 7 rra 0 rb 1 rrb 0	 last_id 18
+b_id 24	cost 6	ra 4 rra 0 rb 2 rrb 0	 last_id 18
+b_id 4	cost 10	ra 7 rra 0 rb 3 rrb 0	 last_id 18
+b_id 2	cost 11	ra 7 rra 0 rb 4 rrb 0	 last_id 18
+b_id 5	cost 12	ra 7 rra 0 rb 5 rrb 0	 last_id 18
+b_id 22	cost 9	ra 3 rra 0 rb 6 rrb 0	 last_id 18
+b_id 17	cost 8	ra 0 rra 1 rb 7 rrb 0	 last_id 18
+b_id 12	cost 13	ra 0 rra 5 rb 8 rrb 0	 last_id 18
+b_id 3	cost 16	ra 7 rra 0 rb 9 rrb 0	 last_id 18
+b_id 9	cost 17	ra 0 rra 7 rb 10 rrb 0	 last_id 18
+b_id 41	cost 16	ra 5 rra 0 rb 11 rrb 0	 last_id 18
+b_id 49	cost 17	ra 5 rra 0 rb 12 rrb 0	 last_id 18
+b_id 46	cost 18	ra 5 rra 0 rb 13 rrb 0	 last_id 18
+b_id 29	cost 19	ra 5 rra 0 rb 14 rrb 0	 last_id 18
+b_id 40	cost 20	ra 5 rra 0 rb 15 rrb 0	 last_id 18
+b_id 34	cost 21	ra 5 rra 0 rb 16 rrb 0	 last_id 18
+b_id 35	cost 22	ra 5 rra 0 rb 17 rrb 0	 last_id 18
+b_id 48	cost 22	ra 5 rra 0 rb 0 rrb 17	 last_id 18
+b_id 37	cost 21	ra 5 rra 0 rb 0 rrb 16	 last_id 18
+b_id 38	cost 20	ra 5 rra 0 rb 0 rrb 15	 last_id 18
+b_id 36	cost 19	ra 5 rra 0 rb 0 rrb 14	 last_id 18
+b_id 27	cost 18	ra 5 rra 0 rb 0 rrb 13	 last_id 18
+b_id 42	cost 17	ra 5 rra 0 rb 0 rrb 12	 last_id 18
+b_id 44	cost 16	ra 5 rra 0 rb 0 rrb 11	 last_id 18
+b_id 32	cost 15	ra 5 rra 0 rb 0 rrb 10	 last_id 18
+b_id 28	cost 14	ra 5 rra 0 rb 0 rrb 9	 last_id 18
+b_id 31	cost 13	ra 5 rra 0 rb 0 rrb 8	 last_id 18
+b_id 43	cost 12	ra 5 rra 0 rb 0 rrb 7	 last_id 18
+b_id 45	cost 11	ra 5 rra 0 rb 0 rrb 6	 last_id 18
+b_id 30	cost 10	ra 5 rra 0 rb 0 rrb 5	 last_id 18
+b_id 39	cost 9	ra 5 rra 0 rb 0 rrb 4	 last_id 18
+b_id 33	cost 8	ra 5 rra 0 rb 0 rrb 3	 last_id 18
+b_id 47	cost 7	ra 5 rra 0 rb 0 rrb 2	 last_id 18
+b_id 26	cost 6	ra 5 rra 0 rb 0 rrb 1	 last_id 18
+
+Found cost
+min cost 6 pop_id 24
+ra 4 rra 0
+rb 2 rrb 0
+
+WE DO rr
+rr
+WE DO rr
+rr
+WE DO ra
+ra
+WE DO ra
+ra
+pa
+
+A		|	    B
+42(24)	|	6(4)
+46(25)	|	2(2)
+100(50)	|	7(5)
+0(1)	|	39(22)
+11(8)	|	29(17)
+15(10)	|	18(12)
+17(11)	|	4(3)
+19(13)	|	12(9)
+20(14)	|	79(41)
+22(15)	|	99(49)
+28(16)	|	87(46)
+30(18)	|	54(29)
+33(19)	|	77(40)
+35(20)	|	66(34)
+37(21)	|	68(35)
+41(23)	|	94(48)
+_(_)	|	71(37)
+_(_)	|	73(38)
+_(_)	|	69(36)
+_(_)	|	51(27)
+_(_)	|	81(42)
+_(_)	|	85(44)
+_(_)	|	57(32)
+_(_)	|	52(28)
+_(_)	|	56(31)
+_(_)	|	82(43)
+_(_)	|	86(45)
+_(_)	|	55(30)
+_(_)	|	74(39)
+_(_)	|	61(33)
+_(_)	|	93(47)
+_(_)	|	48(26)
+_(_)	|	10(7)
+_(_)	|	8(6)
+
+b_id 4	cost 38	ra 4 rra 0 rb 0 rrb 34	 last_id 23
+b_id 2	cost 5	ra 4 rra 0 rb 1 rrb 0	 last_id 23
+b_id 5	cost 6	ra 4 rra 0 rb 2 rrb 0	 last_id 23
+b_id 22	cost 4	ra 0 rra 1 rb 3 rrb 0	 last_id 23
+b_id 17	cost 9	ra 0 rra 5 rb 4 rrb 0	 last_id 23
+b_id 12	cost 12	ra 7 rra 0 rb 5 rrb 0	 last_id 23
+b_id 3	cost 10	ra 4 rra 0 rb 6 rrb 0	 last_id 23
+b_id 9	cost 12	ra 5 rra 0 rb 7 rrb 0	 last_id 23
+b_id 41	cost 10	ra 2 rra 0 rb 8 rrb 0	 last_id 23
+b_id 49	cost 11	ra 2 rra 0 rb 9 rrb 0	 last_id 23
+b_id 46	cost 12	ra 2 rra 0 rb 10 rrb 0	 last_id 23
+b_id 29	cost 13	ra 2 rra 0 rb 11 rrb 0	 last_id 23
+b_id 40	cost 14	ra 2 rra 0 rb 12 rrb 0	 last_id 23
+b_id 34	cost 15	ra 2 rra 0 rb 13 rrb 0	 last_id 23
+b_id 35	cost 16	ra 2 rra 0 rb 14 rrb 0	 last_id 23
+b_id 48	cost 17	ra 2 rra 0 rb 15 rrb 0	 last_id 23
+b_id 37	cost 18	ra 2 rra 0 rb 16 rrb 0	 last_id 23
+b_id 38	cost 19	ra 2 rra 0 rb 17 rrb 17	 last_id 23
+b_id 36	cost 18	ra 2 rra 0 rb 0 rrb 16	 last_id 23
+b_id 27	cost 17	ra 2 rra 0 rb 0 rrb 15	 last_id 23
+b_id 42	cost 16	ra 2 rra 0 rb 0 rrb 14	 last_id 23
+b_id 44	cost 15	ra 2 rra 0 rb 0 rrb 13	 last_id 23
+b_id 32	cost 14	ra 2 rra 0 rb 0 rrb 12	 last_id 23
+b_id 28	cost 13	ra 2 rra 0 rb 0 rrb 11	 last_id 23
+b_id 31	cost 12	ra 2 rra 0 rb 0 rrb 10	 last_id 23
+b_id 43	cost 11	ra 2 rra 0 rb 0 rrb 9	 last_id 23
+b_id 45	cost 10	ra 2 rra 0 rb 0 rrb 8	 last_id 23
+b_id 30	cost 9	ra 2 rra 0 rb 0 rrb 7	 last_id 23
+b_id 39	cost 8	ra 2 rra 0 rb 0 rrb 6	 last_id 23
+b_id 33	cost 7	ra 2 rra 0 rb 0 rrb 5	 last_id 23
+b_id 47	cost 6	ra 2 rra 0 rb 0 rrb 4	 last_id 23
+b_id 26	cost 5	ra 2 rra 0 rb 0 rrb 3	 last_id 23
+b_id 7	cost 6	ra 4 rra 0 rb 0 rrb 2	 last_id 23
+b_id 6	cost 5	ra 4 rra 0 rb 0 rrb 1	 last_id 23
+
+Found cost
+min cost 4 pop_id 22
+ra 0 rra 1
+rb 3 rrb 0
+
+WE DO rb
+rb
+WE DO rb
+rb
+WE DO rb
+rb
+WE DO rra
+rra
+pa
+
+A		|	    B
+39(22)	|	29(17)
+41(23)	|	18(12)
+42(24)	|	4(3)
+46(25)	|	12(9)
+100(50)	|	79(41)
+0(1)	|	99(49)
+11(8)	|	87(46)
+15(10)	|	54(29)
+17(11)	|	77(40)
+19(13)	|	66(34)
+20(14)	|	68(35)
+22(15)	|	94(48)
+28(16)	|	71(37)
+30(18)	|	73(38)
+33(19)	|	69(36)
+35(20)	|	51(27)
+37(21)	|	81(42)
+_(_)	|	85(44)
+_(_)	|	57(32)
+_(_)	|	52(28)
+_(_)	|	56(31)
+_(_)	|	82(43)
+_(_)	|	86(45)
+_(_)	|	55(30)
+_(_)	|	74(39)
+_(_)	|	61(33)
+_(_)	|	93(47)
+_(_)	|	48(26)
+_(_)	|	10(7)
+_(_)	|	8(6)
+_(_)	|	6(4)
+_(_)	|	2(2)
+_(_)	|	7(5)
+
+b_id 17	cost 37	ra 0 rra 4 rb 0 rrb 33	 last_id 21
+b_id 12	cost 9	ra 0 rra 8 rb 1 rrb 0	 last_id 21
+b_id 3	cost 8	ra 6 rra 0 rb 2 rrb 0	 last_id 21
+b_id 9	cost 10	ra 7 rra 0 rb 3 rrb 0	 last_id 21
+b_id 41	cost 8	ra 4 rra 0 rb 4 rrb 0	 last_id 21
+b_id 49	cost 9	ra 4 rra 0 rb 5 rrb 0	 last_id 21
+b_id 46	cost 10	ra 4 rra 0 rb 6 rrb 0	 last_id 21
+b_id 29	cost 11	ra 4 rra 0 rb 7 rrb 0	 last_id 21
+b_id 40	cost 12	ra 4 rra 0 rb 8 rrb 0	 last_id 21
+b_id 34	cost 13	ra 4 rra 0 rb 9 rrb 0	 last_id 21
+b_id 35	cost 14	ra 4 rra 0 rb 10 rrb 0	 last_id 21
+b_id 48	cost 15	ra 4 rra 0 rb 11 rrb 0	 last_id 21
+b_id 37	cost 16	ra 4 rra 0 rb 12 rrb 0	 last_id 21
+b_id 38	cost 17	ra 4 rra 0 rb 13 rrb 0	 last_id 21
+b_id 36	cost 18	ra 4 rra 0 rb 14 rrb 0	 last_id 21
+b_id 27	cost 19	ra 4 rra 0 rb 15 rrb 0	 last_id 21
+b_id 42	cost 20	ra 4 rra 0 rb 16 rrb 0	 last_id 21
+b_id 44	cost 20	ra 4 rra 0 rb 0 rrb 16	 last_id 21
+b_id 32	cost 19	ra 4 rra 0 rb 0 rrb 15	 last_id 21
+b_id 28	cost 18	ra 4 rra 0 rb 0 rrb 14	 last_id 21
+b_id 31	cost 17	ra 4 rra 0 rb 0 rrb 13	 last_id 21
+b_id 43	cost 16	ra 4 rra 0 rb 0 rrb 12	 last_id 21
+b_id 45	cost 15	ra 4 rra 0 rb 0 rrb 11	 last_id 21
+b_id 30	cost 14	ra 4 rra 0 rb 0 rrb 10	 last_id 21
+b_id 39	cost 13	ra 4 rra 0 rb 0 rrb 9	 last_id 21
+b_id 33	cost 12	ra 4 rra 0 rb 0 rrb 8	 last_id 21
+b_id 47	cost 11	ra 4 rra 0 rb 0 rrb 7	 last_id 21
+b_id 26	cost 10	ra 4 rra 0 rb 0 rrb 6	 last_id 21
+b_id 7	cost 11	ra 6 rra 0 rb 0 rrb 5	 last_id 21
+b_id 6	cost 10	ra 6 rra 0 rb 0 rrb 4	 last_id 21
+b_id 4	cost 9	ra 6 rra 0 rb 0 rrb 3	 last_id 21
+b_id 2	cost 8	ra 6 rra 0 rb 0 rrb 2	 last_id 21
+b_id 5	cost 7	ra 6 rra 0 rb 0 rrb 1	 last_id 21
+
+Found cost
+min cost 7 pop_id 5
+ra 6 rra 0
+rb 0 rrb 1
+
+WE DO ra
+ra
+WE DO ra
+ra
+WE DO ra
+ra
+WE DO ra
+ra
+WE DO ra
+ra
+WE DO ra
+ra
+WE DO rrb
+rrb
+pa
+
+A		|	    B
+7(5)	|	29(17)
+11(8)	|	18(12)
+15(10)	|	4(3)
+17(11)	|	12(9)
+19(13)	|	79(41)
+20(14)	|	99(49)
+22(15)	|	87(46)
+28(16)	|	54(29)
+30(18)	|	77(40)
+33(19)	|	66(34)
+35(20)	|	68(35)
+37(21)	|	94(48)
+39(22)	|	71(37)
+41(23)	|	73(38)
+42(24)	|	69(36)
+46(25)	|	51(27)
+100(50)	|	81(42)
+0(1)	|	85(44)
+_(_)	|	57(32)
+_(_)	|	52(28)
+_(_)	|	56(31)
+_(_)	|	82(43)
+_(_)	|	86(45)
+_(_)	|	55(30)
+_(_)	|	74(39)
+_(_)	|	61(33)
+_(_)	|	93(47)
+_(_)	|	48(26)
+_(_)	|	10(7)
+_(_)	|	8(6)
+_(_)	|	6(4)
+_(_)	|	2(2)
+
+b_id 17	cost 40	ra 8 rra 0 rb 0 rrb 32	 last_id 1
+b_id 12	cost 5	ra 4 rra 0 rb 1 rrb 0	 last_id 1
+b_id 3	cost 2	ra 0 rra 0 rb 2 rrb 0	 last_id 1
+b_id 9	cost 5	ra 2 rra 0 rb 3 rrb 0	 last_id 1
+b_id 41	cost 20	ra 16 rra 0 rb 4 rrb 0	 last_id 1
+b_id 49	cost 7	ra 0 rra 2 rb 5 rrb 0	 last_id 1
+b_id 46	cost 22	ra 16 rra 0 rb 6 rrb 0	 last_id 1
+b_id 29	cost 23	ra 16 rra 0 rb 7 rrb 0	 last_id 1
+b_id 40	cost 24	ra 16 rra 0 rb 8 rrb 0	 last_id 1
+b_id 34	cost 25	ra 16 rra 0 rb 9 rrb 0	 last_id 1
+b_id 35	cost 26	ra 16 rra 0 rb 10 rrb 0	 last_id 1
+b_id 48	cost 27	ra 16 rra 0 rb 11 rrb 0	 last_id 1
+b_id 37	cost 28	ra 16 rra 0 rb 12 rrb 0	 last_id 1
+b_id 38	cost 29	ra 16 rra 0 rb 13 rrb 0	 last_id 1
+b_id 36	cost 30	ra 16 rra 0 rb 14 rrb 0	 last_id 1
+b_id 27	cost 31	ra 16 rra 0 rb 15 rrb 0	 last_id 1
+b_id 42	cost 32	ra 16 rra 0 rb 16 rrb 16	 last_id 1
+b_id 44	cost 31	ra 16 rra 0 rb 0 rrb 15	 last_id 1
+b_id 32	cost 30	ra 16 rra 0 rb 0 rrb 14	 last_id 1
+b_id 28	cost 29	ra 16 rra 0 rb 0 rrb 13	 last_id 1
+b_id 31	cost 28	ra 16 rra 0 rb 0 rrb 12	 last_id 1
+b_id 43	cost 27	ra 16 rra 0 rb 0 rrb 11	 last_id 1
+b_id 45	cost 26	ra 16 rra 0 rb 0 rrb 10	 last_id 1
+b_id 30	cost 25	ra 16 rra 0 rb 0 rrb 9	 last_id 1
+b_id 39	cost 24	ra 16 rra 0 rb 0 rrb 8	 last_id 1
+b_id 33	cost 23	ra 16 rra 0 rb 0 rrb 7	 last_id 1
+b_id 47	cost 22	ra 16 rra 0 rb 0 rrb 6	 last_id 1
+b_id 26	cost 21	ra 16 rra 0 rb 0 rrb 5	 last_id 1
+b_id 7	cost 5	ra 1 rra 0 rb 0 rrb 4	 last_id 1
+b_id 6	cost 4	ra 1 rra 0 rb 0 rrb 3	 last_id 1
+b_id 4	cost 20	ra 0 rra 18 rb 0 rrb 2	 last_id 1
+b_id 2	cost 1	ra 0 rra 0 rb 0 rrb 1	 last_id 1
+
+Found cost
+min cost 1 pop_id 2
+ra 0 rra 0
+rb 0 rrb 1
+
+WE DO rrb
+rrb
+pa
+
+A		|	    B
+2(2)	|	29(17)
+7(5)	|	18(12)
+11(8)	|	4(3)
+15(10)	|	12(9)
+17(11)	|	79(41)
+19(13)	|	99(49)
+20(14)	|	87(46)
+22(15)	|	54(29)
+28(16)	|	77(40)
+30(18)	|	66(34)
+33(19)	|	68(35)
+35(20)	|	94(48)
+37(21)	|	71(37)
+39(22)	|	73(38)
+41(23)	|	69(36)
+42(24)	|	51(27)
+46(25)	|	81(42)
+100(50)	|	85(44)
+0(1)	|	57(32)
+_(_)	|	52(28)
+_(_)	|	56(31)
+_(_)	|	82(43)
+_(_)	|	86(45)
+_(_)	|	55(30)
+_(_)	|	74(39)
+_(_)	|	61(33)
+_(_)	|	93(47)
+_(_)	|	48(26)
+_(_)	|	10(7)
+_(_)	|	8(6)
+_(_)	|	6(4)
+
+b_id 17	cost 40	ra 9 rra 0 rb 0 rrb 31	 last_id 1
+b_id 12	cost 6	ra 5 rra 0 rb 1 rrb 0	 last_id 1
+b_id 3	cost 3	ra 1 rra 0 rb 2 rrb 0	 last_id 1
+b_id 9	cost 6	ra 3 rra 0 rb 3 rrb 0	 last_id 1
+b_id 41	cost 21	ra 17 rra 0 rb 4 rrb 0	 last_id 1
+b_id 49	cost 7	ra 0 rra 2 rb 5 rrb 0	 last_id 1
+b_id 46	cost 23	ra 17 rra 0 rb 6 rrb 0	 last_id 1
+b_id 29	cost 24	ra 17 rra 0 rb 7 rrb 0	 last_id 1
+b_id 40	cost 25	ra 17 rra 0 rb 8 rrb 0	 last_id 1
+b_id 34	cost 26	ra 17 rra 0 rb 9 rrb 0	 last_id 1
+b_id 35	cost 27	ra 17 rra 0 rb 10 rrb 0	 last_id 1
+b_id 48	cost 28	ra 17 rra 0 rb 11 rrb 0	 last_id 1
+b_id 37	cost 29	ra 17 rra 0 rb 12 rrb 0	 last_id 1
+b_id 38	cost 30	ra 17 rra 0 rb 13 rrb 0	 last_id 1
+b_id 36	cost 31	ra 17 rra 0 rb 14 rrb 0	 last_id 1
+b_id 27	cost 32	ra 17 rra 0 rb 15 rrb 0	 last_id 1
+b_id 42	cost 32	ra 17 rra 0 rb 0 rrb 15	 last_id 1
+b_id 44	cost 31	ra 17 rra 0 rb 0 rrb 14	 last_id 1
+b_id 32	cost 30	ra 17 rra 0 rb 0 rrb 13	 last_id 1
+b_id 28	cost 29	ra 17 rra 0 rb 0 rrb 12	 last_id 1
+b_id 31	cost 28	ra 17 rra 0 rb 0 rrb 11	 last_id 1
+b_id 43	cost 27	ra 17 rra 0 rb 0 rrb 10	 last_id 1
+b_id 45	cost 26	ra 17 rra 0 rb 0 rrb 9	 last_id 1
+b_id 30	cost 25	ra 17 rra 0 rb 0 rrb 8	 last_id 1
+b_id 39	cost 24	ra 17 rra 0 rb 0 rrb 7	 last_id 1
+b_id 33	cost 23	ra 17 rra 0 rb 0 rrb 6	 last_id 1
+b_id 47	cost 22	ra 17 rra 0 rb 0 rrb 5	 last_id 1
+b_id 26	cost 21	ra 17 rra 0 rb 0 rrb 4	 last_id 1
+b_id 7	cost 5	ra 2 rra 0 rb 0 rrb 3	 last_id 1
+b_id 6	cost 4	ra 2 rra 0 rb 0 rrb 2	 last_id 1
+b_id 4	cost 2	ra 1 rra 0 rb 0 rrb 1	 last_id 1
+
+Found cost
+min cost 2 pop_id 4
+ra 1 rra 0
+rb 0 rrb 1
+
+WE DO ra
+ra
+WE DO rrb
+rrb
+pa
+
+A		|	    B
+6(4)	|	29(17)
+7(5)	|	18(12)
+11(8)	|	4(3)
+15(10)	|	12(9)
+17(11)	|	79(41)
+19(13)	|	99(49)
+20(14)	|	87(46)
+22(15)	|	54(29)
+28(16)	|	77(40)
+30(18)	|	66(34)
+33(19)	|	68(35)
+35(20)	|	94(48)
+37(21)	|	71(37)
+39(22)	|	73(38)
+41(23)	|	69(36)
+42(24)	|	51(27)
+46(25)	|	81(42)
+100(50)	|	85(44)
+0(1)	|	57(32)
+2(2)	|	52(28)
+_(_)	|	56(31)
+_(_)	|	82(43)
+_(_)	|	86(45)
+_(_)	|	55(30)
+_(_)	|	74(39)
+_(_)	|	61(33)
+_(_)	|	93(47)
+_(_)	|	48(26)
+_(_)	|	10(7)
+_(_)	|	8(6)
+
+b_id 17	cost 39	ra 9 rra 0 rb 0 rrb 30	 last_id 2
+b_id 12	cost 6	ra 5 rra 0 rb 1 rrb 0	 last_id 2
+b_id 3	cost 22	ra 0 rra 20 rb 2 rrb 0	 last_id 2
+b_id 9	cost 6	ra 3 rra 0 rb 3 rrb 0	 last_id 2
+b_id 41	cost 21	ra 17 rra 0 rb 4 rrb 0	 last_id 2
+b_id 49	cost 8	ra 0 rra 3 rb 5 rrb 0	 last_id 2
+b_id 46	cost 23	ra 17 rra 0 rb 6 rrb 0	 last_id 2
+b_id 29	cost 24	ra 17 rra 0 rb 7 rrb 0	 last_id 2
+b_id 40	cost 25	ra 17 rra 0 rb 8 rrb 0	 last_id 2
+b_id 34	cost 26	ra 17 rra 0 rb 9 rrb 0	 last_id 2
+b_id 35	cost 27	ra 17 rra 0 rb 10 rrb 0	 last_id 2
+b_id 48	cost 28	ra 17 rra 0 rb 11 rrb 0	 last_id 2
+b_id 37	cost 29	ra 17 rra 0 rb 12 rrb 0	 last_id 2
+b_id 38	cost 30	ra 17 rra 0 rb 13 rrb 0	 last_id 2
+b_id 36	cost 31	ra 17 rra 0 rb 14 rrb 0	 last_id 2
+b_id 27	cost 32	ra 17 rra 0 rb 15 rrb 15	 last_id 2
+b_id 42	cost 31	ra 17 rra 0 rb 0 rrb 14	 last_id 2
+b_id 44	cost 30	ra 17 rra 0 rb 0 rrb 13	 last_id 2
+b_id 32	cost 29	ra 17 rra 0 rb 0 rrb 12	 last_id 2
+b_id 28	cost 28	ra 17 rra 0 rb 0 rrb 11	 last_id 2
+b_id 31	cost 27	ra 17 rra 0 rb 0 rrb 10	 last_id 2
+b_id 43	cost 26	ra 17 rra 0 rb 0 rrb 9	 last_id 2
+b_id 45	cost 25	ra 17 rra 0 rb 0 rrb 8	 last_id 2
+b_id 30	cost 24	ra 17 rra 0 rb 0 rrb 7	 last_id 2
+b_id 39	cost 23	ra 17 rra 0 rb 0 rrb 6	 last_id 2
+b_id 33	cost 22	ra 17 rra 0 rb 0 rrb 5	 last_id 2
+b_id 47	cost 21	ra 17 rra 0 rb 0 rrb 4	 last_id 2
+b_id 26	cost 20	ra 17 rra 0 rb 0 rrb 3	 last_id 2
+b_id 7	cost 4	ra 2 rra 0 rb 0 rrb 2	 last_id 2
+b_id 6	cost 3	ra 2 rra 0 rb 0 rrb 1	 last_id 2
+
+Found cost
+min cost 3 pop_id 6
+ra 2 rra 0
+rb 0 rrb 1
+
+WE DO ra
+ra
+WE DO ra
+ra
+WE DO rrb
+rrb
+pa
+
+A		|	    B
+8(6)	|	29(17)
+11(8)	|	18(12)
+15(10)	|	4(3)
+17(11)	|	12(9)
+19(13)	|	79(41)
+20(14)	|	99(49)
+22(15)	|	87(46)
+28(16)	|	54(29)
+30(18)	|	77(40)
+33(19)	|	66(34)
+35(20)	|	68(35)
+37(21)	|	94(48)
+39(22)	|	71(37)
+41(23)	|	73(38)
+42(24)	|	69(36)
+46(25)	|	51(27)
+100(50)	|	81(42)
+0(1)	|	85(44)
+2(2)	|	57(32)
+6(4)	|	52(28)
+7(5)	|	56(31)
+_(_)	|	82(43)
+_(_)	|	86(45)
+_(_)	|	55(30)
+_(_)	|	74(39)
+_(_)	|	61(33)
+_(_)	|	93(47)
+_(_)	|	48(26)
+_(_)	|	10(7)
+
+b_id 17	cost 37	ra 8 rra 0 rb 0 rrb 29	 last_id 5
+b_id 12	cost 5	ra 4 rra 0 rb 1 rrb 0	 last_id 5
+b_id 3	cost 4	ra 0 rra 2 rb 2 rrb 0	 last_id 5
+b_id 9	cost 5	ra 2 rra 0 rb 3 rrb 0	 last_id 5
+b_id 41	cost 20	ra 16 rra 0 rb 4 rrb 0	 last_id 5
+b_id 49	cost 10	ra 0 rra 5 rb 5 rrb 0	 last_id 5
+b_id 46	cost 22	ra 16 rra 0 rb 6 rrb 0	 last_id 5
+b_id 29	cost 23	ra 16 rra 0 rb 7 rrb 0	 last_id 5
+b_id 40	cost 24	ra 16 rra 0 rb 8 rrb 0	 last_id 5
+b_id 34	cost 25	ra 16 rra 0 rb 9 rrb 0	 last_id 5
+b_id 35	cost 26	ra 16 rra 0 rb 10 rrb 0	 last_id 5
+b_id 48	cost 27	ra 16 rra 0 rb 11 rrb 0	 last_id 5
+b_id 37	cost 28	ra 16 rra 0 rb 12 rrb 0	 last_id 5
+b_id 38	cost 29	ra 16 rra 0 rb 13 rrb 0	 last_id 5
+b_id 36	cost 30	ra 16 rra 0 rb 14 rrb 0	 last_id 5
+b_id 27	cost 30	ra 16 rra 0 rb 0 rrb 14	 last_id 5
+b_id 42	cost 29	ra 16 rra 0 rb 0 rrb 13	 last_id 5
+b_id 44	cost 28	ra 16 rra 0 rb 0 rrb 12	 last_id 5
+b_id 32	cost 27	ra 16 rra 0 rb 0 rrb 11	 last_id 5
+b_id 28	cost 26	ra 16 rra 0 rb 0 rrb 10	 last_id 5
+b_id 31	cost 25	ra 16 rra 0 rb 0 rrb 9	 last_id 5
+b_id 43	cost 24	ra 16 rra 0 rb 0 rrb 8	 last_id 5
+b_id 45	cost 23	ra 16 rra 0 rb 0 rrb 7	 last_id 5
+b_id 30	cost 22	ra 16 rra 0 rb 0 rrb 6	 last_id 5
+b_id 39	cost 21	ra 16 rra 0 rb 0 rrb 5	 last_id 5
+b_id 33	cost 20	ra 16 rra 0 rb 0 rrb 4	 last_id 5
+b_id 47	cost 19	ra 16 rra 0 rb 0 rrb 3	 last_id 5
+b_id 26	cost 18	ra 16 rra 0 rb 0 rrb 2	 last_id 5
+b_id 7	cost 2	ra 1 rra 0 rb 0 rrb 1	 last_id 5
+
+Found cost
+min cost 2 pop_id 7
+ra 1 rra 0
+rb 0 rrb 1
+
+WE DO ra
+ra
+WE DO rrb
+rrb
+pa
+
+A		|	    B
+10(7)	|	29(17)
+11(8)	|	18(12)
+15(10)	|	4(3)
+17(11)	|	12(9)
+19(13)	|	79(41)
+20(14)	|	99(49)
+22(15)	|	87(46)
+28(16)	|	54(29)
+30(18)	|	77(40)
+33(19)	|	66(34)
+35(20)	|	68(35)
+37(21)	|	94(48)
+39(22)	|	71(37)
+41(23)	|	73(38)
+42(24)	|	69(36)
+46(25)	|	51(27)
+100(50)	|	81(42)
+0(1)	|	85(44)
+2(2)	|	57(32)
+6(4)	|	52(28)
+7(5)	|	56(31)
+8(6)	|	82(43)
+_(_)	|	86(45)
+_(_)	|	55(30)
+_(_)	|	74(39)
+_(_)	|	61(33)
+_(_)	|	93(47)
+_(_)	|	48(26)
+
+b_id 17	cost 36	ra 8 rra 0 rb 0 rrb 28	 last_id 6
+b_id 12	cost 5	ra 4 rra 0 rb 1 rrb 0	 last_id 6
+b_id 3	cost 5	ra 0 rra 3 rb 2 rrb 0	 last_id 6
+b_id 9	cost 5	ra 2 rra 0 rb 3 rrb 0	 last_id 6
+b_id 41	cost 20	ra 16 rra 0 rb 4 rrb 0	 last_id 6
+b_id 49	cost 11	ra 0 rra 6 rb 5 rrb 0	 last_id 6
+b_id 46	cost 22	ra 16 rra 0 rb 6 rrb 0	 last_id 6
+b_id 29	cost 23	ra 16 rra 0 rb 7 rrb 0	 last_id 6
+b_id 40	cost 24	ra 16 rra 0 rb 8 rrb 0	 last_id 6
+b_id 34	cost 25	ra 16 rra 0 rb 9 rrb 0	 last_id 6
+b_id 35	cost 26	ra 16 rra 0 rb 10 rrb 0	 last_id 6
+b_id 48	cost 27	ra 16 rra 0 rb 11 rrb 0	 last_id 6
+b_id 37	cost 28	ra 16 rra 0 rb 12 rrb 0	 last_id 6
+b_id 38	cost 29	ra 16 rra 0 rb 13 rrb 0	 last_id 6
+b_id 36	cost 30	ra 16 rra 0 rb 14 rrb 14	 last_id 6
+b_id 27	cost 29	ra 16 rra 0 rb 0 rrb 13	 last_id 6
+b_id 42	cost 28	ra 16 rra 0 rb 0 rrb 12	 last_id 6
+b_id 44	cost 27	ra 16 rra 0 rb 0 rrb 11	 last_id 6
+b_id 32	cost 26	ra 16 rra 0 rb 0 rrb 10	 last_id 6
+b_id 28	cost 25	ra 16 rra 0 rb 0 rrb 9	 last_id 6
+b_id 31	cost 24	ra 16 rra 0 rb 0 rrb 8	 last_id 6
+b_id 43	cost 23	ra 16 rra 0 rb 0 rrb 7	 last_id 6
+b_id 45	cost 22	ra 16 rra 0 rb 0 rrb 6	 last_id 6
+b_id 30	cost 21	ra 16 rra 0 rb 0 rrb 5	 last_id 6
+b_id 39	cost 20	ra 16 rra 0 rb 0 rrb 4	 last_id 6
+b_id 33	cost 19	ra 16 rra 0 rb 0 rrb 3	 last_id 6
+b_id 47	cost 18	ra 16 rra 0 rb 0 rrb 2	 last_id 6
+b_id 26	cost 17	ra 16 rra 0 rb 0 rrb 1	 last_id 6
+
+Found cost
+min cost 5 pop_id 12
+ra 4 rra 0
+rb 1 rrb 0
+
+WE DO rr
+rr
+WE DO ra
+ra
+WE DO ra
+ra
+WE DO ra
+ra
+pa
+
+A		|	    B
+18(12)	|	4(3)
+19(13)	|	12(9)
+20(14)	|	79(41)
+22(15)	|	99(49)
+28(16)	|	87(46)
+30(18)	|	54(29)
+33(19)	|	77(40)
+35(20)	|	66(34)
+37(21)	|	68(35)
+39(22)	|	94(48)
+41(23)	|	71(37)
+42(24)	|	73(38)
+46(25)	|	69(36)
+100(50)	|	51(27)
+0(1)	|	81(42)
+2(2)	|	85(44)
+6(4)	|	57(32)
+7(5)	|	52(28)
+8(6)	|	56(31)
+10(7)	|	82(43)
+11(8)	|	86(45)
+15(10)	|	55(30)
+17(11)	|	74(39)
+_(_)	|	61(33)
+_(_)	|	93(47)
+_(_)	|	48(26)
+_(_)	|	29(17)
+
+b_id 3	cost 34	ra 0 rra 7 rb 0 rrb 27	 last_id 11
+b_id 9	cost 3	ra 0 rra 2 rb 1 rrb 0	 last_id 11
+b_id 41	cost 15	ra 13 rra 0 rb 2 rrb 0	 last_id 11
+b_id 49	cost 13	ra 0 rra 10 rb 3 rrb 0	 last_id 11
+b_id 46	cost 17	ra 13 rra 0 rb 4 rrb 0	 last_id 11
+b_id 29	cost 18	ra 13 rra 0 rb 5 rrb 0	 last_id 11
+b_id 40	cost 19	ra 13 rra 0 rb 6 rrb 0	 last_id 11
+b_id 34	cost 20	ra 13 rra 0 rb 7 rrb 0	 last_id 11
+b_id 35	cost 21	ra 13 rra 0 rb 8 rrb 0	 last_id 11
+b_id 48	cost 22	ra 13 rra 0 rb 9 rrb 0	 last_id 11
+b_id 37	cost 23	ra 13 rra 0 rb 10 rrb 0	 last_id 11
+b_id 38	cost 24	ra 13 rra 0 rb 11 rrb 0	 last_id 11
+b_id 36	cost 25	ra 13 rra 0 rb 12 rrb 0	 last_id 11
+b_id 27	cost 26	ra 13 rra 0 rb 13 rrb 0	 last_id 11
+b_id 42	cost 26	ra 13 rra 0 rb 0 rrb 13	 last_id 11
+b_id 44	cost 25	ra 13 rra 0 rb 0 rrb 12	 last_id 11
+b_id 32	cost 24	ra 13 rra 0 rb 0 rrb 11	 last_id 11
+b_id 28	cost 23	ra 13 rra 0 rb 0 rrb 10	 last_id 11
+b_id 31	cost 22	ra 13 rra 0 rb 0 rrb 9	 last_id 11
+b_id 43	cost 21	ra 13 rra 0 rb 0 rrb 8	 last_id 11
+b_id 45	cost 20	ra 13 rra 0 rb 0 rrb 7	 last_id 11
+b_id 30	cost 19	ra 13 rra 0 rb 0 rrb 6	 last_id 11
+b_id 39	cost 18	ra 13 rra 0 rb 0 rrb 5	 last_id 11
+b_id 33	cost 17	ra 13 rra 0 rb 0 rrb 4	 last_id 11
+b_id 47	cost 16	ra 13 rra 0 rb 0 rrb 3	 last_id 11
+b_id 26	cost 15	ra 13 rra 0 rb 0 rrb 2	 last_id 11
+b_id 17	cost 6	ra 5 rra 0 rb 0 rrb 1	 last_id 11
+
+Found cost
+min cost 3 pop_id 9
+ra 0 rra 2
+rb 1 rrb 0
+
+WE DO rb
+rb
+WE DO rra
+rra
+WE DO rra
+rra
+pa
+
+A		|	    B
+12(9)	|	79(41)
+15(10)	|	99(49)
+17(11)	|	87(46)
+18(12)	|	54(29)
+19(13)	|	77(40)
+20(14)	|	66(34)
+22(15)	|	68(35)
+28(16)	|	94(48)
+30(18)	|	71(37)
+33(19)	|	73(38)
+35(20)	|	69(36)
+37(21)	|	51(27)
+39(22)	|	81(42)
+41(23)	|	85(44)
+42(24)	|	57(32)
+46(25)	|	52(28)
+100(50)	|	56(31)
+0(1)	|	82(43)
+2(2)	|	86(45)
+6(4)	|	55(30)
+7(5)	|	74(39)
+8(6)	|	61(33)
+10(7)	|	93(47)
+11(8)	|	48(26)
+_(_)	|	29(17)
+_(_)	|	4(3)
+
+b_id 41	cost 42	ra 16 rra 0 rb 0 rrb 26	 last_id 8
+b_id 49	cost 9	ra 0 rra 8 rb 1 rrb 0	 last_id 8
+b_id 46	cost 18	ra 16 rra 0 rb 2 rrb 0	 last_id 8
+b_id 29	cost 19	ra 16 rra 0 rb 3 rrb 0	 last_id 8
+b_id 40	cost 20	ra 16 rra 0 rb 4 rrb 0	 last_id 8
+b_id 34	cost 21	ra 16 rra 0 rb 5 rrb 0	 last_id 8
+b_id 35	cost 22	ra 16 rra 0 rb 6 rrb 0	 last_id 8
+b_id 48	cost 23	ra 16 rra 0 rb 7 rrb 0	 last_id 8
+b_id 37	cost 24	ra 16 rra 0 rb 8 rrb 0	 last_id 8
+b_id 38	cost 25	ra 16 rra 0 rb 9 rrb 0	 last_id 8
+b_id 36	cost 26	ra 16 rra 0 rb 10 rrb 0	 last_id 8
+b_id 27	cost 27	ra 16 rra 0 rb 11 rrb 0	 last_id 8
+b_id 42	cost 28	ra 16 rra 0 rb 12 rrb 0	 last_id 8
+b_id 44	cost 29	ra 16 rra 0 rb 13 rrb 13	 last_id 8
+b_id 32	cost 28	ra 16 rra 0 rb 0 rrb 12	 last_id 8
+b_id 28	cost 27	ra 16 rra 0 rb 0 rrb 11	 last_id 8
+b_id 31	cost 26	ra 16 rra 0 rb 0 rrb 10	 last_id 8
+b_id 43	cost 25	ra 16 rra 0 rb 0 rrb 9	 last_id 8
+b_id 45	cost 24	ra 16 rra 0 rb 0 rrb 8	 last_id 8
+b_id 30	cost 23	ra 16 rra 0 rb 0 rrb 7	 last_id 8
+b_id 39	cost 22	ra 16 rra 0 rb 0 rrb 6	 last_id 8
+b_id 33	cost 21	ra 16 rra 0 rb 0 rrb 5	 last_id 8
+b_id 47	cost 20	ra 16 rra 0 rb 0 rrb 4	 last_id 8
+b_id 26	cost 19	ra 16 rra 0 rb 0 rrb 3	 last_id 8
+b_id 17	cost 10	ra 8 rra 0 rb 0 rrb 2	 last_id 8
+b_id 3	cost 6	ra 0 rra 5 rb 0 rrb 1	 last_id 8
+
+Found cost
+min cost 6 pop_id 3
+ra 0 rra 5
+rb 0 rrb 1
+
+WE DO rrr
+rrr
+WE DO rra
+rra
+WE DO rra
+rra
+WE DO rra
+rra
+WE DO rra
+rra
+pa
+
+A		|	    B
+4(3)	|	79(41)
+6(4)	|	99(49)
+7(5)	|	87(46)
+8(6)	|	54(29)
+10(7)	|	77(40)
+11(8)	|	66(34)
+12(9)	|	68(35)
+15(10)	|	94(48)
+17(11)	|	71(37)
+18(12)	|	73(38)
+19(13)	|	69(36)
+20(14)	|	51(27)
+22(15)	|	81(42)
+28(16)	|	85(44)
+30(18)	|	57(32)
+33(19)	|	52(28)
+35(20)	|	56(31)
+37(21)	|	82(43)
+39(22)	|	86(45)
+41(23)	|	55(30)
+42(24)	|	74(39)
+46(25)	|	61(33)
+100(50)	|	93(47)
+0(1)	|	48(26)
+2(2)	|	29(17)
+
+b_id 41	cost 47	ra 22 rra 0 rb 0 rrb 25	 last_id 2
+b_id 49	cost 4	ra 0 rra 3 rb 1 rrb 0	 last_id 2
+b_id 46	cost 24	ra 22 rra 0 rb 2 rrb 0	 last_id 2
+b_id 29	cost 25	ra 22 rra 0 rb 3 rrb 0	 last_id 2
+b_id 40	cost 26	ra 22 rra 0 rb 4 rrb 0	 last_id 2
+b_id 34	cost 27	ra 22 rra 0 rb 5 rrb 0	 last_id 2
+b_id 35	cost 28	ra 22 rra 0 rb 6 rrb 0	 last_id 2
+b_id 48	cost 29	ra 22 rra 0 rb 7 rrb 0	 last_id 2
+b_id 37	cost 30	ra 22 rra 0 rb 8 rrb 0	 last_id 2
+b_id 38	cost 31	ra 22 rra 0 rb 9 rrb 0	 last_id 2
+b_id 36	cost 32	ra 22 rra 0 rb 10 rrb 0	 last_id 2
+b_id 27	cost 33	ra 22 rra 0 rb 11 rrb 0	 last_id 2
+b_id 42	cost 34	ra 22 rra 0 rb 12 rrb 0	 last_id 2
+b_id 44	cost 34	ra 22 rra 0 rb 0 rrb 12	 last_id 2
+b_id 32	cost 33	ra 22 rra 0 rb 0 rrb 11	 last_id 2
+b_id 28	cost 32	ra 22 rra 0 rb 0 rrb 10	 last_id 2
+b_id 31	cost 31	ra 22 rra 0 rb 0 rrb 9	 last_id 2
+b_id 43	cost 30	ra 22 rra 0 rb 0 rrb 8	 last_id 2
+b_id 45	cost 29	ra 22 rra 0 rb 0 rrb 7	 last_id 2
+b_id 30	cost 28	ra 22 rra 0 rb 0 rrb 6	 last_id 2
+b_id 39	cost 27	ra 22 rra 0 rb 0 rrb 5	 last_id 2
+b_id 33	cost 26	ra 22 rra 0 rb 0 rrb 4	 last_id 2
+b_id 47	cost 25	ra 22 rra 0 rb 0 rrb 3	 last_id 2
+b_id 26	cost 24	ra 22 rra 0 rb 0 rrb 2	 last_id 2
+b_id 17	cost 12	ra 0 rra 11 rb 0 rrb 1	 last_id 2
+
+Found cost
+min cost 4 pop_id 49
+ra 0 rra 3
+rb 1 rrb 0
+
+WE DO rb
+rb
+WE DO rra
+rra
+WE DO rra
+rra
+WE DO rra
+rra
+pa
+
+A		|	    B
+99(49)	|	87(46)
+100(50)	|	54(29)
+0(1)	|	77(40)
+2(2)	|	66(34)
+4(3)	|	68(35)
+6(4)	|	94(48)
+7(5)	|	71(37)
+8(6)	|	73(38)
+10(7)	|	69(36)
+11(8)	|	51(27)
+12(9)	|	81(42)
+15(10)	|	85(44)
+17(11)	|	57(32)
+18(12)	|	52(28)
+19(13)	|	56(31)
+20(14)	|	82(43)
+22(15)	|	86(45)
+28(16)	|	55(30)
+30(18)	|	74(39)
+33(19)	|	61(33)
+35(20)	|	93(47)
+37(21)	|	48(26)
+39(22)	|	29(17)
+41(23)	|	79(41)
+42(24)	|	_(_)
+46(25)	|	_(_)
+
+b_id 46	cost 24	ra 0 rra 0 rb 0 rrb 24	 last_id 25
+b_id 29	cost 1	ra 0 rra 0 rb 1 rrb 0	 last_id 25
+b_id 40	cost 2	ra 0 rra 0 rb 2 rrb 0	 last_id 25
+b_id 34	cost 3	ra 0 rra 0 rb 3 rrb 0	 last_id 25
+b_id 35	cost 4	ra 0 rra 0 rb 4 rrb 0	 last_id 25
+b_id 48	cost 31	ra 0 rra 26 rb 5 rrb 0	 last_id 25
+b_id 37	cost 6	ra 0 rra 0 rb 6 rrb 0	 last_id 25
+b_id 38	cost 7	ra 0 rra 0 rb 7 rrb 0	 last_id 25
+b_id 36	cost 8	ra 0 rra 0 rb 8 rrb 0	 last_id 25
+b_id 27	cost 9	ra 0 rra 0 rb 9 rrb 0	 last_id 25
+b_id 42	cost 10	ra 0 rra 0 rb 10 rrb 0	 last_id 25
+b_id 44	cost 11	ra 0 rra 0 rb 11 rrb 0	 last_id 25
+b_id 32	cost 12	ra 0 rra 0 rb 12 rrb 12	 last_id 25
+b_id 28	cost 11	ra 0 rra 0 rb 0 rrb 11	 last_id 25
+b_id 31	cost 10	ra 0 rra 0 rb 0 rrb 10	 last_id 25
+b_id 43	cost 9	ra 0 rra 0 rb 0 rrb 9	 last_id 25
+b_id 45	cost 8	ra 0 rra 0 rb 0 rrb 8	 last_id 25
+b_id 30	cost 7	ra 0 rra 0 rb 0 rrb 7	 last_id 25
+b_id 39	cost 6	ra 0 rra 0 rb 0 rrb 6	 last_id 25
+b_id 33	cost 5	ra 0 rra 0 rb 0 rrb 5	 last_id 25
+b_id 47	cost 4	ra 0 rra 0 rb 0 rrb 4	 last_id 25
+b_id 26	cost 3	ra 0 rra 0 rb 0 rrb 3	 last_id 25
+b_id 17	cost 10	ra 0 rra 8 rb 0 rrb 2	 last_id 25
+b_id 41	cost 1	ra 0 rra 0 rb 0 rrb 1	 last_id 25
+
+Found cost
+min cost 1 pop_id 29
+ra 0 rra 0
+rb 1 rrb 0
+
+WE DO rb
+rb
+pa
+
+A		|	    B
+54(29)	|	77(40)
+99(49)	|	66(34)
+100(50)	|	68(35)
+0(1)	|	94(48)
+2(2)	|	71(37)
+4(3)	|	73(38)
+6(4)	|	69(36)
+7(5)	|	51(27)
+8(6)	|	81(42)
+10(7)	|	85(44)
+11(8)	|	57(32)
+12(9)	|	52(28)
+15(10)	|	56(31)
+17(11)	|	82(43)
+18(12)	|	86(45)
+19(13)	|	55(30)
+20(14)	|	74(39)
+22(15)	|	61(33)
+28(16)	|	93(47)
+30(18)	|	48(26)
+33(19)	|	29(17)
+35(20)	|	79(41)
+37(21)	|	87(46)
+39(22)	|	_(_)
+41(23)	|	_(_)
+42(24)	|	_(_)
+46(25)	|	_(_)
+
+b_id 40	cost 24	ra 1 rra 0 rb 0 rrb 23	 last_id 25
+b_id 34	cost 2	ra 1 rra 0 rb 1 rrb 0	 last_id 25
+b_id 35	cost 3	ra 1 rra 0 rb 2 rrb 0	 last_id 25
+b_id 48	cost 4	ra 1 rra 0 rb 3 rrb 0	 last_id 25
+b_id 37	cost 5	ra 1 rra 0 rb 4 rrb 0	 last_id 25
+b_id 38	cost 6	ra 1 rra 0 rb 5 rrb 0	 last_id 25
+b_id 36	cost 7	ra 1 rra 0 rb 6 rrb 0	 last_id 25
+b_id 27	cost 7	ra 0 rra 0 rb 7 rrb 0	 last_id 25
+b_id 42	cost 9	ra 1 rra 0 rb 8 rrb 0	 last_id 25
+b_id 44	cost 10	ra 1 rra 0 rb 9 rrb 0	 last_id 25
+b_id 32	cost 11	ra 1 rra 0 rb 10 rrb 0	 last_id 25
+b_id 28	cost 38	ra 0 rra 27 rb 11 rrb 0	 last_id 25
+b_id 31	cost 12	ra 1 rra 0 rb 0 rrb 11	 last_id 25
+b_id 43	cost 11	ra 1 rra 0 rb 0 rrb 10	 last_id 25
+b_id 45	cost 10	ra 1 rra 0 rb 0 rrb 9	 last_id 25
+b_id 30	cost 9	ra 1 rra 0 rb 0 rrb 8	 last_id 25
+b_id 39	cost 8	ra 1 rra 0 rb 0 rrb 7	 last_id 25
+b_id 33	cost 7	ra 1 rra 0 rb 0 rrb 6	 last_id 25
+b_id 47	cost 6	ra 1 rra 0 rb 0 rrb 5	 last_id 25
+b_id 26	cost 4	ra 0 rra 0 rb 0 rrb 4	 last_id 25
+b_id 17	cost 11	ra 0 rra 8 rb 0 rrb 3	 last_id 25
+b_id 41	cost 3	ra 1 rra 0 rb 0 rrb 2	 last_id 25
+b_id 46	cost 2	ra 1 rra 0 rb 0 rrb 1	 last_id 25
+
+Found cost
+min cost 2 pop_id 34
+ra 1 rra 0
+rb 1 rrb 0
+
+WE DO rr
+rr
+pa
+
+A		|	    B
+66(34)	|	68(35)
+99(49)	|	94(48)
+100(50)	|	71(37)
+0(1)	|	73(38)
+2(2)	|	69(36)
+4(3)	|	51(27)
+6(4)	|	81(42)
+7(5)	|	85(44)
+8(6)	|	57(32)
+10(7)	|	52(28)
+11(8)	|	56(31)
+12(9)	|	82(43)
+15(10)	|	86(45)
+17(11)	|	55(30)
+18(12)	|	74(39)
+19(13)	|	61(33)
+20(14)	|	93(47)
+22(15)	|	48(26)
+28(16)	|	29(17)
+30(18)	|	79(41)
+33(19)	|	87(46)
+35(20)	|	77(40)
+37(21)	|	_(_)
+39(22)	|	_(_)
+41(23)	|	_(_)
+42(24)	|	_(_)
+46(25)	|	_(_)
+54(29)	|	_(_)
+
+b_id 35	cost 23	ra 1 rra 0 rb 0 rrb 22	 last_id 29
+b_id 48	cost 2	ra 1 rra 0 rb 1 rrb 0	 last_id 29
+b_id 37	cost 3	ra 1 rra 0 rb 2 rrb 0	 last_id 29
+b_id 38	cost 4	ra 1 rra 0 rb 3 rrb 0	 last_id 29
+b_id 36	cost 5	ra 1 rra 0 rb 4 rrb 0	 last_id 29
+b_id 27	cost 32	ra 27 rra 0 rb 5 rrb 0	 last_id 29
+b_id 42	cost 7	ra 1 rra 0 rb 6 rrb 0	 last_id 29
+b_id 44	cost 8	ra 1 rra 0 rb 7 rrb 0	 last_id 29
+b_id 32	cost 8	ra 0 rra 0 rb 8 rrb 0	 last_id 29
+b_id 28	cost 10	ra 0 rra 1 rb 9 rrb 0	 last_id 29
+b_id 31	cost 10	ra 0 rra 0 rb 10 rrb 0	 last_id 29
+b_id 43	cost 12	ra 1 rra 0 rb 11 rrb 11	 last_id 29
+b_id 45	cost 11	ra 1 rra 0 rb 0 rrb 10	 last_id 29
+b_id 30	cost 9	ra 0 rra 0 rb 0 rrb 9	 last_id 29
+b_id 39	cost 9	ra 1 rra 0 rb 0 rrb 8	 last_id 29
+b_id 33	cost 35	ra 0 rra 28 rb 0 rrb 7	 last_id 29
+b_id 47	cost 7	ra 1 rra 0 rb 0 rrb 6	 last_id 29
+b_id 26	cost 32	ra 27 rra 0 rb 0 rrb 5	 last_id 29
+b_id 17	cost 13	ra 0 rra 9 rb 0 rrb 4	 last_id 29
+b_id 41	cost 4	ra 1 rra 0 rb 0 rrb 3	 last_id 29
+b_id 46	cost 3	ra 1 rra 0 rb 0 rrb 2	 last_id 29
+b_id 40	cost 2	ra 1 rra 0 rb 0 rrb 1	 last_id 29
+
+Found cost
+min cost 2 pop_id 48
+ra 1 rra 0
+rb 1 rrb 0
+
+WE DO rr
+rr
+pa
+
+A		|	    B
+94(48)	|	71(37)
+99(49)	|	73(38)
+100(50)	|	69(36)
+0(1)	|	51(27)
+2(2)	|	81(42)
+4(3)	|	85(44)
+6(4)	|	57(32)
+7(5)	|	52(28)
+8(6)	|	56(31)
+10(7)	|	82(43)
+11(8)	|	86(45)
+12(9)	|	55(30)
+15(10)	|	74(39)
+17(11)	|	61(33)
+18(12)	|	93(47)
+19(13)	|	48(26)
+20(14)	|	29(17)
+22(15)	|	79(41)
+28(16)	|	87(46)
+30(18)	|	77(40)
+33(19)	|	68(35)
+35(20)	|	_(_)
+37(21)	|	_(_)
+39(22)	|	_(_)
+41(23)	|	_(_)
+42(24)	|	_(_)
+46(25)	|	_(_)
+54(29)	|	_(_)
+66(34)	|	_(_)
+
+b_id 37	cost 21	ra 0 rra 0 rb 0 rrb 21	 last_id 34
+b_id 38	cost 1	ra 0 rra 0 rb 1 rrb 0	 last_id 34
+b_id 36	cost 2	ra 0 rra 0 rb 2 rrb 0	 last_id 34
+b_id 27	cost 30	ra 27 rra 0 rb 3 rrb 0	 last_id 34
+b_id 42	cost 4	ra 0 rra 0 rb 4 rrb 0	 last_id 34
+b_id 44	cost 5	ra 0 rra 0 rb 5 rrb 0	 last_id 34
+b_id 32	cost 34	ra 28 rra 0 rb 6 rrb 0	 last_id 34
+b_id 28	cost 9	ra 0 rra 2 rb 7 rrb 0	 last_id 34
+b_id 31	cost 36	ra 28 rra 0 rb 8 rrb 0	 last_id 34
+b_id 43	cost 9	ra 0 rra 0 rb 9 rrb 0	 last_id 34
+b_id 45	cost 10	ra 0 rra 0 rb 10 rrb 0	 last_id 34
+b_id 30	cost 38	ra 28 rra 0 rb 0 rrb 10	 last_id 34
+b_id 39	cost 9	ra 0 rra 0 rb 0 rrb 9	 last_id 34
+b_id 33	cost 9	ra 0 rra 1 rb 0 rrb 8	 last_id 34
+b_id 47	cost 36	ra 0 rra 29 rb 0 rrb 7	 last_id 34
+b_id 26	cost 33	ra 27 rra 0 rb 0 rrb 6	 last_id 34
+b_id 17	cost 15	ra 0 rra 10 rb 0 rrb 5	 last_id 34
+b_id 41	cost 4	ra 0 rra 0 rb 0 rrb 4	 last_id 34
+b_id 46	cost 3	ra 0 rra 0 rb 0 rrb 3	 last_id 34
+b_id 40	cost 2	ra 0 rra 0 rb 0 rrb 2	 last_id 34
+b_id 35	cost 1	ra 0 rra 0 rb 0 rrb 1	 last_id 34
+
+Found cost
+min cost 1 pop_id 38
+ra 0 rra 0
+rb 1 rrb 0
+
+WE DO rb
+rb
+pa
+
+A		|	    B
+73(38)	|	69(36)
+94(48)	|	51(27)
+99(49)	|	81(42)
+100(50)	|	85(44)
+0(1)	|	57(32)
+2(2)	|	52(28)
+4(3)	|	56(31)
+6(4)	|	82(43)
+7(5)	|	86(45)
+8(6)	|	55(30)
+10(7)	|	74(39)
+11(8)	|	61(33)
+12(9)	|	93(47)
+15(10)	|	48(26)
+17(11)	|	29(17)
+18(12)	|	79(41)
+19(13)	|	87(46)
+20(14)	|	77(40)
+22(15)	|	68(35)
+28(16)	|	71(37)
+30(18)	|	_(_)
+33(19)	|	_(_)
+35(20)	|	_(_)
+37(21)	|	_(_)
+39(22)	|	_(_)
+41(23)	|	_(_)
+42(24)	|	_(_)
+46(25)	|	_(_)
+54(29)	|	_(_)
+66(34)	|	_(_)
+
+b_id 36	cost 20	ra 0 rra 0 rb 0 rrb 20	 last_id 34
+b_id 27	cost 29	ra 28 rra 0 rb 1 rrb 0	 last_id 34
+b_id 42	cost 3	ra 1 rra 0 rb 2 rrb 0	 last_id 34
+b_id 44	cost 4	ra 1 rra 0 rb 3 rrb 0	 last_id 34
+b_id 32	cost 33	ra 29 rra 0 rb 4 rrb 0	 last_id 34
+b_id 28	cost 7	ra 0 rra 2 rb 5 rrb 0	 last_id 34
+b_id 31	cost 35	ra 29 rra 0 rb 6 rrb 0	 last_id 34
+b_id 43	cost 8	ra 1 rra 0 rb 7 rrb 0	 last_id 34
+b_id 45	cost 9	ra 1 rra 0 rb 8 rrb 0	 last_id 34
+b_id 30	cost 38	ra 29 rra 0 rb 9 rrb 0	 last_id 34
+b_id 39	cost 11	ra 1 rra 0 rb 10 rrb 10	 last_id 34
+b_id 33	cost 10	ra 0 rra 1 rb 0 rrb 9	 last_id 34
+b_id 47	cost 9	ra 1 rra 0 rb 0 rrb 8	 last_id 34
+b_id 26	cost 35	ra 28 rra 0 rb 0 rrb 7	 last_id 34
+b_id 17	cost 16	ra 0 rra 10 rb 0 rrb 6	 last_id 34
+b_id 41	cost 6	ra 1 rra 0 rb 0 rrb 5	 last_id 34
+b_id 46	cost 5	ra 1 rra 0 rb 0 rrb 4	 last_id 34
+b_id 40	cost 4	ra 1 rra 0 rb 0 rrb 3	 last_id 34
+b_id 35	cost 2	ra 0 rra 0 rb 0 rrb 2	 last_id 34
+b_id 37	cost 31	ra 0 rra 30 rb 0 rrb 1	 last_id 34
+
+Found cost
+min cost 2 pop_id 35
+ra 0 rra 0
+rb 0 rrb 2
+
+WE DO rrb
+rrb
+WE DO rrb
+rrb
+pa
+
+A		|	    B
+68(35)	|	71(37)
+73(38)	|	69(36)
+94(48)	|	51(27)
+99(49)	|	81(42)
+100(50)	|	85(44)
+0(1)	|	57(32)
+2(2)	|	52(28)
+4(3)	|	56(31)
+6(4)	|	82(43)
+7(5)	|	86(45)
+8(6)	|	55(30)
+10(7)	|	74(39)
+11(8)	|	61(33)
+12(9)	|	93(47)
+15(10)	|	48(26)
+17(11)	|	29(17)
+18(12)	|	79(41)
+19(13)	|	87(46)
+20(14)	|	77(40)
+22(15)	|	_(_)
+28(16)	|	_(_)
+30(18)	|	_(_)
+33(19)	|	_(_)
+35(20)	|	_(_)
+37(21)	|	_(_)
+39(22)	|	_(_)
+41(23)	|	_(_)
+42(24)	|	_(_)
+46(25)	|	_(_)
+54(29)	|	_(_)
+66(34)	|	_(_)
+
+b_id 37	cost 20	ra 1 rra 0 rb 0 rrb 19	 last_id 34
+b_id 36	cost 2	ra 1 rra 0 rb 1 rrb 0	 last_id 34
+b_id 27	cost 31	ra 29 rra 0 rb 2 rrb 0	 last_id 34
+b_id 42	cost 5	ra 2 rra 0 rb 3 rrb 0	 last_id 34
+b_id 44	cost 6	ra 2 rra 0 rb 4 rrb 0	 last_id 34
+b_id 32	cost 35	ra 30 rra 0 rb 5 rrb 0	 last_id 34
+b_id 28	cost 8	ra 0 rra 2 rb 6 rrb 0	 last_id 34
+b_id 31	cost 37	ra 30 rra 0 rb 7 rrb 0	 last_id 34
+b_id 43	cost 10	ra 2 rra 0 rb 8 rrb 0	 last_id 34
+b_id 45	cost 11	ra 2 rra 0 rb 9 rrb 0	 last_id 34
+b_id 30	cost 39	ra 30 rra 0 rb 0 rrb 9	 last_id 34
+b_id 39	cost 10	ra 2 rra 0 rb 0 rrb 8	 last_id 34
+b_id 33	cost 8	ra 0 rra 1 rb 0 rrb 7	 last_id 34
+b_id 47	cost 8	ra 2 rra 0 rb 0 rrb 6	 last_id 34
+b_id 26	cost 34	ra 29 rra 0 rb 0 rrb 5	 last_id 34
+b_id 17	cost 14	ra 0 rra 10 rb 0 rrb 4	 last_id 34
+b_id 41	cost 5	ra 2 rra 0 rb 0 rrb 3	 last_id 34
+b_id 46	cost 4	ra 2 rra 0 rb 0 rrb 2	 last_id 34
+b_id 40	cost 3	ra 2 rra 0 rb 0 rrb 1	 last_id 34
+
+Found cost
+min cost 2 pop_id 36
+ra 1 rra 0
+rb 1 rrb 0
+
+WE DO rr
+rr
+pa
+
+A		|	    B
+69(36)	|	51(27)
+73(38)	|	81(42)
+94(48)	|	85(44)
+99(49)	|	57(32)
+100(50)	|	52(28)
+0(1)	|	56(31)
+2(2)	|	82(43)
+4(3)	|	86(45)
+6(4)	|	55(30)
+7(5)	|	74(39)
+8(6)	|	61(33)
+10(7)	|	93(47)
+11(8)	|	48(26)
+12(9)	|	29(17)
+15(10)	|	79(41)
+17(11)	|	87(46)
+18(12)	|	77(40)
+19(13)	|	71(37)
+20(14)	|	_(_)
+22(15)	|	_(_)
+28(16)	|	_(_)
+30(18)	|	_(_)
+33(19)	|	_(_)
+35(20)	|	_(_)
+37(21)	|	_(_)
+39(22)	|	_(_)
+41(23)	|	_(_)
+42(24)	|	_(_)
+46(25)	|	_(_)
+54(29)	|	_(_)
+66(34)	|	_(_)
+68(35)	|	_(_)
+
+b_id 27	cost 47	ra 29 rra 0 rb 0 rrb 18	 last_id 35
+b_id 42	cost 3	ra 2 rra 0 rb 1 rrb 0	 last_id 35
+b_id 44	cost 4	ra 2 rra 0 rb 2 rrb 0	 last_id 35
+b_id 32	cost 33	ra 30 rra 0 rb 3 rrb 0	 last_id 35
+b_id 28	cost 7	ra 0 rra 3 rb 4 rrb 0	 last_id 35
+b_id 31	cost 35	ra 30 rra 0 rb 5 rrb 0	 last_id 35
+b_id 43	cost 8	ra 2 rra 0 rb 6 rrb 0	 last_id 35
+b_id 45	cost 9	ra 2 rra 0 rb 7 rrb 0	 last_id 35
+b_id 30	cost 38	ra 30 rra 0 rb 8 rrb 0	 last_id 35
+b_id 39	cost 11	ra 2 rra 0 rb 9 rrb 9	 last_id 35
+b_id 33	cost 10	ra 0 rra 2 rb 0 rrb 8	 last_id 35
+b_id 47	cost 9	ra 2 rra 0 rb 0 rrb 7	 last_id 35
+b_id 26	cost 35	ra 29 rra 0 rb 0 rrb 6	 last_id 35
+b_id 17	cost 16	ra 0 rra 11 rb 0 rrb 5	 last_id 35
+b_id 41	cost 6	ra 2 rra 0 rb 0 rrb 4	 last_id 35
+b_id 46	cost 5	ra 2 rra 0 rb 0 rrb 3	 last_id 35
+b_id 40	cost 4	ra 2 rra 0 rb 0 rrb 2	 last_id 35
+b_id 37	cost 2	ra 1 rra 0 rb 0 rrb 1	 last_id 35
+
+Found cost
+min cost 2 pop_id 37
+ra 1 rra 0
+rb 0 rrb 1
+
+WE DO ra
+ra
+WE DO rrb
+rrb
+pa
+
+A		|	    B
+71(37)	|	51(27)
+73(38)	|	81(42)
+94(48)	|	85(44)
+99(49)	|	57(32)
+100(50)	|	52(28)
+0(1)	|	56(31)
+2(2)	|	82(43)
+4(3)	|	86(45)
+6(4)	|	55(30)
+7(5)	|	74(39)
+8(6)	|	61(33)
+10(7)	|	93(47)
+11(8)	|	48(26)
+12(9)	|	29(17)
+15(10)	|	79(41)
+17(11)	|	87(46)
+18(12)	|	77(40)
+19(13)	|	_(_)
+20(14)	|	_(_)
+22(15)	|	_(_)
+28(16)	|	_(_)
+30(18)	|	_(_)
+33(19)	|	_(_)
+35(20)	|	_(_)
+37(21)	|	_(_)
+39(22)	|	_(_)
+41(23)	|	_(_)
+42(24)	|	_(_)
+46(25)	|	_(_)
+54(29)	|	_(_)
+66(34)	|	_(_)
+68(35)	|	_(_)
+69(36)	|	_(_)
+
+b_id 27	cost 46	ra 29 rra 0 rb 0 rrb 17	 last_id 36
+b_id 42	cost 3	ra 2 rra 0 rb 1 rrb 0	 last_id 36
+b_id 44	cost 4	ra 2 rra 0 rb 2 rrb 0	 last_id 36
+b_id 32	cost 33	ra 30 rra 0 rb 3 rrb 0	 last_id 36
+b_id 28	cost 8	ra 0 rra 4 rb 4 rrb 0	 last_id 36
+b_id 31	cost 35	ra 30 rra 0 rb 5 rrb 0	 last_id 36
+b_id 43	cost 8	ra 2 rra 0 rb 6 rrb 0	 last_id 36
+b_id 45	cost 9	ra 2 rra 0 rb 7 rrb 0	 last_id 36
+b_id 30	cost 38	ra 30 rra 0 rb 8 rrb 0	 last_id 36
+b_id 39	cost 10	ra 2 rra 0 rb 0 rrb 8	 last_id 36
+b_id 33	cost 10	ra 0 rra 3 rb 0 rrb 7	 last_id 36
+b_id 47	cost 8	ra 2 rra 0 rb 0 rrb 6	 last_id 36
+b_id 26	cost 34	ra 29 rra 0 rb 0 rrb 5	 last_id 36
+b_id 17	cost 16	ra 0 rra 12 rb 0 rrb 4	 last_id 36
+b_id 41	cost 5	ra 2 rra 0 rb 0 rrb 3	 last_id 36
+b_id 46	cost 4	ra 2 rra 0 rb 0 rrb 2	 last_id 36
+b_id 40	cost 3	ra 2 rra 0 rb 0 rrb 1	 last_id 36
+
+Found cost
+min cost 3 pop_id 42
+ra 2 rra 0
+rb 1 rrb 0
+
+WE DO rr
+rr
+WE DO ra
+ra
+pa
+
+A		|	    B
+81(42)	|	85(44)
+94(48)	|	57(32)
+99(49)	|	52(28)
+100(50)	|	56(31)
+0(1)	|	82(43)
+2(2)	|	86(45)
+4(3)	|	55(30)
+6(4)	|	74(39)
+7(5)	|	61(33)
+8(6)	|	93(47)
+10(7)	|	48(26)
+11(8)	|	29(17)
+12(9)	|	79(41)
+15(10)	|	87(46)
+17(11)	|	77(40)
+18(12)	|	51(27)
+19(13)	|	_(_)
+20(14)	|	_(_)
+22(15)	|	_(_)
+28(16)	|	_(_)
+30(18)	|	_(_)
+33(19)	|	_(_)
+35(20)	|	_(_)
+37(21)	|	_(_)
+39(22)	|	_(_)
+41(23)	|	_(_)
+42(24)	|	_(_)
+46(25)	|	_(_)
+54(29)	|	_(_)
+66(34)	|	_(_)
+68(35)	|	_(_)
+69(36)	|	_(_)
+71(37)	|	_(_)
+73(38)	|	_(_)
+
+b_id 44	cost 17	ra 1 rra 0 rb 0 rrb 16	 last_id 38
+b_id 32	cost 30	ra 29 rra 0 rb 1 rrb 0	 last_id 38
+b_id 28	cost 8	ra 0 rra 6 rb 2 rrb 0	 last_id 38
+b_id 31	cost 32	ra 29 rra 0 rb 3 rrb 0	 last_id 38
+b_id 43	cost 5	ra 1 rra 0 rb 4 rrb 0	 last_id 38
+b_id 45	cost 6	ra 1 rra 0 rb 5 rrb 0	 last_id 38
+b_id 30	cost 35	ra 29 rra 0 rb 6 rrb 0	 last_id 38
+b_id 39	cost 7	ra 0 rra 0 rb 7 rrb 0	 last_id 38
+b_id 33	cost 13	ra 0 rra 5 rb 8 rrb 8	 last_id 38
+b_id 47	cost 8	ra 1 rra 0 rb 0 rrb 7	 last_id 38
+b_id 26	cost 34	ra 28 rra 0 rb 0 rrb 6	 last_id 38
+b_id 17	cost 19	ra 0 rra 14 rb 0 rrb 5	 last_id 38
+b_id 41	cost 38	ra 0 rra 34 rb 0 rrb 4	 last_id 38
+b_id 46	cost 4	ra 1 rra 0 rb 0 rrb 3	 last_id 38
+b_id 40	cost 2	ra 0 rra 0 rb 0 rrb 2	 last_id 38
+b_id 27	cost 29	ra 28 rra 0 rb 0 rrb 1	 last_id 38
+
+Found cost
+min cost 2 pop_id 40
+ra 0 rra 0
+rb 0 rrb 2
+
+WE DO rrb
+rrb
+WE DO rrb
+rrb
+pa
+
+A		|	    B
+77(40)	|	51(27)
+81(42)	|	85(44)
+94(48)	|	57(32)
+99(49)	|	52(28)
+100(50)	|	56(31)
+0(1)	|	82(43)
+2(2)	|	86(45)
+4(3)	|	55(30)
+6(4)	|	74(39)
+7(5)	|	61(33)
+8(6)	|	93(47)
+10(7)	|	48(26)
+11(8)	|	29(17)
+12(9)	|	79(41)
+15(10)	|	87(46)
+17(11)	|	_(_)
+18(12)	|	_(_)
+19(13)	|	_(_)
+20(14)	|	_(_)
+22(15)	|	_(_)
+28(16)	|	_(_)
+30(18)	|	_(_)
+33(19)	|	_(_)
+35(20)	|	_(_)
+37(21)	|	_(_)
+39(22)	|	_(_)
+41(23)	|	_(_)
+42(24)	|	_(_)
+46(25)	|	_(_)
+54(29)	|	_(_)
+66(34)	|	_(_)
+68(35)	|	_(_)
+69(36)	|	_(_)
+71(37)	|	_(_)
+73(38)	|	_(_)
+
+b_id 27	cost 44	ra 29 rra 0 rb 0 rrb 15	 last_id 38
+b_id 44	cost 3	ra 2 rra 0 rb 1 rrb 0	 last_id 38
+b_id 32	cost 32	ra 30 rra 0 rb 2 rrb 0	 last_id 38
+b_id 28	cost 9	ra 0 rra 6 rb 3 rrb 0	 last_id 38
+b_id 31	cost 34	ra 30 rra 0 rb 4 rrb 0	 last_id 38
+b_id 43	cost 7	ra 2 rra 0 rb 5 rrb 0	 last_id 38
+b_id 45	cost 8	ra 2 rra 0 rb 6 rrb 0	 last_id 38
+b_id 30	cost 37	ra 30 rra 0 rb 7 rrb 0	 last_id 38
+b_id 39	cost 42	ra 0 rra 35 rb 0 rrb 7	 last_id 38
+b_id 33	cost 11	ra 0 rra 5 rb 0 rrb 6	 last_id 38
+b_id 47	cost 7	ra 2 rra 0 rb 0 rrb 5	 last_id 38
+b_id 26	cost 33	ra 29 rra 0 rb 0 rrb 4	 last_id 38
+b_id 17	cost 17	ra 0 rra 14 rb 0 rrb 3	 last_id 38
+b_id 41	cost 3	ra 1 rra 0 rb 0 rrb 2	 last_id 38
+b_id 46	cost 3	ra 2 rra 0 rb 0 rrb 1	 last_id 38
+
+Found cost
+min cost 3 pop_id 44
+ra 2 rra 0
+rb 1 rrb 0
+
+WE DO rr
+rr
+WE DO ra
+ra
+pa
+
+A		|	    B
+85(44)	|	57(32)
+94(48)	|	52(28)
+99(49)	|	56(31)
+100(50)	|	82(43)
+0(1)	|	86(45)
+2(2)	|	55(30)
+4(3)	|	74(39)
+6(4)	|	61(33)
+7(5)	|	93(47)
+8(6)	|	48(26)
+10(7)	|	29(17)
+11(8)	|	79(41)
+12(9)	|	87(46)
+15(10)	|	51(27)
+17(11)	|	_(_)
+18(12)	|	_(_)
+19(13)	|	_(_)
+20(14)	|	_(_)
+22(15)	|	_(_)
+28(16)	|	_(_)
+30(18)	|	_(_)
+33(19)	|	_(_)
+35(20)	|	_(_)
+37(21)	|	_(_)
+39(22)	|	_(_)
+41(23)	|	_(_)
+42(24)	|	_(_)
+46(25)	|	_(_)
+54(29)	|	_(_)
+66(34)	|	_(_)
+68(35)	|	_(_)
+69(36)	|	_(_)
+71(37)	|	_(_)
+73(38)	|	_(_)
+77(40)	|	_(_)
+81(42)	|	_(_)
+
+b_id 32	cost 43	ra 29 rra 0 rb 0 rrb 14	 last_id 42
+b_id 28	cost 9	ra 0 rra 8 rb 1 rrb 0	 last_id 42
+b_id 31	cost 31	ra 29 rra 0 rb 2 rrb 0	 last_id 42
+b_id 43	cost 39	ra 0 rra 36 rb 3 rrb 0	 last_id 42
+b_id 45	cost 5	ra 1 rra 0 rb 4 rrb 0	 last_id 42
+b_id 30	cost 34	ra 29 rra 0 rb 5 rrb 0	 last_id 42
+b_id 39	cost 8	ra 0 rra 2 rb 6 rrb 0	 last_id 42
+b_id 33	cost 14	ra 0 rra 7 rb 7 rrb 7	 last_id 42
+b_id 47	cost 7	ra 1 rra 0 rb 0 rrb 6	 last_id 42
+b_id 26	cost 33	ra 28 rra 0 rb 0 rrb 5	 last_id 42
+b_id 17	cost 20	ra 0 rra 16 rb 0 rrb 4	 last_id 42
+b_id 41	cost 4	ra 0 rra 1 rb 0 rrb 3	 last_id 42
+b_id 46	cost 3	ra 1 rra 0 rb 0 rrb 2	 last_id 42
+b_id 27	cost 29	ra 28 rra 0 rb 0 rrb 1	 last_id 42
+
+Found cost
+min cost 3 pop_id 46
+ra 1 rra 0
+rb 0 rrb 2
+
+WE DO ra
+ra
+WE DO rrb
+rrb
+WE DO rrb
+rrb
+pa
+
+A		|	    B
+87(46)	|	51(27)
+94(48)	|	57(32)
+99(49)	|	52(28)
+100(50)	|	56(31)
+0(1)	|	82(43)
+2(2)	|	86(45)
+4(3)	|	55(30)
+6(4)	|	74(39)
+7(5)	|	61(33)
+8(6)	|	93(47)
+10(7)	|	48(26)
+11(8)	|	29(17)
+12(9)	|	79(41)
+15(10)	|	_(_)
+17(11)	|	_(_)
+18(12)	|	_(_)
+19(13)	|	_(_)
+20(14)	|	_(_)
+22(15)	|	_(_)
+28(16)	|	_(_)
+30(18)	|	_(_)
+33(19)	|	_(_)
+35(20)	|	_(_)
+37(21)	|	_(_)
+39(22)	|	_(_)
+41(23)	|	_(_)
+42(24)	|	_(_)
+46(25)	|	_(_)
+54(29)	|	_(_)
+66(34)	|	_(_)
+68(35)	|	_(_)
+69(36)	|	_(_)
+71(37)	|	_(_)
+73(38)	|	_(_)
+77(40)	|	_(_)
+81(42)	|	_(_)
+85(44)	|	_(_)
+
+b_id 27	cost 41	ra 28 rra 0 rb 0 rrb 13	 last_id 44
+b_id 32	cost 30	ra 29 rra 0 rb 1 rrb 0	 last_id 44
+b_id 28	cost 11	ra 0 rra 9 rb 2 rrb 0	 last_id 44
+b_id 31	cost 32	ra 29 rra 0 rb 3 rrb 0	 last_id 44
+b_id 43	cost 5	ra 0 rra 1 rb 4 rrb 0	 last_id 44
+b_id 45	cost 42	ra 0 rra 37 rb 5 rrb 0	 last_id 44
+b_id 30	cost 35	ra 29 rra 0 rb 6 rrb 0	 last_id 44
+b_id 39	cost 9	ra 0 rra 3 rb 0 rrb 6	 last_id 44
+b_id 33	cost 13	ra 0 rra 8 rb 0 rrb 5	 last_id 44
+b_id 47	cost 5	ra 1 rra 0 rb 0 rrb 4	 last_id 44
+b_id 26	cost 31	ra 28 rra 0 rb 0 rrb 3	 last_id 44
+b_id 17	cost 19	ra 0 rra 17 rb 0 rrb 2	 last_id 44
+b_id 41	cost 3	ra 0 rra 2 rb 0 rrb 1	 last_id 44
+
+Found cost
+min cost 3 pop_id 41
+ra 0 rra 2
+rb 0 rrb 1
+
+WE DO rrr
+rrr
+WE DO rra
+rra
+pa
+
+A		|	    B
+79(41)	|	51(27)
+81(42)	|	57(32)
+85(44)	|	52(28)
+87(46)	|	56(31)
+94(48)	|	82(43)
+99(49)	|	86(45)
+100(50)	|	55(30)
+0(1)	|	74(39)
+2(2)	|	61(33)
+4(3)	|	93(47)
+6(4)	|	48(26)
+7(5)	|	29(17)
+8(6)	|	_(_)
+10(7)	|	_(_)
+11(8)	|	_(_)
+12(9)	|	_(_)
+15(10)	|	_(_)
+17(11)	|	_(_)
+18(12)	|	_(_)
+19(13)	|	_(_)
+20(14)	|	_(_)
+22(15)	|	_(_)
+28(16)	|	_(_)
+30(18)	|	_(_)
+33(19)	|	_(_)
+35(20)	|	_(_)
+37(21)	|	_(_)
+39(22)	|	_(_)
+41(23)	|	_(_)
+42(24)	|	_(_)
+46(25)	|	_(_)
+54(29)	|	_(_)
+66(34)	|	_(_)
+68(35)	|	_(_)
+69(36)	|	_(_)
+71(37)	|	_(_)
+73(38)	|	_(_)
+77(40)	|	_(_)
+
+b_id 27	cost 43	ra 31 rra 0 rb 0 rrb 12	 last_id 40
+b_id 32	cost 33	ra 32 rra 0 rb 1 rrb 0	 last_id 40
+b_id 28	cost 9	ra 0 rra 7 rb 2 rrb 0	 last_id 40
+b_id 31	cost 35	ra 32 rra 0 rb 3 rrb 0	 last_id 40
+b_id 43	cost 6	ra 2 rra 0 rb 4 rrb 0	 last_id 40
+b_id 45	cost 8	ra 3 rra 0 rb 5 rrb 0	 last_id 40
+b_id 30	cost 38	ra 32 rra 0 rb 6 rrb 6	 last_id 40
+b_id 39	cost 6	ra 0 rra 1 rb 0 rrb 5	 last_id 40
+b_id 33	cost 10	ra 0 rra 6 rb 0 rrb 4	 last_id 40
+b_id 47	cost 7	ra 4 rra 0 rb 0 rrb 3	 last_id 40
+b_id 26	cost 33	ra 31 rra 0 rb 0 rrb 2	 last_id 40
+b_id 17	cost 16	ra 0 rra 15 rb 0 rrb 1	 last_id 40
+
+Found cost
+min cost 6 pop_id 43
+ra 2 rra 0
+rb 4 rrb 0
+
+WE DO rr
+rr
+WE DO rr
+rr
+WE DO rb
+rb
+WE DO rb
+rb
+pa
+
+A		|	    B
+82(43)	|	86(45)
+85(44)	|	55(30)
+87(46)	|	74(39)
+94(48)	|	61(33)
+99(49)	|	93(47)
+100(50)	|	48(26)
+0(1)	|	29(17)
+2(2)	|	51(27)
+4(3)	|	57(32)
+6(4)	|	52(28)
+7(5)	|	56(31)
+8(6)	|	_(_)
+10(7)	|	_(_)
+11(8)	|	_(_)
+12(9)	|	_(_)
+15(10)	|	_(_)
+17(11)	|	_(_)
+18(12)	|	_(_)
+19(13)	|	_(_)
+20(14)	|	_(_)
+22(15)	|	_(_)
+28(16)	|	_(_)
+30(18)	|	_(_)
+33(19)	|	_(_)
+35(20)	|	_(_)
+37(21)	|	_(_)
+39(22)	|	_(_)
+41(23)	|	_(_)
+42(24)	|	_(_)
+46(25)	|	_(_)
+54(29)	|	_(_)
+66(34)	|	_(_)
+68(35)	|	_(_)
+69(36)	|	_(_)
+71(37)	|	_(_)
+73(38)	|	_(_)
+77(40)	|	_(_)
+79(41)	|	_(_)
+81(42)	|	_(_)
+
+b_id 45	cost 13	ra 2 rra 0 rb 0 rrb 11	 last_id 42
+b_id 30	cost 32	ra 31 rra 0 rb 1 rrb 0	 last_id 42
+b_id 39	cost 5	ra 0 rra 3 rb 2 rrb 0	 last_id 42
+b_id 33	cost 11	ra 0 rra 8 rb 3 rrb 0	 last_id 42
+b_id 47	cost 7	ra 3 rra 0 rb 4 rrb 0	 last_id 42
+b_id 26	cost 35	ra 30 rra 0 rb 5 rrb 0	 last_id 42
+b_id 17	cost 22	ra 0 rra 17 rb 0 rrb 5	 last_id 42
+b_id 27	cost 34	ra 30 rra 0 rb 0 rrb 4	 last_id 42
+b_id 32	cost 34	ra 31 rra 0 rb 0 rrb 3	 last_id 42
+b_id 28	cost 11	ra 0 rra 9 rb 0 rrb 2	 last_id 42
+b_id 31	cost 32	ra 31 rra 0 rb 0 rrb 1	 last_id 42
+
+Found cost
+min cost 5 pop_id 39
+ra 0 rra 3
+rb 2 rrb 0
+
+WE DO rb
+rb
+WE DO rb
+rb
+WE DO rra
+rra
+WE DO rra
+rra
+WE DO rra
+rra
+pa
+
+A		|	    B
+74(39)	|	61(33)
+77(40)	|	93(47)
+79(41)	|	48(26)
+81(42)	|	29(17)
+82(43)	|	51(27)
+85(44)	|	57(32)
+87(46)	|	52(28)
+94(48)	|	56(31)
+99(49)	|	86(45)
+100(50)	|	55(30)
+0(1)	|	_(_)
+2(2)	|	_(_)
+4(3)	|	_(_)
+6(4)	|	_(_)
+7(5)	|	_(_)
+8(6)	|	_(_)
+10(7)	|	_(_)
+11(8)	|	_(_)
+12(9)	|	_(_)
+15(10)	|	_(_)
+17(11)	|	_(_)
+18(12)	|	_(_)
+19(13)	|	_(_)
+20(14)	|	_(_)
+22(15)	|	_(_)
+28(16)	|	_(_)
+30(18)	|	_(_)
+33(19)	|	_(_)
+35(20)	|	_(_)
+37(21)	|	_(_)
+39(22)	|	_(_)
+41(23)	|	_(_)
+42(24)	|	_(_)
+46(25)	|	_(_)
+54(29)	|	_(_)
+66(34)	|	_(_)
+68(35)	|	_(_)
+69(36)	|	_(_)
+71(37)	|	_(_)
+73(38)	|	_(_)
+
+b_id 33	cost 15	ra 0 rra 5 rb 0 rrb 10	 last_id 38
+b_id 47	cost 8	ra 7 rra 0 rb 1 rrb 0	 last_id 38
+b_id 26	cost 36	ra 34 rra 0 rb 2 rrb 0	 last_id 38
+b_id 17	cost 17	ra 0 rra 14 rb 3 rrb 0	 last_id 38
+b_id 27	cost 38	ra 34 rra 0 rb 4 rrb 0	 last_id 38
+b_id 32	cost 40	ra 35 rra 0 rb 5 rrb 5	 last_id 38
+b_id 28	cost 10	ra 0 rra 6 rb 0 rrb 4	 last_id 38
+b_id 31	cost 38	ra 35 rra 0 rb 0 rrb 3	 last_id 38
+b_id 45	cost 8	ra 6 rra 0 rb 0 rrb 2	 last_id 38
+b_id 30	cost 36	ra 35 rra 0 rb 0 rrb 1	 last_id 38
+
+Found cost
+min cost 8 pop_id 47
+ra 7 rra 0
+rb 1 rrb 0
+
+WE DO rr
+rr
+WE DO ra
+ra
+WE DO ra
+ra
+WE DO ra
+ra
+WE DO ra
+ra
+WE DO ra
+ra
+WE DO ra
+ra
+pa
+
+A		|	    B
+93(47)	|	48(26)
+94(48)	|	29(17)
+99(49)	|	51(27)
+100(50)	|	57(32)
+0(1)	|	52(28)
+2(2)	|	56(31)
+4(3)	|	86(45)
+6(4)	|	55(30)
+7(5)	|	61(33)
+8(6)	|	_(_)
+10(7)	|	_(_)
+11(8)	|	_(_)
+12(9)	|	_(_)
+15(10)	|	_(_)
+17(11)	|	_(_)
+18(12)	|	_(_)
+19(13)	|	_(_)
+20(14)	|	_(_)
+22(15)	|	_(_)
+28(16)	|	_(_)
+30(18)	|	_(_)
+33(19)	|	_(_)
+35(20)	|	_(_)
+37(21)	|	_(_)
+39(22)	|	_(_)
+41(23)	|	_(_)
+42(24)	|	_(_)
+46(25)	|	_(_)
+54(29)	|	_(_)
+66(34)	|	_(_)
+68(35)	|	_(_)
+69(36)	|	_(_)
+71(37)	|	_(_)
+73(38)	|	_(_)
+74(39)	|	_(_)
+77(40)	|	_(_)
+79(41)	|	_(_)
+81(42)	|	_(_)
+82(43)	|	_(_)
+85(44)	|	_(_)
+87(46)	|	_(_)
+
+b_id 26	cost 37	ra 28 rra 0 rb 0 rrb 9	 last_id 46
+b_id 17	cost 21	ra 20 rra 0 rb 1 rrb 0	 last_id 46
+b_id 27	cost 30	ra 28 rra 0 rb 2 rrb 0	 last_id 46
+b_id 32	cost 32	ra 29 rra 0 rb 3 rrb 0	 last_id 46
+b_id 28	cost 17	ra 0 rra 13 rb 4 rrb 0	 last_id 46
+b_id 31	cost 33	ra 29 rra 0 rb 0 rrb 4	 last_id 46
+b_id 45	cost 4	ra 0 rra 1 rb 0 rrb 3	 last_id 46
+b_id 30	cost 31	ra 29 rra 0 rb 0 rrb 2	 last_id 46
+b_id 33	cost 13	ra 0 rra 12 rb 0 rrb 1	 last_id 46
+
+Found cost
+min cost 4 pop_id 45
+ra 0 rra 1
+rb 0 rrb 3
+
+WE DO rrr
+rrr
+WE DO rrb
+rrb
+WE DO rrb
+rrb
+pa
+
+A		|	    B
+86(45)	|	55(30)
+87(46)	|	61(33)
+93(47)	|	48(26)
+94(48)	|	29(17)
+99(49)	|	51(27)
+100(50)	|	57(32)
+0(1)	|	52(28)
+2(2)	|	56(31)
+4(3)	|	_(_)
+6(4)	|	_(_)
+7(5)	|	_(_)
+8(6)	|	_(_)
+10(7)	|	_(_)
+11(8)	|	_(_)
+12(9)	|	_(_)
+15(10)	|	_(_)
+17(11)	|	_(_)
+18(12)	|	_(_)
+19(13)	|	_(_)
+20(14)	|	_(_)
+22(15)	|	_(_)
+28(16)	|	_(_)
+30(18)	|	_(_)
+33(19)	|	_(_)
+35(20)	|	_(_)
+37(21)	|	_(_)
+39(22)	|	_(_)
+41(23)	|	_(_)
+42(24)	|	_(_)
+46(25)	|	_(_)
+54(29)	|	_(_)
+66(34)	|	_(_)
+68(35)	|	_(_)
+69(36)	|	_(_)
+71(37)	|	_(_)
+73(38)	|	_(_)
+74(39)	|	_(_)
+77(40)	|	_(_)
+79(41)	|	_(_)
+81(42)	|	_(_)
+82(43)	|	_(_)
+85(44)	|	_(_)
+
+b_id 30	cost 39	ra 31 rra 0 rb 0 rrb 8	 last_id 44
+b_id 33	cost 12	ra 0 rra 11 rb 1 rrb 0	 last_id 44
+b_id 26	cost 32	ra 30 rra 0 rb 2 rrb 0	 last_id 44
+b_id 17	cost 23	ra 0 rra 20 rb 3 rrb 0	 last_id 44
+b_id 27	cost 34	ra 30 rra 0 rb 4 rrb 4	 last_id 44
+b_id 32	cost 34	ra 31 rra 0 rb 0 rrb 3	 last_id 44
+b_id 28	cost 14	ra 0 rra 12 rb 0 rrb 2	 last_id 44
+b_id 31	cost 32	ra 31 rra 0 rb 0 rrb 1	 last_id 44
+
+Found cost
+min cost 12 pop_id 33
+ra 0 rra 11
+rb 1 rrb 0
+
+WE DO rb
+rb
+WE DO rra
+rra
+WE DO rra
+rra
+WE DO rra
+rra
+WE DO rra
+rra
+WE DO rra
+rra
+WE DO rra
+rra
+WE DO rra
+rra
+WE DO rra
+rra
+WE DO rra
+rra
+WE DO rra
+rra
+WE DO rra
+rra
+pa
+
+A		|	    B
+61(33)	|	48(26)
+66(34)	|	29(17)
+68(35)	|	51(27)
+69(36)	|	57(32)
+71(37)	|	52(28)
+73(38)	|	56(31)
+74(39)	|	55(30)
+77(40)	|	_(_)
+79(41)	|	_(_)
+81(42)	|	_(_)
+82(43)	|	_(_)
+85(44)	|	_(_)
+86(45)	|	_(_)
+87(46)	|	_(_)
+93(47)	|	_(_)
+94(48)	|	_(_)
+99(49)	|	_(_)
+100(50)	|	_(_)
+0(1)	|	_(_)
+2(2)	|	_(_)
+4(3)	|	_(_)
+6(4)	|	_(_)
+7(5)	|	_(_)
+8(6)	|	_(_)
+10(7)	|	_(_)
+11(8)	|	_(_)
+12(9)	|	_(_)
+15(10)	|	_(_)
+17(11)	|	_(_)
+18(12)	|	_(_)
+19(13)	|	_(_)
+20(14)	|	_(_)
+22(15)	|	_(_)
+28(16)	|	_(_)
+30(18)	|	_(_)
+33(19)	|	_(_)
+35(20)	|	_(_)
+37(21)	|	_(_)
+39(22)	|	_(_)
+41(23)	|	_(_)
+42(24)	|	_(_)
+46(25)	|	_(_)
+54(29)	|	_(_)
+
+b_id 26	cost 49	ra 42 rra 0 rb 0 rrb 7	 last_id 29
+b_id 17	cost 10	ra 0 rra 9 rb 1 rrb 0	 last_id 29
+b_id 27	cost 44	ra 42 rra 0 rb 2 rrb 0	 last_id 29
+b_id 32	cost 46	ra 0 rra 43 rb 3 rrb 0	 last_id 29
+b_id 28	cost 4	ra 0 rra 1 rb 0 rrb 3	 last_id 29
+b_id 31	cost 2	ra 0 rra 0 rb 0 rrb 2	 last_id 29
+b_id 30	cost 1	ra 0 rra 0 rb 0 rrb 1	 last_id 29
+
+Found cost
+min cost 1 pop_id 30
+ra 0 rra 0
+rb 0 rrb 1
+
+WE DO rrb
+rrb
+pa
+
+A		|	    B
+55(30)	|	48(26)
+61(33)	|	29(17)
+66(34)	|	51(27)
+68(35)	|	57(32)
+69(36)	|	52(28)
+71(37)	|	56(31)
+73(38)	|	_(_)
+74(39)	|	_(_)
+77(40)	|	_(_)
+79(41)	|	_(_)
+81(42)	|	_(_)
+82(43)	|	_(_)
+85(44)	|	_(_)
+86(45)	|	_(_)
+87(46)	|	_(_)
+93(47)	|	_(_)
+94(48)	|	_(_)
+99(49)	|	_(_)
+100(50)	|	_(_)
+0(1)	|	_(_)
+2(2)	|	_(_)
+4(3)	|	_(_)
+6(4)	|	_(_)
+7(5)	|	_(_)
+8(6)	|	_(_)
+10(7)	|	_(_)
+11(8)	|	_(_)
+12(9)	|	_(_)
+15(10)	|	_(_)
+17(11)	|	_(_)
+18(12)	|	_(_)
+19(13)	|	_(_)
+20(14)	|	_(_)
+22(15)	|	_(_)
+28(16)	|	_(_)
+30(18)	|	_(_)
+33(19)	|	_(_)
+35(20)	|	_(_)
+37(21)	|	_(_)
+39(22)	|	_(_)
+41(23)	|	_(_)
+42(24)	|	_(_)
+46(25)	|	_(_)
+54(29)	|	_(_)
+
+b_id 26	cost 49	ra 43 rra 0 rb 0 rrb 6	 last_id 29
+b_id 17	cost 10	ra 0 rra 9 rb 1 rrb 0	 last_id 29
+b_id 27	cost 45	ra 43 rra 0 rb 2 rrb 0	 last_id 29
+b_id 32	cost 4	ra 1 rra 0 rb 3 rrb 3	 last_id 29
+b_id 28	cost 3	ra 0 rra 1 rb 0 rrb 2	 last_id 29
+b_id 31	cost 2	ra 1 rra 0 rb 0 rrb 1	 last_id 29
+
+Found cost
+min cost 2 pop_id 31
+ra 1 rra 0
+rb 0 rrb 1
+
+WE DO ra
+ra
+WE DO rrb
+rrb
+pa
+
+A		|	    B
+56(31)	|	48(26)
+61(33)	|	29(17)
+66(34)	|	51(27)
+68(35)	|	57(32)
+69(36)	|	52(28)
+71(37)	|	_(_)
+73(38)	|	_(_)
+74(39)	|	_(_)
+77(40)	|	_(_)
+79(41)	|	_(_)
+81(42)	|	_(_)
+82(43)	|	_(_)
+85(44)	|	_(_)
+86(45)	|	_(_)
+87(46)	|	_(_)
+93(47)	|	_(_)
+94(48)	|	_(_)
+99(49)	|	_(_)
+100(50)	|	_(_)
+0(1)	|	_(_)
+2(2)	|	_(_)
+4(3)	|	_(_)
+6(4)	|	_(_)
+7(5)	|	_(_)
+8(6)	|	_(_)
+10(7)	|	_(_)
+11(8)	|	_(_)
+12(9)	|	_(_)
+15(10)	|	_(_)
+17(11)	|	_(_)
+18(12)	|	_(_)
+19(13)	|	_(_)
+20(14)	|	_(_)
+22(15)	|	_(_)
+28(16)	|	_(_)
+30(18)	|	_(_)
+33(19)	|	_(_)
+35(20)	|	_(_)
+37(21)	|	_(_)
+39(22)	|	_(_)
+41(23)	|	_(_)
+42(24)	|	_(_)
+46(25)	|	_(_)
+54(29)	|	_(_)
+55(30)	|	_(_)
+
+b_id 26	cost 48	ra 43 rra 0 rb 0 rrb 5	 last_id 30
+b_id 17	cost 11	ra 0 rra 10 rb 1 rrb 0	 last_id 30
+b_id 27	cost 45	ra 43 rra 0 rb 2 rrb 0	 last_id 30
+b_id 32	cost 3	ra 1 rra 0 rb 0 rrb 2	 last_id 30
+b_id 28	cost 3	ra 0 rra 2 rb 0 rrb 1	 last_id 30
+
+Found cost
+min cost 3 pop_id 32
+ra 1 rra 0
+rb 0 rrb 2
+
+WE DO ra
+ra
+WE DO rrb
+rrb
+WE DO rrb
+rrb
+pa
+
+A		|	    B
+57(32)	|	52(28)
+61(33)	|	48(26)
+66(34)	|	29(17)
+68(35)	|	51(27)
+69(36)	|	_(_)
+71(37)	|	_(_)
+73(38)	|	_(_)
+74(39)	|	_(_)
+77(40)	|	_(_)
+79(41)	|	_(_)
+81(42)	|	_(_)
+82(43)	|	_(_)
+85(44)	|	_(_)
+86(45)	|	_(_)
+87(46)	|	_(_)
+93(47)	|	_(_)
+94(48)	|	_(_)
+99(49)	|	_(_)
+100(50)	|	_(_)
+0(1)	|	_(_)
+2(2)	|	_(_)
+4(3)	|	_(_)
+6(4)	|	_(_)
+7(5)	|	_(_)
+8(6)	|	_(_)
+10(7)	|	_(_)
+11(8)	|	_(_)
+12(9)	|	_(_)
+15(10)	|	_(_)
+17(11)	|	_(_)
+18(12)	|	_(_)
+19(13)	|	_(_)
+20(14)	|	_(_)
+22(15)	|	_(_)
+28(16)	|	_(_)
+30(18)	|	_(_)
+33(19)	|	_(_)
+35(20)	|	_(_)
+37(21)	|	_(_)
+39(22)	|	_(_)
+41(23)	|	_(_)
+42(24)	|	_(_)
+46(25)	|	_(_)
+54(29)	|	_(_)
+55(30)	|	_(_)
+56(31)	|	_(_)
+
+b_id 28	cost 7	ra 0 rra 3 rb 0 rrb 4	 last_id 31
+b_id 26	cost 44	ra 43 rra 0 rb 1 rrb 0	 last_id 31
+b_id 17	cost 13	ra 0 rra 11 rb 2 rrb 2	 last_id 31
+b_id 27	cost 44	ra 43 rra 0 rb 0 rrb 1	 last_id 31
+
+Found cost
+min cost 7 pop_id 28
+ra 0 rra 3
+rb 0 rrb 4
+
+WE DO rrr
+rrr
+WE DO rrr
+rrr
+WE DO rrr
+rrr
+WE DO rrb
+rrb
+pa
+
+A		|	    B
+52(28)	|	48(26)
+54(29)	|	29(17)
+55(30)	|	51(27)
+56(31)	|	_(_)
+57(32)	|	_(_)
+61(33)	|	_(_)
+66(34)	|	_(_)
+68(35)	|	_(_)
+69(36)	|	_(_)
+71(37)	|	_(_)
+73(38)	|	_(_)
+74(39)	|	_(_)
+77(40)	|	_(_)
+79(41)	|	_(_)
+81(42)	|	_(_)
+82(43)	|	_(_)
+85(44)	|	_(_)
+86(45)	|	_(_)
+87(46)	|	_(_)
+93(47)	|	_(_)
+94(48)	|	_(_)
+99(49)	|	_(_)
+100(50)	|	_(_)
+0(1)	|	_(_)
+2(2)	|	_(_)
+4(3)	|	_(_)
+6(4)	|	_(_)
+7(5)	|	_(_)
+8(6)	|	_(_)
+10(7)	|	_(_)
+11(8)	|	_(_)
+12(9)	|	_(_)
+15(10)	|	_(_)
+17(11)	|	_(_)
+18(12)	|	_(_)
+19(13)	|	_(_)
+20(14)	|	_(_)
+22(15)	|	_(_)
+28(16)	|	_(_)
+30(18)	|	_(_)
+33(19)	|	_(_)
+35(20)	|	_(_)
+37(21)	|	_(_)
+39(22)	|	_(_)
+41(23)	|	_(_)
+42(24)	|	_(_)
+46(25)	|	_(_)
+
+b_id 26	cost 3	ra 0 rra 0 rb 0 rrb 3	 last_id 25
+b_id 17	cost 9	ra 0 rra 8 rb 1 rrb 0	 last_id 25
+b_id 27	cost 48	ra 0 rra 47 rb 0 rrb 1	 last_id 25
+
+Found cost
+min cost 3 pop_id 26
+ra 0 rra 0
+rb 0 rrb 3
+
+WE DO rrb
+rrb
+WE DO rrb
+rrb
+WE DO rrb
+rrb
+pa
+
+A		|	    B
+48(26)	|	29(17)
+52(28)	|	51(27)
+54(29)	|	_(_)
+55(30)	|	_(_)
+56(31)	|	_(_)
+57(32)	|	_(_)
+61(33)	|	_(_)
+66(34)	|	_(_)
+68(35)	|	_(_)
+69(36)	|	_(_)
+71(37)	|	_(_)
+73(38)	|	_(_)
+74(39)	|	_(_)
+77(40)	|	_(_)
+79(41)	|	_(_)
+81(42)	|	_(_)
+82(43)	|	_(_)
+85(44)	|	_(_)
+86(45)	|	_(_)
+87(46)	|	_(_)
+93(47)	|	_(_)
+94(48)	|	_(_)
+99(49)	|	_(_)
+100(50)	|	_(_)
+0(1)	|	_(_)
+2(2)	|	_(_)
+4(3)	|	_(_)
+6(4)	|	_(_)
+7(5)	|	_(_)
+8(6)	|	_(_)
+10(7)	|	_(_)
+11(8)	|	_(_)
+12(9)	|	_(_)
+15(10)	|	_(_)
+17(11)	|	_(_)
+18(12)	|	_(_)
+19(13)	|	_(_)
+20(14)	|	_(_)
+22(15)	|	_(_)
+28(16)	|	_(_)
+30(18)	|	_(_)
+33(19)	|	_(_)
+35(20)	|	_(_)
+37(21)	|	_(_)
+39(22)	|	_(_)
+41(23)	|	_(_)
+42(24)	|	_(_)
+46(25)	|	_(_)
+
+b_id 17	cost 10	ra 0 rra 8 rb 0 rrb 2	 last_id 25
+b_id 27	cost 2	ra 1 rra 0 rb 1 rrb 1	 last_id 25
+
+Found cost
+min cost 2 pop_id 27
+ra 1 rra 0
+rb 1 rrb 1
+
+WE DO rr
+rr
+WE DO rrb
+rrb
+pa
+
+A		|	    B
+29(17)	|	51(27)
+52(28)	|	_(_)
+54(29)	|	_(_)
+55(30)	|	_(_)
+56(31)	|	_(_)
+57(32)	|	_(_)
+61(33)	|	_(_)
+66(34)	|	_(_)
+68(35)	|	_(_)
+69(36)	|	_(_)
+71(37)	|	_(_)
+73(38)	|	_(_)
+74(39)	|	_(_)
+77(40)	|	_(_)
+79(41)	|	_(_)
+81(42)	|	_(_)
+82(43)	|	_(_)
+85(44)	|	_(_)
+86(45)	|	_(_)
+87(46)	|	_(_)
+93(47)	|	_(_)
+94(48)	|	_(_)
+99(49)	|	_(_)
+100(50)	|	_(_)
+0(1)	|	_(_)
+2(2)	|	_(_)
+4(3)	|	_(_)
+6(4)	|	_(_)
+7(5)	|	_(_)
+8(6)	|	_(_)
+10(7)	|	_(_)
+11(8)	|	_(_)
+12(9)	|	_(_)
+15(10)	|	_(_)
+17(11)	|	_(_)
+18(12)	|	_(_)
+19(13)	|	_(_)
+20(14)	|	_(_)
+22(15)	|	_(_)
+28(16)	|	_(_)
+30(18)	|	_(_)
+33(19)	|	_(_)
+35(20)	|	_(_)
+37(21)	|	_(_)
+39(22)	|	_(_)
+41(23)	|	_(_)
+42(24)	|	_(_)
+46(25)	|	_(_)
+48(26)	|	_(_)
+
+b_id 27	cost 2	ra 1 rra 0 rb 0 rrb 1	 last_id 26
+
+Found cost
+min cost 2 pop_id 27
+ra 1 rra 0
+rb 0 rrb 1
+
+WE DO ra
+ra
+WE DO rrb
+pa
+
+A		|	    B
+51(27)	|	_(_)
+52(28)	|	_(_)
+54(29)	|	_(_)
+55(30)	|	_(_)
+56(31)	|	_(_)
+57(32)	|	_(_)
+61(33)	|	_(_)
+66(34)	|	_(_)
+68(35)	|	_(_)
+69(36)	|	_(_)
+71(37)	|	_(_)
+73(38)	|	_(_)
+74(39)	|	_(_)
+77(40)	|	_(_)
+79(41)	|	_(_)
+81(42)	|	_(_)
+82(43)	|	_(_)
+85(44)	|	_(_)
+86(45)	|	_(_)
+87(46)	|	_(_)
+93(47)	|	_(_)
+94(48)	|	_(_)
+99(49)	|	_(_)
+100(50)	|	_(_)
+0(1)	|	_(_)
+2(2)	|	_(_)
+4(3)	|	_(_)
+6(4)	|	_(_)
+7(5)	|	_(_)
+8(6)	|	_(_)
+10(7)	|	_(_)
+11(8)	|	_(_)
+12(9)	|	_(_)
+15(10)	|	_(_)
+17(11)	|	_(_)
+18(12)	|	_(_)
+19(13)	|	_(_)
+20(14)	|	_(_)
+22(15)	|	_(_)
+28(16)	|	_(_)
+30(18)	|	_(_)
+33(19)	|	_(_)
+35(20)	|	_(_)
+37(21)	|	_(_)
+39(22)	|	_(_)
+41(23)	|	_(_)
+42(24)	|	_(_)
+46(25)	|	_(_)
+48(26)	|	_(_)
+29(17)	|	_(_)
+
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
