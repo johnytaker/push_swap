@@ -6,7 +6,7 @@
 /*   By: iugolin <iugolin@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/23 17:35:56 by iugolin           #+#    #+#             */
-/*   Updated: 2022/03/24 14:16:55 by iugolin          ###   ########.fr       */
+/*   Updated: 2022/03/24 17:28:06 by iugolin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,7 +85,7 @@ void	insertion(t_info *info)
 		info->a->len++;
 		info->b->len--;
 		reset_default_costs(info);
-		// if (info->a->head->id == 56)
+		// if (info->b->head->next)
 		// 	break ;
 		// print_stacks_with_ids(info->a, info->b);
 	}

@@ -6,7 +6,7 @@
 /*   By: iugolin <iugolin@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/23 14:28:26 by iugolin           #+#    #+#             */
-/*   Updated: 2022/03/24 14:16:42 by iugolin          ###   ########.fr       */
+/*   Updated: 2022/03/24 17:24:37 by iugolin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ static void	calc_costs(t_decisions *ptr, int r, int rr)
 	ptr->rr = 0;
 	if (ptr->cost == r)
 		ptr->r = r;
-	if (ptr->cost == rr)
+	if ((ptr->cost == rr) && !(ptr->cost == r))
 		ptr->rr = rr;
 }
 
@@ -48,7 +48,6 @@ static void	find_costs(t_info *info, int b_id)
 	calc_costs(&a_str,
 		rotate_a_cost(info->a, b_id, last_node(info->a->head)->id),
 		reverse_rotate_a_cost(info->a, b_id, last_node(info->a->head)->id));
-		// reverse_rotate_a_cost(info->a, b_id));
 	calc_costs(&b_str, rotate_b_cost(info->b, b_id),
 		reverse_rotate_b_cost(info->b, b_id));
 	min_cost = a_str.cost + b_str.cost;
