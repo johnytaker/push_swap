@@ -6,7 +6,7 @@
 /*   By: iugolin <iugolin@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/10 01:31:35 by iugolin           #+#    #+#             */
-/*   Updated: 2022/03/20 17:24:55 by iugolin          ###   ########.fr       */
+/*   Updated: 2022/03/24 22:53:50 by iugolin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,19 +21,17 @@ static void	check_digit(char c)
 {
 	if (!ft_isdigit(c) && c != '\0')
 	{
-		write(1, "Error!\nThe program works with \
-numetric parameters only!\n", 57);
+		ft_putendl_fd("Error", 1);
 		exit(EXIT_FAILURE);
 	}
 }
 
-static void	check_maxmin_int(unsigned long number, int sign)
+static void	check_max_min_int(unsigned long number, int sign)
 {
 	if ((number > 2147483648 && sign == -1)
 		|| (number > 2147483647 && sign == 1))
 	{
-		write(1, "Error!\nThe program works with \
-values between MININT and MAXINT only!\n", 70);
+		ft_putendl_fd("Error", 1);
 		exit(EXIT_FAILURE);
 	}
 }
@@ -57,6 +55,6 @@ int	ft_atoi(const char *str)
 		str++;
 		check_digit(*str);
 	}
-	check_maxmin_int(number, sign);
+	check_max_min_int(number, sign);
 	return (number * sign);
 }

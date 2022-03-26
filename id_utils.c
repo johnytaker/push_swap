@@ -6,7 +6,7 @@
 /*   By: iugolin <iugolin@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/07 14:34:51 by iugolin           #+#    #+#             */
-/*   Updated: 2022/03/23 22:54:07 by iugolin          ###   ########.fr       */
+/*   Updated: 2022/03/26 14:57:25 by iugolin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,65 +24,39 @@ static int	*int_arr_create(char **data)
 	if (arr)
 	{
 		i = 0;
-		while (data[i + 1])
+		while (data[i])
 		{
-			arr[i] = ft_atoi(data[i + 1]);
+			arr[i] = ft_atoi(data[i]);
 			i++;
 		}
 	}
 	return (arr);
 }
 
-// static int	*insertion_sort_arr(int *data, int size)
-// {
-// 	int	i;
-// 	int	j;
-// 	int	temp;
-
-// 	i = 1;
-// 	while (i < size)
-// 	{
-// 		j = i;
-// 		while (j >= 0 && data[j] < data[j - 1])
-// 		{
-// 			temp = data[j];
-// 			data[j] = data[j - 1];
-// 			data[j - 1] = temp;
-// 			j--;
-// 		}
-// 		i++;
-// 	}
-// 	return (data);
-// }
-
-static int	*bubble_sort_id(int *data, int size)
+static int	*insertion_sort_arr(int *data, int size)
 {
 	int	i;
 	int	j;
-	int	tmp;
+	int	temp;
 
-	i = 0;
-	j = 0;
-	tmp = 0;
+	i = 1;
+	temp = 0;
 	while (i < size)
 	{
-		j = i + 1;
-		while (j < size)
+		temp = data[i];
+		j = i - 1;
+		while (j >= 0 && data[j] > temp)
 		{
-			if (data[i] > data[j])
-			{
-				tmp = data[i];
-				data[i] = data[j];
-				data[j] = tmp;
-			}
-			j++;
+			data[j + 1] = data[j];
+			j--;
 		}
+		data[j + 1] = temp;
 		i++;
 	}
 	return (data);
 }
 
-int	append_id(t_stack *stack_a, char **data, int size)
+int	append_id(t_stack *stack_a, char **data)
 {
 	int		i;
 	int		*arr;
@@ -90,10 +64,12 @@ int	append_id(t_stack *stack_a, char **data, int size)
 
 	arr = int_arr_create(data);
 	ptr = stack_a->head;
+	i = 0;
+	while (arr[i])
+		i++;
 	if (arr)
 	{
-		// arr = insertion_sort_arr(arr, size);
-		arr = bubble_sort_id(arr, size);
+		arr = insertion_sort_arr(arr, i);
 		while (ptr)
 		{
 			i = 0;

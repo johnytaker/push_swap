@@ -6,7 +6,7 @@
 /*   By: iugolin <iugolin@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/03 17:06:45 by iugolin           #+#    #+#             */
-/*   Updated: 2022/03/24 20:31:46 by iugolin          ###   ########.fr       */
+/*   Updated: 2022/03/26 12:26:55 by iugolin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,20 +45,20 @@ static int	is_input_repeat(char **data)
 	return (0);
 }
 
-void	check_parameters(int number, char **data)
+void	check_parameters(char **data)
 {
-	if (number < 3)
-	{
-		ft_putendl_fd("Error", 1);
+	int	i;
+
+	i = 0;
+	while (data[i])
+		i++;
+	if (i < 3)
 		exit(EXIT_FAILURE);
-	}
 	else if (is_input_repeat(data))
 	{
 		ft_putendl_fd("Error", 1);
 		exit(EXIT_FAILURE);
 	}
 	else if (!is_input_sorted(data))
-	{
 		exit(EXIT_SUCCESS);
-	}
 }

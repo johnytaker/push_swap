@@ -6,7 +6,7 @@
 /*   By: iugolin <iugolin@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/23 17:35:56 by iugolin           #+#    #+#             */
-/*   Updated: 2022/03/24 17:28:06 by iugolin          ###   ########.fr       */
+/*   Updated: 2022/03/26 12:30:58 by iugolin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,36 +81,31 @@ void	insertion(t_info *info)
 		find_costs_manager(info);
 		direct_roll(info);
 		reverse_roll(info);
-		push_a(&info->a->head, &info->b->head);
-		info->a->len++;
-		info->b->len--;
+		push_a(info);
 		reset_default_costs(info);
-		// if (info->b->head->next)
-		// 	break ;
-		// print_stacks_with_ids(info->a, info->b);
 	}
 }
 
-void	make_stack_great_again(t_stack *stack_a)
+void	roll_the_stack_to_start(t_info *info)
 {
 	t_list	*ptr;
 	int		i;
 	int		size;
 
-	ptr = stack_a->head;
-	size = stack_a->len;
+	ptr = info->a->head;
+	size = info->b->len;
 	i = 0;
-	while (ptr && ptr->id != stack_a->min_id)
+	while (ptr && ptr->id != info->a->min_id)
 	{
 		i++;
 		ptr = ptr->next;
 	}
-	ptr = stack_a->head;
-	while (stack_a->head->id != stack_a->min_id)
+	ptr = info->a->head;
+	while (info->a->head->id != info->a->min_id)
 	{
 		if (i < (size / 2))
-			do_rotate(&stack_a->head, "ra");
+			do_rotate(&info->a->head, "ra");
 		else if (i > (size / 2))
-			do_reverse_rotate(&stack_a->head, "rra");
+			do_reverse_rotate(&info->a->head, "rra");
 	}
 }

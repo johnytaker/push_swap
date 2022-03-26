@@ -6,34 +6,42 @@
 /*   By: iugolin <iugolin@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/05 19:23:24 by iugolin           #+#    #+#             */
-/*   Updated: 2022/03/23 12:06:13 by iugolin          ###   ########.fr       */
+/*   Updated: 2022/03/26 12:17:57 by iugolin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	push_a(t_list **lst_a, t_list **lst_b)
+void	push_a(t_info *info)
 {
 	t_list	*tmp_node;
 
-	if (*lst_b)
+	tmp_node = NULL;
+	if (info->b->head)
 	{
-		tmp_node = (*lst_b)->next;
-		push_front(lst_a, *lst_b);
-		*lst_b = tmp_node;
+		if (info->b->head->next)
+			tmp_node = info->b->head->next;
+		push_front(&info->a->head, info->b->head);
+		info->b->head = tmp_node;
+		info->b->len--;
+		info->a->len++;
 		print_op("pa");
 	}
 }
 
-void	push_b(t_list **lst_a, t_list **lst_b)
+void	push_b(t_info *info)
 {
 	t_list	*tmp_node;
 
-	if (*lst_a)
+	tmp_node = NULL;
+	if (info->a->head)
 	{
-		tmp_node = (*lst_a)->next;
-		push_front(lst_b, *lst_a);
-		*lst_a = tmp_node;
+		if (info->a->head->next)
+			tmp_node = info->a->head->next;
+		push_front(&info->b->head, info->a->head);
+		info->a->head = tmp_node;
+		info->a->len--;
+		info->b->len++;
 		print_op("pb");
 	}
 }

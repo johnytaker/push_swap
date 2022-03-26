@@ -6,25 +6,13 @@
 /*   By: iugolin <iugolin@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/06 15:30:44 by iugolin           #+#    #+#             */
-/*   Updated: 2022/03/24 17:21:48 by iugolin          ###   ########.fr       */
+/*   Updated: 2022/03/26 12:29:41 by iugolin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
 static void	reverse_rotate(t_list **lst)
-// {
-// 	t_list	*head;
-// 	t_list	*tail;
-
-// 	tail = *lst;
-// 	head = last_node(*lst);
-// 	while (tail->next->next)
-// 		tail = tail->next;
-// 	tail->next = NULL;
-// 	head->next = *lst;
-// 	*lst = head;
-// }
 {
 	t_list	*tmp_last;
 	t_list	*previus;

@@ -6,7 +6,7 @@
 #    By: iugolin <iugolin@student.21-school.ru>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/21 18:09:12 by iugolin           #+#    #+#              #
-#    Updated: 2022/03/23 22:53:23 by iugolin          ###   ########.fr        #
+#    Updated: 2022/03/24 22:21:02 by iugolin          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,9 +23,11 @@ SRCS =		create_list.c		\
 			reverse_rotate_op.c	\
 			id_utils.c			\
 			pre_sort_utils.c	\
+			fill_stack_b.c		\
 			cost_utils.c		\
 			insertion_utils.c	\
 			insertion_utils_2.c	\
+			deallocate_utils.c	\
 			print_utils.c
 
 OBJS = $(SRCS:.c=.o)

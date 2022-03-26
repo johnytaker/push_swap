@@ -6,7 +6,7 @@
 /*   By: iugolin <iugolin@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/16 11:52:02 by iugolin           #+#    #+#             */
-/*   Updated: 2022/03/23 22:51:48 by iugolin          ###   ########.fr       */
+/*   Updated: 2022/03/26 14:41:34 by iugolin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,32 +40,26 @@ void	push_back(t_list **lst, t_list *node)
 {
 	t_list	*last_elem;
 
-	if (lst)
+	if (*lst == NULL)
+		*lst = node;
+	else
 	{
-		if (*lst == NULL)
-			*lst = node;
-		else
-		{
-			last_elem = last_node(*lst);
-			last_elem->next = node;
-		}
+		last_elem = last_node(*lst);
+		last_elem->next = node;
 	}
 }
 
 void	push_front(t_list **lst, t_list *node)
 {
-	if (lst)
+	if (*lst == NULL)
 	{
-		if (*lst == NULL)
-		{
-			*lst = node;
-			(*lst)->next = NULL;
-		}
-		else
-		{
-			node->next = *lst;
-			*lst = node;
-		}
+		*lst = node;
+		(*lst)->next = NULL;
+	}
+	else
+	{
+		node->next = *lst;
+		*lst = node;
 	}
 }
 

@@ -6,7 +6,7 @@
 /*   By: iugolin <iugolin@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/05 17:25:44 by iugolin           #+#    #+#             */
-/*   Updated: 2022/03/23 18:06:20 by iugolin          ###   ########.fr       */
+/*   Updated: 2022/03/25 08:15:21 by iugolin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,10 @@ static void	swap(t_list **lst)
 	t_list	*tmp_node;
 
 	tmp_node = (*lst)->next;
-	(*lst)->next = (*lst)->next->next;
+	if ((*lst)->next->next)
+		(*lst)->next = (*lst)->next->next;
+	else
+		(*lst)->next = NULL;
 	tmp_node->next = *lst;
 	*lst = tmp_node;
 }

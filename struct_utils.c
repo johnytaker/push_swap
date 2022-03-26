@@ -6,13 +6,13 @@
 /*   By: iugolin <iugolin@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/05 16:02:02 by iugolin           #+#    #+#             */
-/*   Updated: 2022/03/23 22:54:34 by iugolin          ###   ########.fr       */
+/*   Updated: 2022/03/26 14:52:09 by iugolin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-static t_stack	*create_stack_a(char **data, int size)
+static t_stack	*create_stack_a(char **data)
 {
 	t_stack	*a;
 
@@ -21,12 +21,12 @@ static t_stack	*create_stack_a(char **data, int size)
 		a->head = create_lst(data);
 	if (a->head)
 	{
-		if (!append_id(a, data, size - 1))
+		a->len = lstsize(&a->head);
+		if (!append_id(a, data))
 		{
 			free(a);
 			return (NULL);
 		}
-		a->len = lstsize(&a->head);
 		a->min_id = find_min_id(&a->head);
 		a->median_id = find_median_id(&a->head);
 		a->max_id = a->len;
@@ -72,7 +72,7 @@ void	reset_default_costs(t_info *info)
 	info->rrb_ct = 0;
 }
 
-t_info	*create_main_struct(char **data, int size)
+t_info	*create_main_struct(char **data)
 {
 	t_info	*info;
 
@@ -80,7 +80,7 @@ t_info	*create_main_struct(char **data, int size)
 	if (info)
 	{
 		reset_default_costs(info);
-		info->a = create_stack_a(data, size);
+		info->a = create_stack_a(data);
 		if (!info->a)
 		{
 			free(info);

@@ -6,7 +6,7 @@
 /*   By: iugolin <iugolin@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/23 14:28:26 by iugolin           #+#    #+#             */
-/*   Updated: 2022/03/24 17:24:37 by iugolin          ###   ########.fr       */
+/*   Updated: 2022/03/24 22:16:06 by iugolin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,5 +76,4 @@ void	find_costs_manager(t_info *info)
 		find_costs(info, ptr->id);
 		ptr = ptr->next;
 	}
-	// print_found_cost(info);
 }
