@@ -6,7 +6,7 @@
 /*   By: iugolin <iugolin@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/15 21:43:31 by iugolin           #+#    #+#             */
-/*   Updated: 2022/03/26 13:50:48 by iugolin          ###   ########.fr       */
+/*   Updated: 2022/03/26 22:39:45 by iugolin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,8 +29,6 @@ char	*ft_strjoin(char const *s1, char const *s2)
 		return (NULL);
 	ft_memmove(str_new, s1, s1_len);
 	ft_memmove(str_new + s1_len, s2, s2_len);
-	// ft_strlcpy(str_new, s1, size);
-	// ft_strlcpy(str_new + s1_len, s2, s2_len);
 	str_new[size - 2] = ' ';
 	str_new[size - 1] = '\0';
 	return (str_new);
