@@ -6,16 +6,11 @@
 /*   By: iugolin <iugolin@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/10 01:31:35 by iugolin           #+#    #+#             */
-/*   Updated: 2022/03/26 19:12:16 by iugolin          ###   ########.fr       */
+/*   Updated: 2022/03/27 16:19:00 by iugolin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-// static int	ft_isspace(char c)
-// {
-// 	return (c == 32 || (c >= 9 && c <= 13));
-// }
 
 static void	check_digit(char c)
 {

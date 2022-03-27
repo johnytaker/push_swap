@@ -6,7 +6,7 @@
 /*   By: iugolin <iugolin@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/03 17:06:45 by iugolin           #+#    #+#             */
-/*   Updated: 2022/03/26 22:29:53 by iugolin          ###   ########.fr       */
+/*   Updated: 2022/03/27 16:09:26 by iugolin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ static int	is_input_sorted(char **data)
 {
 	int	i;
 
-	i = 1;
+	i = 0;
 	while (data[i + 1])
 	{
 		if (!(ft_atoi(data[i]) < ft_atoi(data[i + 1])))
@@ -31,7 +31,7 @@ static int	is_input_repeat(char **data)
 	int	i;
 	int	j;
 
-	i = 1;
+	i = 0;
 	while (data[i])
 	{
 		j = i + 1;
@@ -52,7 +52,7 @@ void	check_parameters(char **data)
 	i = 0;
 	while (data[i])
 		i++;
-	if (i < 3)
+	if (i < 2)
 		exit(EXIT_FAILURE);
 	else if (is_input_repeat(data))
 	{

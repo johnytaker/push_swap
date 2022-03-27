@@ -6,21 +6,18 @@
 /*   By: iugolin <iugolin@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/07 14:34:51 by iugolin           #+#    #+#             */
-/*   Updated: 2022/03/26 14:57:25 by iugolin          ###   ########.fr       */
+/*   Updated: 2022/03/27 16:07:55 by iugolin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-static int	*int_arr_create(char **data)
+static int	*int_arr_create(char **data, t_stack *stack)
 {
 	int	*arr;
 	int	i;
 
-	i = 1;
-	while (data[i])
-		i++;
-	arr = (int *)malloc(sizeof(int) * i);
+	arr = (int *)malloc(sizeof(int) * stack->len);
 	if (arr)
 	{
 		i = 0;
@@ -58,18 +55,15 @@ static int	*insertion_sort_arr(int *data, int size)
 
 int	append_id(t_stack *stack_a, char **data)
 {
-	int		i;
-	int		*arr;
 	t_list	*ptr;
+	int		*arr;
+	int		i;
 
-	arr = int_arr_create(data);
+	arr = int_arr_create(data, stack_a);
 	ptr = stack_a->head;
-	i = 0;
-	while (arr[i])
-		i++;
 	if (arr)
 	{
-		arr = insertion_sort_arr(arr, i);
+		arr = insertion_sort_arr(arr, stack_a->len);
 		while (ptr)
 		{
 			i = 0;
@@ -99,8 +93,3 @@ int	find_median_id(t_list **lst)
 {
 	return (1 + (lstsize(lst) - 1) / 2);
 }
-
-// int	find_max_id(t_list **lst)
-// {
-// 	return (lstsize(lst));
-// }

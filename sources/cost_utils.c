@@ -6,46 +6,44 @@
 /*   By: iugolin <iugolin@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/06 19:59:28 by iugolin           #+#    #+#             */
-/*   Updated: 2022/03/24 19:14:53 by iugolin          ###   ########.fr       */
+/*   Updated: 2022/03/27 16:35:41 by iugolin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	rotate_a_cost(t_stack *stack_a, int b_id, int last_id)
+static int	number_of_rotate_a(t_stack *stack_a,
+	int b_id, int last_id, int cost)
 {
 	t_list	*a;
-	int		i;
 
-	i = 0;
 	a = stack_a->head;
 	while (a)
 	{
 		if (b_id < a->id && b_id > last_id)
 			break ;
-		if (last_id == stack_a->min_id)
-		{
-			if (b_id > a->id)
-				i++;
-		}
+		if (last_id == stack_a->min_id && b_id > a->id)
+				cost++;
 		else if (last_id != stack_a->min_id)
 		{
-			if (last_id == stack_a->max_id)
-			{
-				if (b_id > a->id)
-					i++;
-			}
+			if (last_id == stack_a->max_id && b_id > a->id)
+					cost++;
 			else if (last_id != stack_a->max_id)
 			{
 				if (last_id < a->id)
-					i++;
+					cost++;
 				else if (last_id > a->id && b_id > a->id)
-					i++;
+					cost++;
 			}
 		}
 		a = a->next;
 	}
-	return (i);
+	return (cost);
+}
+
+int	rotate_a_cost(t_stack *stack_a, int b_id, int last_id)
+{
+	return (number_of_rotate_a(stack_a, b_id, last_id, 0));
 }
 
 int	rotate_b_cost(t_stack *stack_b, int b_id)
@@ -65,6 +63,8 @@ int	rotate_b_cost(t_stack *stack_b, int b_id)
 
 int	reverse_rotate_a_cost(t_stack *stack_a, int b_id, int last_id)
 {
+	if (stack_a->len == 1)
+		return (0);
 	return (stack_a->len - rotate_a_cost(stack_a, b_id, last_id));
 }
 

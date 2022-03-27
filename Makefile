@@ -6,7 +6,7 @@
 #    By: iugolin <iugolin@student.21-school.ru>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/21 18:09:12 by iugolin           #+#    #+#              #
-#    Updated: 2022/03/27 01:22:48 by iugolin          ###   ########.fr        #
+#    Updated: 2022/03/27 14:01:36 by iugolin          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -48,7 +48,7 @@ SRCS = $(addprefix $(SRCS_DIR), $(SRCS_FILES))
 
 OBJS_DIR = objects
 
-OBJS_FILES = $(SRCS:%.c=$(OBJS_DIR)/%.o)
+OBJS_FILES = $(SRCS:%.c=%.o)
 
 # $(OBJS_DIR):
 # 	@mkdir -p $(OBJS_DIR)
@@ -65,18 +65,17 @@ $(NAME) : $(OBJS_FILES)
 # 	@mkdir -p $(@D)
 # 	$(CC) $(CFLAGS) -I $(INCLUDES_PATH) -c $< -o $@
 
-$(OBJS_FILES): $(OBJS_DIR)/%.o: %.c $(INCLUDES) $(LIBFT)
-	@mkdir -p $(@D)
+%.o: %.c $(INCLUDES) $(LIBFT)
 	$(CC) $(CFLAGS) -I $(INCLUDES_PATH) -c $< -o $@
 
 
 clean :
-	$(RM) $(OBJS_DIR)
+	$(RM) $(OBJS_FILES)
 	make clean -C libft
 	@echo "push_swap clean done"
 
 fclean :
-	$(RM) $(OBJS_DIR)
+	$(RM) $(OBJS_FILES)
 	$(RM) $(NAME)
 	make fclean -C libft
 	@echo "push_swap fclean done"
