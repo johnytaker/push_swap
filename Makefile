@@ -6,7 +6,7 @@
 #    By: iugolin <iugolin@student.21-school.ru>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/21 18:09:12 by iugolin           #+#    #+#              #
-#    Updated: 2022/03/26 20:23:31 by iugolin          ###   ########.fr        #
+#    Updated: 2022/03/27 01:22:48 by iugolin          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,9 +22,9 @@ INCLUDES_PATH = includes/
 
 INCLUDES = $(INCLUDES_PATH)push_swap.h
 
-RM = @rm -f
+RM = @rm -rf
 
-SOURCES_DIR = sources/
+SRCS_DIR = sources/
 
 SRCS_FILES =	create_list.c		\
 				check_input_data.c	\
@@ -44,32 +44,43 @@ SRCS_FILES =	create_list.c		\
 				print_utils.c		\
 				push_swap.c
 
-SRCS = $(addprefix $(SOURCES_DIR), $(SRCS_FILES))
+SRCS = $(addprefix $(SRCS_DIR), $(SRCS_FILES))
 
-OBJS = $(SRCS:.c=.o)
+OBJS_DIR = objects
 
-.PHONY : all clean fclean re
+OBJS_FILES = $(SRCS:%.c=$(OBJS_DIR)/%.o)
+
+# $(OBJS_DIR):
+# 	@mkdir -p $(OBJS_DIR)
 
 all :lib $(NAME)
-
-%.o: %.c $(INCLUDES) $(LIBFT)
-	$(CC) $(CFLAGS) -I $(INCLUDES_PATH) -c $< -o $@
 
 lib :
 	make -C libft
 
-$(NAME) : $(INCLUDES) $(OBJS)
-	$(CC) $(CFLAGS) $(OBJS) $(LIBFT) -o $(NAME)
+$(NAME) : $(OBJS_FILES)
+	$(CC) $(CFLAGS) $(OBJS_FILES) $(LIBFT) -o $(NAME)
+
+# $(OBJS_FILES): $(OBJS_DIR)/%.o: %.c $(INCLUDES) $(LIBFT)
+# 	@mkdir -p $(@D)
+# 	$(CC) $(CFLAGS) -I $(INCLUDES_PATH) -c $< -o $@
+
+$(OBJS_FILES): $(OBJS_DIR)/%.o: %.c $(INCLUDES) $(LIBFT)
+	@mkdir -p $(@D)
+	$(CC) $(CFLAGS) -I $(INCLUDES_PATH) -c $< -o $@
+
 
 clean :
-	$(RM) $(OBJS)
+	$(RM) $(OBJS_DIR)
 	make clean -C libft
-	@echo "clean done"
+	@echo "push_swap clean done"
 
 fclean :
-	$(RM) $(OBJS)
+	$(RM) $(OBJS_DIR)
 	$(RM) $(NAME)
 	make fclean -C libft
-	@echo "fclean done"
+	@echo "push_swap fclean done"
 
-re :	fclean all
+re : fclean all
+
+.PHONY : all clean fclean re

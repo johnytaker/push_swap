@@ -6,7 +6,7 @@
 #    By: iugolin <iugolin@student.21-school.ru>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/26 19:31:17 by iugolin           #+#    #+#              #
-#    Updated: 2022/03/26 22:22:23 by iugolin          ###   ########.fr        #
+#    Updated: 2022/03/27 01:09:26 by iugolin          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,6 +19,8 @@ CFLAGS = -Wall -Werror -Wextra
 HEADER = libft.h
 
 RM = @rm -f
+
+# SRCS_DIR = sources/
 
 SRCS =	ft_isalpha.c		ft_isdigit.c	\
 		ft_isalnum.c		ft_isascii.c	\
@@ -39,6 +41,8 @@ SRCS =	ft_isalpha.c		ft_isdigit.c	\
 		ft_putstr_fd.c		ft_putendl_fd.c	\
 		ft_putnbr_fd.c
 
+# SRCS = $(addprefix $(SRCS_DIR), $(SRCS_FILES))
+
 OBJS = $(SRCS:.c=.o)
 
 all : $(NAME)
@@ -46,8 +50,8 @@ all : $(NAME)
 %.o : %.c $(HEADER)
 	$(CC) $(CFLAGS) -c $< -o $@
 
-$(NAME) : $(HEADER) $(OBJS)
-	ar crs $@ $?
+$(NAME) : $(OBJS)
+	ar -crs $@ $?
 	echo "libft.a updated"
 
 clean :
@@ -59,6 +63,6 @@ fclean :
 	$(RM) $(NAME)
 	@echo "libft.a fclean done"
 
-re :	fclean all
+re : fclean all
 
 .PHONY : all clean fclean re
