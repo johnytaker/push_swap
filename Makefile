@@ -6,7 +6,7 @@
 #    By: iugolin <iugolin@student.21-school.ru>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/21 18:09:12 by iugolin           #+#    #+#              #
-#    Updated: 2022/03/27 14:01:36 by iugolin          ###   ########.fr        #
+#    Updated: 2022/03/30 21:16:52 by iugolin          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -65,7 +65,7 @@ $(NAME) : $(OBJS_FILES)
 # 	@mkdir -p $(@D)
 # 	$(CC) $(CFLAGS) -I $(INCLUDES_PATH) -c $< -o $@
 
-%.o: %.c $(INCLUDES) $(LIBFT)
+%.o: %.c $(INCLUDES) $(LIBFT) Makefile
 	$(CC) $(CFLAGS) -I $(INCLUDES_PATH) -c $< -o $@
 
 

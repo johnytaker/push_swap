@@ -6,7 +6,7 @@
 /*   By: iugolin <iugolin@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/23 17:35:56 by iugolin           #+#    #+#             */
-/*   Updated: 2022/03/26 12:30:58 by iugolin          ###   ########.fr       */
+/*   Updated: 2022/03/30 21:13:04 by iugolin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,7 +93,7 @@ void	roll_the_stack_to_start(t_info *info)
 	int		size;
 
 	ptr = info->a->head;
-	size = info->b->len;
+	size = info->a->len;
 	i = 0;
 	while (ptr && ptr->id != info->a->min_id)
 	{
@@ -105,7 +105,7 @@ void	roll_the_stack_to_start(t_info *info)
 	{
 		if (i < (size / 2))
 			do_rotate(&info->a->head, "ra");
-		else if (i > (size / 2))
+		else
 			do_reverse_rotate(&info->a->head, "rra");
 	}
 }
