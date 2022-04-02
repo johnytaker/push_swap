@@ -1,0 +1,26 @@
+$(NAME):	lib server client
+
+all:	$(NAME)
+
+%.o: %.c $(HEADER)
+	$(CC) $(CFLAGS) -c $< -o $@
+
+lib:
+	make -C libft
+
+server:	$(OBJ_SERVER) $(LIBFT)
+			$(CC) $(CFLAGS) $(OBJ_SERVER) $(LIBFT) -o $(SERVER)
+
+client:	$(OBJ_CLIENT) $(LIBFT)
+			$(CC) $(CFLAGS) $(OBJ_CLIENT) $(LIBFT) -o $(CLIENT)
+
+bonus:
+	make "OBJ_SERVER=$(OBJ_SERVER_B)" "OBJ_CLIENT=$(OBJ_CLIENT_B)" all
+
+clean:
+		$(RM) $(OBJ_SERVER) $(OBJ_CLIENT) $(OBJ_SERVER_B) $(OBJ_CLIENT_B)
+		make clean -C libft
+
+fclean:	clean
+		$(RM) $(SERVER) $(CLIENT)
+		make fclean -C libft

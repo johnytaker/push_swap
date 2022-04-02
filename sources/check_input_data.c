@@ -6,7 +6,7 @@
 /*   By: iugolin <iugolin@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/03 17:06:45 by iugolin           #+#    #+#             */
-/*   Updated: 2022/03/27 16:09:26 by iugolin          ###   ########.fr       */
+/*   Updated: 2022/03/31 20:04:43 by iugolin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,11 @@ static int	is_input_sorted(char **data)
 	i = 0;
 	while (data[i + 1])
 	{
-		if (!(ft_atoi(data[i]) < ft_atoi(data[i + 1])))
-			return (1);
+		if (ft_atoi(data[i]) > ft_atoi(data[i + 1]))
+			return (0);
 		i++;
 	}
-	return (0);
+	return (1);
 }
 
 static int	is_input_repeat(char **data)
@@ -55,10 +55,7 @@ void	check_parameters(char **data)
 	if (i < 2)
 		exit(EXIT_FAILURE);
 	else if (is_input_repeat(data))
-	{
-		ft_putendl_fd("Error", 1);
+		print_error();
+	else if (is_input_sorted(data))
 		exit(EXIT_FAILURE);
-	}
-	else if (!is_input_sorted(data))
-		exit(EXIT_SUCCESS);
 }

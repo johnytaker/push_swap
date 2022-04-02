@@ -6,7 +6,7 @@
 #    By: iugolin <iugolin@student.21-school.ru>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/26 19:31:17 by iugolin           #+#    #+#              #
-#    Updated: 2022/03/27 01:09:26 by iugolin          ###   ########.fr        #
+#    Updated: 2022/03/31 18:29:23 by iugolin          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,24 +22,25 @@ RM = @rm -f
 
 # SRCS_DIR = sources/
 
-SRCS =	ft_isalpha.c		ft_isdigit.c	\
-		ft_isalnum.c		ft_isascii.c	\
-		ft_isprint.c		ft_strlen.c		\
-		ft_memset.c			ft_bzero.c		\
-		ft_memcpy.c			ft_memmove.c	\
-		ft_strlcpy.c		ft_strlcat.c	\
-		ft_toupper.c		ft_tolower.c	\
-		ft_strchr.c			ft_strrchr.c	\
-		ft_strcmp.c			ft_strncmp.c	\
-		ft_memchr.c			ft_memcmp.c		\
-		ft_strnstr.c		ft_atoi.c		\
-		ft_calloc.c			ft_strdup.c		\
-		ft_substr.c			ft_strjoin.c	\
-		ft_strtrim.c		ft_split.c		\
-		ft_itoa.c			ft_strmapi.c	\
-		ft_striteri.c		ft_putchar_fd.c	\
-		ft_putstr_fd.c		ft_putendl_fd.c	\
-		ft_putnbr_fd.c
+SRCS =	ft_isalpha.c		ft_isdigit.c		\
+		ft_isalnum.c		ft_isascii.c		\
+		ft_isprint.c		ft_strlen.c			\
+		ft_memset.c			ft_bzero.c			\
+		ft_memcpy.c			ft_memmove.c		\
+		ft_strlcpy.c		ft_strlcat.c		\
+		ft_toupper.c		ft_tolower.c		\
+		ft_strchr.c			ft_strrchr.c		\
+		ft_strcmp.c			ft_strncmp.c		\
+		ft_memchr.c			ft_memcmp.c			\
+		ft_strnstr.c		ft_atoi.c			\
+		ft_calloc.c			ft_strdup.c			\
+		ft_substr.c			ft_strjoin.c		\
+		ft_strtrim.c		ft_split.c			\
+		ft_itoa.c			ft_strmapi.c		\
+		ft_striteri.c		ft_putchar_fd.c		\
+		ft_putstr_fd.c		ft_putendl_fd.c		\
+		ft_putnbr_fd.c		ft_strjoin_free.c	\
+		get_next_line.c
 
 # SRCS = $(addprefix $(SRCS_DIR), $(SRCS_FILES))
 
@@ -56,12 +57,12 @@ $(NAME) : $(OBJS)
 
 clean :
 	$(RM) $(OBJS)
-	@echo "libft.a clean done"
+	@echo "libft clean done"
 
 fclean :
 	$(RM) $(OBJS)
 	$(RM) $(NAME)
-	@echo "libft.a fclean done"
+	@echo "libft fclean done"
 
 re : fclean all
 

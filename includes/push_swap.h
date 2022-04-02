@@ -6,7 +6,7 @@
 /*   By: iugolin <iugolin@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/02 19:26:59 by iugolin           #+#    #+#             */
-/*   Updated: 2022/03/26 22:47:13 by iugolin          ###   ########.fr       */
+/*   Updated: 2022/03/31 21:35:34 by iugolin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@
 # include <stdio.h>
 
 # define DEFAULT_COST -1
+
 /*				STRUCTS				*/
 typedef struct s_info		t_info;
 typedef struct s_stack		t_stack;
@@ -61,13 +62,14 @@ struct s_decisions
 };
 /*				CHECK INPUT DATA			*/
 void	check_parameters(char **data);
+/*				PARCE ARGUMENTS				*/
+char	**parse_arguments(int argc, char **argv);
 /*				STRUCT UTILS				*/
 void	reset_costs(t_info *info);
 void	reset_default_costs(t_info *info);
 int		append_id(t_stack *stack_a, char **data);
 int		find_median_id(t_list **lst);
 int		find_min_id(t_list **lst);
-// int		find_max_id(t_list **lst);
 t_info	*create_main_struct(char **data);
 /*				LIST UTILS					*/
 t_list	*create_node(int value);
@@ -83,6 +85,7 @@ void	fill_b(t_info *info);
 void	triple_sort(t_stack *stack);
 void	sort_small_numbers(t_info *info);
 void	make_stack_great_again(t_info *info);
+void	run_push_swap(char **data);
 /*				COST UTILS					*/
 int		rotate_a_cost(t_stack *stack_a, int b_id, int last_id);
 int		rotate_b_cost(t_stack *stack_b, int b_id);
@@ -108,6 +111,7 @@ void	do_reverse_rotate(t_list **lst, char *op_name);
 void	reverse_rotate_ab(t_list **lst_a, t_list **lst_b);
 /*				PRINT UTILS					*/
 void	print_op(char *op);
+void	print_error(void);
 void	print_one_stack_with_id(t_stack *stack, char *name);
 void	print_max_min_mid(t_stack *stack);
 void	print_found_cost(t_info *info);

@@ -6,7 +6,7 @@
 /*   By: iugolin <iugolin@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/23 12:07:01 by iugolin           #+#    #+#             */
-/*   Updated: 2022/03/26 20:43:02 by iugolin          ###   ########.fr       */
+/*   Updated: 2022/03/31 19:59:01 by iugolin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,12 @@
 void	print_op(char *op)
 {
 	ft_putendl_fd(op, 1);
+}
+
+void	print_error(void)
+{
+	ft_putendl_fd("Error", 1);
+	exit(EXIT_FAILURE);
 }
 
 void	print_max_min_mid(t_stack *stack)
