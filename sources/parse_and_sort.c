@@ -6,7 +6,7 @@
 /*   By: iugolin <iugolin@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/31 21:17:59 by iugolin           #+#    #+#             */
-/*   Updated: 2022/04/03 01:49:32 by iugolin          ###   ########.fr       */
+/*   Updated: 2022/04/04 14:54:52 by iugolin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,6 @@ void	run_push_swap(char **data)
 		sort_small_numbers(info);
 	else
 		make_stack_great_again(info);
-	// print_stacks_with_ids(info->a, info->b);
 	deallocate_list_memory(info);
 	deallocate_struct_memory(info);
 }

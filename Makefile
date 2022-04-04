@@ -6,7 +6,7 @@
 #    By: iugolin <iugolin@student.21-school.ru>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/21 18:09:12 by iugolin           #+#    #+#              #
-#    Updated: 2022/04/03 05:22:17 by iugolin          ###   ########.fr        #
+#    Updated: 2022/04/04 15:18:46 by iugolin          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,6 +27,8 @@ INCLUDES = $(INCLUDES_PATH)push_swap.h
 RM = @rm -rf
 
 SRCS_DIR = ./sources/
+
+OBJS_DIR = ./objects/
 
 SRCS_FILES = 	create_list_and_fill_b.c	check_input_data.c	\
 				list_utils.c				struct_utils.c		\
@@ -54,11 +56,17 @@ SRCS = $(addprefix $(SRCS_DIR), $(SRCS_FILES))
 
 SRCS_B = $(addprefix $(SRCS_DIR), $(SRCS_FILES_B))
 
-OBJS = $(SRCS:%.c=%.o)
+OBJS = $(addprefix $(OBJS_DIR), $(SRCS_FILES:.c=.o))
 
-OBJS_B = $(SRCS_B:%.c=%.o)
+OBJS_B = $(addprefix $(OBJS_DIR), $(SRCS_FILES_B:.c=.o))
 
-all : lib $(NAME)
+all : lib temp $(NAME)
+
+lib :
+	make -C ./libft
+
+temp :
+	@mkdir -p ./objects/
 
 $(NAME) : $(OBJS)
 	$(CC) $(OBJS) -L ./libft -lft -o $(NAME)
@@ -68,21 +76,18 @@ bonus : lib $(CHECKER)
 $(CHECKER) : $(OBJS_B)
 	$(CC) $(OBJS_B) -L ./libft -lft -o $(CHECKER)
 
-lib :
-	make -C ./libft
-
-%.o: %.c $(INCLUDES) $(LIBFT)
+$(OBJS_DIR)%.o: $(SRCS_DIR)%.c $(INCLUDES) $(LIBFT)
 	$(CC) $(CFLAGS) -I $(INCLUDES_PATH) -c $< -o $@
 
 .PHONY : all lib clean fclean re bonus
 
 clean :
-	$(RM) $(OBJS) $(OBJS_B)
+	$(RM) $(OBJS_DIR)
 	make clean -C libft
 	@echo "push_swap && checker clean done"
 
 fclean :
-	$(RM) $(OBJS) $(OBJS_B)
+	$(RM) $(OBJ_DIR)
 	$(RM) $(NAME) $(CHECKER)
 	make fclean -C libft
 	@echo "push_swap && checker fclean done"
