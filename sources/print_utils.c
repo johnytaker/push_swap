@@ -6,7 +6,7 @@
 /*   By: iugolin <iugolin@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/23 12:07:01 by iugolin           #+#    #+#             */
-/*   Updated: 2022/03/31 19:59:01 by iugolin          ###   ########.fr       */
+/*   Updated: 2022/04/04 14:51:43 by iugolin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,32 +42,32 @@ void	print_one_stack_with_id(t_stack *stack, char *name)
 	}
 }
 
-void	print_found_cost(t_info *info)
-{
-	printf("\nFound cost\n");
-	printf("min cost %d pop_id %d\nra %d rra %d\nrb %d rrb %d\n\n",\
-		info->min_cost, info->pop_ind, info->ra_ct, info->rra_ct, info->rb_ct, info->rrb_ct);
-}
+// void	print_found_cost(t_info *info)
+// {
+// 	printf("\nFound cost\n");
+// 	printf("min cost %d pop_id %d\nra %d rra %d\nrb %d rrb %d\n\n",\
+// 	info->min_cost, info->pop_ind, info->ra_ct, info->rra_ct, info->rb_ct, info->rrb_ct);
+// }
 
-void print_stacks_with_ids(t_stack *a, t_stack *b)
-{
-	t_list *tmp_a = a->head;
-	t_list *tmp_b = b->head;
-	char *a_elem, *a_id, *b_elem, *b_id;
+// void print_stacks_with_ids(t_stack *a, t_stack *b)
+// {
+// 	t_list *tmp_a = a->head;
+// 	t_list *tmp_b = b->head;
+// 	char *a_elem, *a_id, *b_elem, *b_id;
 
-	printf("\n%s\t\t|\t%5s\n", "A", "B");
-	while (tmp_a || tmp_b)
-	{
-		a_elem = tmp_a ? ft_itoa(tmp_a->value) : "_";
-		a_id = tmp_a ? ft_itoa(tmp_a->id) : "_";
-		b_elem = tmp_b ? ft_itoa(tmp_b->value) : "_";
-		b_id = tmp_b ? ft_itoa(tmp_b->id) : "_";
-		printf("%-s(%s)\t|\t%s(%s)\n", a_elem, a_id, b_elem, b_id);
-		tmp_a = tmp_a ? tmp_a->next : NULL;
-		tmp_b = tmp_b ? tmp_b->next : NULL;
-	}
-	printf("\n");
-}
+// 	printf("\n%s\t\t|\t%5s\n", "A", "B");
+// 	while (tmp_a || tmp_b)
+// 	{
+// 		a_elem = tmp_a ? ft_itoa(tmp_a->value) : "_";
+// 		a_id = tmp_a ? ft_itoa(tmp_a->id) : "_";
+// 		b_elem = tmp_b ? ft_itoa(tmp_b->value) : "_";
+// 		b_id = tmp_b ? ft_itoa(tmp_b->id) : "_";
+// 		printf("%-s(%s)\t|\t%s(%s)\n", a_elem, a_id, b_elem, b_id);
+// 		tmp_a = tmp_a ? tmp_a->next : NULL;
+// 		tmp_b = tmp_b ? tmp_b->next : NULL;
+// 	}
+// 	printf("\n");
+// }
 
 // void print_sorted(t_stack *stack)
 // {

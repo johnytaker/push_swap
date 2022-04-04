@@ -6,7 +6,7 @@
 /*   By: iugolin <iugolin@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/02 19:26:59 by iugolin           #+#    #+#             */
-/*   Updated: 2022/03/31 21:35:34 by iugolin          ###   ########.fr       */
+/*   Updated: 2022/04/04 14:49:14 by iugolin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -96,25 +96,37 @@ void	find_costs_manager(t_info *info);
 void	insertion(t_info *info);
 void	roll_the_stack_to_start(t_info *info);
 /*				DEALLOCATE UTILS			*/
+void	deallocate_list_memory(t_info *info);
+void	deallocate_struct_memory(t_info *info);
+void	deallocate_array_memory(char **data);
 void	deallocate_all(t_info *info, char **data);
 /*					SWAP					*/
 void	do_swap(t_list **lst, char *op_name);
 void	swap_ab(t_list **lst_a, t_list **lst_b);
+void	do_swap_bonus(t_list **lst);
+void	swap_ab_bonus(t_list **lst_a, t_list **lst_b);
 /*					PUSH					*/
 void	push_a(t_info *info);
 void	push_b(t_info *info);
+void	push_a_bonus(t_info *info);
+void	push_b_bonus(t_info *info);
 /*				   ROTATE					*/
 void	do_rotate(t_list **lst, char *op_name);
 void	rotate_ab(t_list **lst_a, t_list **lst_b);
+void	do_rotate_bonus(t_list **lst);
+void	rotate_ab_bonus(t_list **lst_a, t_list **lst_b);
 /*				REVERSE ROTATE				*/
 void	do_reverse_rotate(t_list **lst, char *op_name);
 void	reverse_rotate_ab(t_list **lst_a, t_list **lst_b);
+void	do_reverse_rotate_bonus(t_list **lst);
+void	reverse_rotate_ab_bonus(t_list **lst_a, t_list **lst_b);
 /*				PRINT UTILS					*/
 void	print_op(char *op);
 void	print_error(void);
+/*
 void	print_one_stack_with_id(t_stack *stack, char *name);
 void	print_max_min_mid(t_stack *stack);
 void	print_found_cost(t_info *info);
 void	print_stacks_with_ids(t_stack *a, t_stack *b);
-
+*/
 #endif

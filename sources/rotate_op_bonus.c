@@ -1,46 +1,47 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   swap_op.c                                          :+:      :+:    :+:   */
+/*   rotate_op.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: iugolin <iugolin@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/05 17:25:44 by iugolin           #+#    #+#             */
-/*   Updated: 2022/04/02 23:03:18 by iugolin          ###   ########.fr       */
+/*   Created: 2022/02/05 20:05:11 by iugolin           #+#    #+#             */
+/*   Updated: 2022/04/02 23:00:56 by iugolin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-static void	swap(t_list **lst)
+static void	rotate(t_list **lst)
 {
-	t_list	*tmp_node;
+	t_list	*head;
+	t_list	*tail;
 
-	tmp_node = (*lst)->next;
-	if ((*lst)->next->next)
-		(*lst)->next = (*lst)->next->next;
-	else
-		(*lst)->next = NULL;
-	tmp_node->next = *lst;
-	*lst = tmp_node;
+	tail = *lst;
+	head = (*lst)->next;
+	while (tail->next)
+		tail = tail->next;
+	tail->next = *lst;
+	tail->next->next = NULL;
+	*lst = head;
 }
 
-void	do_swap(t_list **lst, char *op_name)
+void	do_rotate_bonus(t_list **lst)
 {
 	if (*lst && ((*lst)->next))
 	{
-		swap(lst);
-		print_op(op_name);
+		rotate(lst);
+		// print_op(op_name);
 	}
 }
 
-void	swap_ab(t_list **lst_a, t_list **lst_b)
+void	rotate_ab_bonus(t_list **lst_a, t_list **lst_b)
 {
 	if ((*lst_a && (*lst_a)->next)
 		&& (*lst_b && (*lst_b)->next))
 	{
-		swap(lst_a);
-		swap(lst_b);
-		print_op("ss");
+		rotate(lst_a);
+		rotate(lst_b);
+		// print_op("rr");
 	}
 }

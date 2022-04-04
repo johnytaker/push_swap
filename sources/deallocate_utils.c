@@ -6,13 +6,13 @@
 /*   By: iugolin <iugolin@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/24 22:08:39 by iugolin           #+#    #+#             */
-/*   Updated: 2022/03/26 22:47:24 by iugolin          ###   ########.fr       */
+/*   Updated: 2022/04/02 23:05:30 by iugolin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-static void	deallocate_list_memory(t_info *info)
+void	deallocate_list_memory(t_info *info)
 {
 	t_list	*tmp_node;
 
@@ -26,7 +26,7 @@ static void	deallocate_list_memory(t_info *info)
 	info->a->head = NULL;
 }
 
-static void	deallocate_struct_memory(t_info *info)
+void	deallocate_struct_memory(t_info *info)
 {
 	if (info->a->head == NULL)
 	{
@@ -42,7 +42,7 @@ static void	deallocate_struct_memory(t_info *info)
 	info = NULL;
 }
 
-static void	deallocate_array_memory(char **data)
+void	deallocate_array_memory(char **data)
 {
 	int		i;
 

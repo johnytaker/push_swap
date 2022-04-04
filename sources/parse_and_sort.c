@@ -6,7 +6,7 @@
 /*   By: iugolin <iugolin@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/31 21:17:59 by iugolin           #+#    #+#             */
-/*   Updated: 2022/04/02 00:38:58 by iugolin          ###   ########.fr       */
+/*   Updated: 2022/04/03 01:49:32 by iugolin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,15 @@ char	**parse_arguments(int argc, char **argv)
 	return (argv_new);
 }
 
+void	make_stack_great_again(t_info *info)
+{
+	fill_b(info);
+	triple_sort(info->a);
+	insertion(info);
+	if (info->a->head->id != info->a->min_id)
+		roll_the_stack_to_start(info);
+}
+
 void	run_push_swap(char **data)
 {
 	t_info	*info;
@@ -47,6 +56,7 @@ void	run_push_swap(char **data)
 		sort_small_numbers(info);
 	else
 		make_stack_great_again(info);
-	// print_sacks_with_ids(info->a, info->b);
-	// deallocate_all(info, data);
+	// print_stacks_with_ids(info->a, info->b);
+	deallocate_list_memory(info);
+	deallocate_struct_memory(info);
 }

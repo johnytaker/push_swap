@@ -6,7 +6,7 @@
 /*   By: iugolin <iugolin@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/06 21:04:57 by iugolin           #+#    #+#             */
-/*   Updated: 2022/03/31 13:22:05 by iugolin          ###   ########.fr       */
+/*   Updated: 2022/04/03 00:22:43 by iugolin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,7 @@ void	ft_putnbr_fd(int n, int fd);
 /*			GET_NEXT_LINE			*/
 
 # ifndef BUFFER_SIZE
-#  define BUFFER_SIZE 42
+#  define BUFFER_SIZE 4
 # endif
 
 # ifndef READ_ERROR

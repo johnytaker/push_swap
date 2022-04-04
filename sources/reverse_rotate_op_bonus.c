@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   reverse_rotate_op.c                                :+:      :+:    :+:   */
+/*   reverse_rotate_op_bonus.c                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: iugolin <iugolin@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/06 15:30:44 by iugolin           #+#    #+#             */
-/*   Updated: 2022/04/02 23:24:55 by iugolin          ###   ########.fr       */
+/*   Updated: 2022/04/02 22:57:20 by iugolin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,22 +30,22 @@ static void	reverse_rotate(t_list **lst)
 	*lst = tmp_last;
 }
 
-void	do_reverse_rotate(t_list **lst, char *op_name)
+void	do_reverse_rotate_bonus(t_list **lst)
 {
 	if (*lst && (*lst)->next)
 	{
 		reverse_rotate(lst);
-		print_op(op_name);
+		// print_op(op_name);
 	}
 }
 
-void	reverse_rotate_ab(t_list **lst_a, t_list **lst_b)
+void	reverse_rotate_ab_bonus(t_list **lst_a, t_list **lst_b)
 {
 	if ((*lst_a && (*lst_a)->next)
 		&& (*lst_b && (*lst_b)->next))
 	{
 		reverse_rotate(lst_a);
 		reverse_rotate(lst_b);
-		print_op("rrr");
+		// print_op("rrr");
 	}
 }
