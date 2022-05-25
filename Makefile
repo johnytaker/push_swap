@@ -6,7 +6,7 @@
 #    By: iugolin <iugolin@student.21-school.ru>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/21 18:09:12 by iugolin           #+#    #+#              #
-#    Updated: 2022/04/04 15:18:46 by iugolin          ###   ########.fr        #
+#    Updated: 2022/05/26 02:35:49 by iugolin          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -63,18 +63,20 @@ OBJS_B = $(addprefix $(OBJS_DIR), $(SRCS_FILES_B:.c=.o))
 all : lib temp $(NAME)
 
 lib :
-	make -C ./libft
+	@make -C ./libft
 
 temp :
 	@mkdir -p ./objects/
 
 $(NAME) : $(OBJS)
 	$(CC) $(OBJS) -L ./libft -lft -o $(NAME)
+	@echo "\npush_swap updated\n"
 
 bonus : lib $(CHECKER)
 
 $(CHECKER) : $(OBJS_B)
 	$(CC) $(OBJS_B) -L ./libft -lft -o $(CHECKER)
+	@echo "\nchecker updated\n"
 
 $(OBJS_DIR)%.o: $(SRCS_DIR)%.c $(INCLUDES) $(LIBFT)
 	$(CC) $(CFLAGS) -I $(INCLUDES_PATH) -c $< -o $@
@@ -83,13 +85,13 @@ $(OBJS_DIR)%.o: $(SRCS_DIR)%.c $(INCLUDES) $(LIBFT)
 
 clean :
 	$(RM) $(OBJS_DIR)
-	make clean -C libft
+	@make clean -C libft
 	@echo "push_swap && checker clean done"
 
 fclean :
-	$(RM) $(OBJ_DIR)
+	$(RM) $(OBJS_DIR)
 	$(RM) $(NAME) $(CHECKER)
-	make fclean -C libft
+	@make fclean -C libft
 	@echo "push_swap && checker fclean done"
 
 re : fclean all

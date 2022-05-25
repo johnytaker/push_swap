@@ -6,7 +6,7 @@
 #    By: iugolin <iugolin@student.21-school.ru>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/26 19:31:17 by iugolin           #+#    #+#              #
-#    Updated: 2022/04/03 05:27:22 by iugolin          ###   ########.fr        #
+#    Updated: 2022/05/26 02:35:35 by iugolin          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -48,7 +48,7 @@ all : $(NAME)
 
 $(NAME) : $(OBJS)
 	ar crs $@ $?
-	echo "libft.a updated"
+	@echo "\nlibft.a updated\n"
 
 %.o : %.c $(HEADER)
 	$(CC) $(CFLAGS) -c $< -o $@
